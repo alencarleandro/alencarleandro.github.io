@@ -73,11 +73,8 @@ window.addEventListener("load", () => {
     fontEsp.forEach((txt) =>
         txt.style.color = "rgba(255, 255, 255, 0.8)"
     );
-    
-    var ss = document.styleSheets[0];
-
-    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
-    folha.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
+    folha.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
+    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
     eu.style.backgroundImage = "url(\"./img/eu5.jpeg\")";
     instagram.src = "./img/instagramBranco.png";
     linkedin.src = "./img/linkedinBranco.png";
