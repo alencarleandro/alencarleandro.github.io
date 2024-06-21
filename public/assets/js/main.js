@@ -24,9 +24,9 @@ paletaPreta.addEventListener('click', function () {
     );
     folha.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
     seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-    eu.style.backgroundImage = "url(\"./public/assets/img/eu5.jpeg\")";
-    instagram.src = "./public/assets/img/instagramBranco.png";
-    linkedin.src = "./public/assets/img/linkedinBranco.png";
+    eu.style.backgroundImage = "url(\"./assets/img/eu5.jpeg\")";
+    instagram.src = "./assets/img/instagramBranco.png";
+    linkedin.src = "./assets/img/linkedinBranco.png";
 });
 
 paletaAzul.addEventListener('click', function () {
@@ -41,9 +41,9 @@ paletaAzul.addEventListener('click', function () {
     );
     seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.5)"
     folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)"
-    eu.style.backgroundImage = "url(\"./public/assets/img/eu2.png\")";
-    instagram.src = "./public/assets/img/instagramBranco.png";
-    linkedin.src = "./public/assets/img/linkedinBranco.png";
+    eu.style.backgroundImage = "url(\"./assets/img/eu2.png\")";
+    instagram.src = "./assets/img/instagramBranco.png";
+    linkedin.src = "./assets/img/linkedinBranco.png";
 });
 
 paletaBeje.addEventListener('click', function () {
@@ -58,9 +58,9 @@ paletaBeje.addEventListener('click', function () {
     );
     folha.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
     seletorPaleta.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
-    eu.style.backgroundImage = "url(\"./public/assets/img/eu3.png\")";
-    instagram.src = "./public/assets/img/instagram.png";
-    linkedin.src = "./public/assets/img/linkedin.png";
+    eu.style.backgroundImage = "url(\"./assets/img/eu3.png\")";
+    instagram.src = "./assets/img/instagram.png";
+    linkedin.src = "./assets/img/linkedin.png";
 });
 
 window.addEventListener("load", () => {
@@ -78,7 +78,7 @@ window.addEventListener("load", () => {
 
     seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
     folha.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-    eu.style.backgroundImage = "url(\"./public/assets/img/eu5.jpeg\")";
-    instagram.src = "./public/assets/img/instagramBranco.png";
-    linkedin.src = "./public/assets/img/linkedinBranco.png";
+    eu.style.backgroundImage = "url(\"./assets/img/eu5.jpeg\")";
+    instagram.src = "./assets/img/instagramBranco.png";
+    linkedin.src = "./assets/img/linkedinBranco.png";
 });
