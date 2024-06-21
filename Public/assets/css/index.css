@@ -1,0 +1,96 @@
+
+.body{
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.perfil{
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "foto descricao";
+}
+
+.colegas{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.foto{
+    grid-area: foto;
+}
+
+.descricao{
+    grid-area: descricao;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    padding-left: 48px;
+    padding-right: 48px;
+    grid-area: main;
+}
+
+.folha{
+    border-radius: 0px 30px 30px 30px;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.scrollColegas{
+    min-width: min-content;
+}
+
+.colegasTrabalho{
+    min-width: 220px;
+    min-height: 220px;
+
+    width: 220px;
+    height: 220px;
+
+    max-width: 220px;
+    max-height: 220px;
+}
+
+@media only screen and (max-width: 900px) {    
+    .main{
+        padding-left: 0px;
+        padding-right: 0px;
+        grid-area: main;
+    }
+
+    .perfil{
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "foto"
+            "descricao";
+    }
+
+    .folha{
+        border-radius: 0px;
+    }
+
+    .colegas{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

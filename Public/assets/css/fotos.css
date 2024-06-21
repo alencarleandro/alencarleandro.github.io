@@ -1,0 +1,14 @@
+.eu{
+    background-image: url("../img/eu2.png");
+    background-size: auto 105%;
+    background-position: center;
+
+    min-height: 250px;
+    min-width: 250px;
+
+    height: 250px;
+    width: 250px;
+
+    max-width: 250px;
+    max-height: 250px;
+}
