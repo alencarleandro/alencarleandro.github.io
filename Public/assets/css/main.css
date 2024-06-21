@@ -890,8 +890,12 @@
 .color_pretoTransparent {background-color: rgba(0, 0, 0, 0.3);}
 .color_pretoTransparent01 {background-color: rgba(0, 0, 0, 0.5);}
 .color_pretoTransparent02 {background-color: rgba(0, 0, 0, 0.6);}
+.color_pretoTransparent03 {background-color: rgba(0, 0, 0, 0.9);}
+
+.font_pretoTransparent03 {color: rgba(0, 0, 0, 0.7);}
 
 .color_brancoTransparent {background-color: rgba(255, 255, 255, 0.5);}
+.color_brancoTransparent01 {background-color: rgba(255, 255, 255, 0.3);}
 
 .color_salmaoPastel {background-color: #e98685;}
 .color_verdePastel {background-color: #84caaa;}
@@ -3777,8 +3781,19 @@ td {
   }
   
   .cartaoH::-webkit-scrollbar-thumb {
-	background-color: #d0d7de;
+	background-color: rgb(0, 0, 0, 0.5);
 	border-radius: 40px 40px 0px 0px;
+	
+  }
+
+  .cartaoHV::-webkit-scrollbar {
+	width: 10px;
+	background-color: rgb(0, 0, 0,0);
+  }
+  
+  .cartaoHV::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 0, 0, 0.5);
+	border-radius: 40px ;
 	
   }
 
@@ -4074,7 +4089,7 @@ td {
 .text_yellow{color: #ffc700}
 .text_transparent-esp{color: rgba(0,0,0,0);}
 
-.exp2{height: 2px;}
+.exp2{height: 2px}
 
 .wrap{text-wrap: wrap;}
 
@@ -4165,7 +4180,6 @@ td {
 .textoNome:hover{
     font-size: 18px;
     color: #0d6efd;
-    text-decoration: underline;
 }
 
 .textUnd{

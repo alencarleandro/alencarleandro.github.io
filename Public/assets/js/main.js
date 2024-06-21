@@ -4,17 +4,29 @@ const paletaBeje = document.querySelector("#paletaBeje");
 
 const paleta = document.querySelectorAll(".paleta");
 const eu = document.querySelector(".eu");
+const instagram = document.querySelector(".instagram");
+const linkedin = document.querySelector(".linkedin");
 const textPaleta = document.querySelectorAll(".text_paleta");
-const scroll = document.querySelectorAll(".cartaoV");
+const scroll = document.querySelector(".cartaoH");
+const fontEsp = document.querySelectorAll(".fontEsp");
+const folha = document.querySelector(".folha");
+const seletorPaleta = document.querySelector(".seletorPaleta");
 
 paletaPreta.addEventListener('click', function () {
     paleta.forEach((p) =>
         p.style.backgroundColor = "#000000"
     );
     textPaleta.forEach((txt) =>
-        txt.style.color = "#d6d6d6"
+        txt.style.color = "#e6e6e6"
     );
+    fontEsp.forEach((txt) =>
+        txt.style.color = "rgba(255, 255, 255, 0.8)"
+    );
+    folha.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
+    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
     eu.style.backgroundImage = "url(\"./img/eu5.jpeg\")";
+    instagram.src = "./img/instagramBranco.png";
+    linkedin.src = "./img/linkedinBranco.png";
 });
 
 paletaAzul.addEventListener('click', function () {
@@ -24,7 +36,14 @@ paletaAzul.addEventListener('click', function () {
     textPaleta.forEach((txt) =>
         txt.style.color = "#ffffff"
     );
+    fontEsp.forEach((txt) =>
+        txt.style.color = "rgba(255, 255, 255, 1)"
+    );
+    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.5)"
+    folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)"
     eu.style.backgroundImage = "url(\"./img/eu2.png\")";
+    instagram.src = "./img/instagramBranco.png";
+    linkedin.src = "./img/linkedinBranco.png";
 });
 
 paletaBeje.addEventListener('click', function () {
@@ -34,7 +53,14 @@ paletaBeje.addEventListener('click', function () {
     textPaleta.forEach((txt) =>
         txt.style.color = "#262626"
     );
+    fontEsp.forEach((txt) =>
+        txt.style.color = "rgba(0, 0, 0, 0.8)"
+    );
+    folha.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
+    seletorPaleta.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
     eu.style.backgroundImage = "url(\"./img/eu3.png\")";
+    instagram.src = "./img/instagram.png";
+    linkedin.src = "./img/linkedin.png";
 });
 
 window.addEventListener("load", () => {
@@ -42,7 +68,17 @@ window.addEventListener("load", () => {
         p.style.backgroundColor = "#000000"
     );
     textPaleta.forEach((txt) =>
-        txt.style.color = "#d6d6d6"
+        txt.style.color = "#e6e6e6"
     );
+    fontEsp.forEach((txt) =>
+        txt.style.color = "rgba(255, 255, 255, 0.8)"
+    );
+    
+    var ss = document.styleSheets[0];
+
+    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.3)"
+    folha.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
     eu.style.backgroundImage = "url(\"./img/eu5.jpeg\")";
+    instagram.src = "./img/instagramBranco.png";
+    linkedin.src = "./img/linkedinBranco.png";
 });

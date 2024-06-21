@@ -1,8 +1,6 @@
 
 .body{
     display: grid;
-    row-gap: 16px;
-    column-gap: 16px;
     grid-template-columns: 100%;
     grid-template-rows: min-content auto min-content;
     grid-template-areas:
@@ -40,7 +38,7 @@
 
 .main{
     padding-left: 48px;
-    padding-right: 48px;
+    padding-right: 28px;
     grid-area: main;
 }
 
