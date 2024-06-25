@@ -19,6 +19,14 @@
         "foto descricao";
 }
 
+.layoutContagem{
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns:auto min-content;
+    grid-template-rows: auto;
+}
+
 .colegas{
     padding-left: 32px;
     padding-right: 32px;
@@ -90,5 +98,15 @@
     .colegas{
         padding-left: 0px;
         padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {    
+    .layoutContagem{
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns:auto;
+        grid-template-rows: auto min-content;
     }
 }
