@@ -3210,6 +3210,10 @@ td {
 .color_paleta_02{background-color: #01355c;}
 .color_paleta_03{background-color: #e7d6b9;}
 
+
+.text_paleta_01{color: #000000;}
+.text_paleta_02{color: #ffffff;}
+
 .bordaGitHub{border: solid 1px; border-color: #d0d7de;}
 .bordaGitHubSEP{border: solid 1px ; border-color: #d0d7de; border-width: 0px 0px 1px 0px;}
 .bordaGitHubr{border: solid 1px ; border-color: #d0d7de; border-width: 1px 1px 1px 0px;}
@@ -3823,6 +3827,8 @@ td {
 .mw350{min-width: 350px;}
 .mw300{min-width: 300px;}
 
+.w-min{min-width: min-content; width: min-content; max-width: min-content;}
+
 .hContent{min-height: fit-content; height: fit-content; max-height: fit-content;}
 .h12{min-height: 12px; height: 12px; max-height: 12px;}
 .h16{min-height: 16px; height: 16px; max-height: 16px;}
@@ -3846,6 +3852,8 @@ td {
 .h380{min-height: 380px; height: 380px; max-height: 380px;}
 .h400{min-height: 400px; height: 400px; max-height: 400px;}
 .h410{min-height: 410px; height: 410px; max-height: 410px;}
+.h420{min-height: 420px; height: 420px; max-height: 420px;}
+.h440{min-height: 440px; height: 440px; max-height: 440px;}
 .h500{min-height: 500px; height: 500px; max-height: 500px;}
 .h600{min-height: 600px; height: 600px; max-height: 600px;}
 .h_minContent{min-height: min-content; height: min-content; max-height: min-content;}
