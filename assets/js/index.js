@@ -69,11 +69,11 @@ async function getJsonServer_Repositorios() {
                 if (!data[i].link == "") {
                     for (j = 0; j < x.length; j++) {
                         if (data[i].link == x[j].html_url) {
-                            pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, x[j].stargazers_count, x[j].watchers_count, paleta)
+                            pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, x[j].stargazers_count, x[j].watchers_count, paleta,x[j].url)
                         }
                     }
                 } else {
-                    pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, "0", "0", paleta)
+                    pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, "0", "0", paleta,"privado")
                 }
 
             }
@@ -170,11 +170,11 @@ async function getApiGitHub_Repos() {
                         if (!json[i].link == "") {
                             for (j = 0; j < git.length; j++) {
                                 if (json[i].link == git[j].html_url) {
-                                    pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, git[j].stargazers_count, git[j].watchers_count, "color_paleta_02")
+                                    pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, git[j].stargazers_count, git[j].watchers_count, "color_paleta_02",git[j].url)
                                 }
                             }
                         } else {
-                            pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, "0", "0", "color_paleta_02")
+                            pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, "0", "0", "color_paleta_02","privado")
                         }
 
                     }
@@ -313,6 +313,16 @@ function start() {
  * Instanciar dados
  */
 
+function trocar(paleta, url){
+    sessionStorage.setItem("paleta", paleta);
+    sessionStorage.setItem("url", url);
+    window.location.href = "./views/repo.html";
+}
+
+/**
+ * Instanciar dados
+ */
+
 function instanciarRepositorios(paleta) {
 
     cards_repos.innerHTML = "";
@@ -322,11 +332,11 @@ function instanciarRepositorios(paleta) {
         if (!dataS_Repo[i].link == "") {
             for (j = 0; j < dataRepos.length; j++) {
                 if (dataS_Repo[i].link == dataRepos[j].html_url) {
-                    pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, dataRepos[j].stargazers_count, dataRepos[j].watchers_count, paleta)
+                    pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, dataRepos[j].stargazers_count, dataRepos[j].watchers_count, paleta,dataRepos[j].url)
                 }
             }
         } else {
-            pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, "0", "0", paleta)
+            pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, "0", "0", paleta,"privado")
         }
 
     }
@@ -350,10 +360,10 @@ function instanciarColegas(paleta) {
  * Elementos
  */
 
-function pendurar_card_repo(img, titulo, descricao, favoritos, forks, paleta) {
+function pendurar_card_repo(img, titulo, descricao, favoritos, forks, paleta, url) {
 
     let card =
-        `<div class="card p-4 m-3 centro cursorHand repo">
+        `<div onclick="trocar('${paleta}', '${url}')" class="card p-4 m-3 centro cursorHand repo">
             <div class="${paleta} x100x300 radius_All_-0-" style="display: flex; align-items: center; justify-content: center;">
                 <img class="h100 ra" src="${img}" alt="Card image cap">
             </div>
