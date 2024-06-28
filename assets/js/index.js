@@ -132,6 +132,7 @@ async function getApiGitHub_User() {
     fetch('https://api.github.com/users/alencarleandro')
         .then(async res => {
             if (!res.ok) {
+                alert("API do GitHub exedeu sua cota de usos, aguarde 40 min para sua recarga.");
                 throw new Error(res.status);
             }
 
