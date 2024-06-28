@@ -37,7 +37,6 @@ var dataSocial;
 
 var dataS_Fotos;
 var dataS_Repo;
-var dataS_Reco;
 var dataS_Clg;
 
 /**
@@ -63,7 +62,23 @@ async function getJsonServer_Repositorios() {
                 throw new Error(res.status);
             }
 
-            dataS_Repo = await res.json();
+            let data = await res.json();
+
+            for (i = 0; i < data.length; i++) {
+
+                if (!data[i].link == "") {
+                    for (j = 0; j < x.length; j++) {
+                        if (data[i].link == x[j].html_url) {
+                            pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, x[j].stargazers_count, x[j].watchers_count, paleta)
+                        }
+                    }
+                } else {
+                    pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, "0", "0", paleta)
+                }
+
+            }
+
+            dataS_Repo = data;
 
         })
 }
@@ -75,7 +90,17 @@ async function getJsonServer_Recomendacoes() {
                 throw new Error(res.status);
             }
 
-            dataS_Reco = await res.json();
+            let data = await res.json();
+
+            for (i = 0; i < data.length; i++) {
+
+                if (i == 0) {
+                    pendurar_card_reco(data[i].imagem, data[i].link, i, "active")
+                } else {
+                    pendurar_card_reco(data[i].imagem, data[i].link, i, "estado")
+                }
+
+            }
 
         })
 }
@@ -87,7 +112,14 @@ async function getJsonServer_Colegas() {
                 throw new Error(res.status);
             }
 
-            dataS_Clg = await res.json();
+            let data = await res.json();
+
+            for (i = 0; i < data.length; i++) {
+                pendurar_card_colega(data[i].foto, data[i].link, data[i].nome, "text_paleta_02");
+
+            }
+
+            dataS_Clg = data;
 
         })
 }
@@ -111,6 +143,8 @@ async function getApiGitHub_User() {
             linkSite.href = dataUser.blog;
             linkGitHub.href = dataUser.html_url;
             txtNumeroSeguidores.innerText = dataUser.followers
+
+            eu.style.backgroundImage = `url(${dataUser.avatar_url})`;
         })
 }
 
@@ -121,7 +155,35 @@ async function getApiGitHub_Repos() {
                 throw new Error(res.status);
             }
 
-            dataRepos = await res.json();
+            var git = await res.json();
+
+            fetch('https://site-pessoal-servidor.vercel.app/repositorios')
+                .then(async res2 => {
+                    if (!res2.ok) {
+                        throw new Error(res2.status);
+                    }
+
+                    let json = await res2.json();
+
+                    for (i = 0; i < json.length; i++) {
+
+                        if (!json[i].link == "") {
+                            for (j = 0; j < git.length; j++) {
+                                if (json[i].link == git[j].html_url) {
+                                    pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, git[j].stargazers_count, git[j].watchers_count, "color_paleta_02")
+                                }
+                            }
+                        } else {
+                            pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, "0", "0", "color_paleta_02")
+                        }
+
+                    }
+
+                    dataS_Repo = json;
+
+                })
+
+            dataRepos = git;
         })
 }
 
@@ -213,29 +275,39 @@ function beje() {
     linkedin.src = "./assets/img/linkedin.png";
     seguidor.src = "./assets/img/seguidor.png";
 
-    eu.style.backgroundImage = `url(${dataS_Fotos[1].foto})`; 
+    eu.style.backgroundImage = `url(${dataS_Fotos[1].foto})`;
 
     instanciarColegas("text_paleta_01");
-    
-    instanciarRecomendacoes();   
+
     instanciarRepositorios("color_paleta_03");
 }
 
 function start() {
 
-    azulMarinho();
-};
+    paleta.forEach((p) =>
+        p.style.backgroundColor = "#01355c"
+    );
+    textPaleta.forEach((txt) =>
+        txt.style.color = "#ffffff"
+    );
+    fontEsp.forEach((txt) =>
+        txt.style.color = "rgba(255, 255, 255, 1)"
+    );
 
-window.addEventListener("load", () => {
+    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+    instagram.src = "./assets/img/instagramBranco.png";
+    linkedin.src = "./assets/img/linkedinBranco.png";
+    seguidor.src = "./assets/img/seguidor_branco.png";
+
     getApiGitHub_User();
-    getApiGitHub_Repos();
     getApiGitHub_Social();
+    getApiGitHub_Repos()
 
     getJsonServer_Fotos();
-    getJsonServer_Repositorios();
     getJsonServer_Recomendacoes();
     getJsonServer_Colegas();
-});
+}
 
 /**
  * Instanciar dados
@@ -261,22 +333,7 @@ function instanciarRepositorios(paleta) {
 
 }
 
-function instanciarRecomendacoes() {
 
-    itensCarrosel.innerHTML = "";
-    contadorCarrosel.innerHTML = "";
-
-    for (i = 0; i < dataS_Reco.length; i++) {
-
-        if(i == 0){
-            pendurar_card_reco(dataS_Reco[i].imagem, dataS_Reco[i].link, i, "active")
-        }else{
-            pendurar_card_reco(dataS_Reco[i].imagem, dataS_Reco[i].link, i, "estado")
-        }
-
-    }
-
-}
 
 function instanciarColegas(paleta) {
 
