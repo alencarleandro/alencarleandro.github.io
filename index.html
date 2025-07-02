@@ -48,7 +48,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active text_paleta text-center botaoAnima"
-                                    href="#repositorios"><strong>Repositorios</strong></a>
+                                    href="#repositorios"><strong>Portfólio</strong></a>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +78,7 @@
                         <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong>Paleta</strong></div>
                         <div class="exp2 paleta w-100"></div>
 
-                        <div class="flex gap-3 mt-3 centro">
+                        <div class="flex gap-3 mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
                             <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
                                 <div onclick="preto()" id="paletaPreta"
                                     class="icon32 rounded-circle color_preto cursorHand"></div>
@@ -86,6 +86,33 @@
                                     class="icon32 rounded-circle color_azulMarinho cursorHand"></div>
                                 <div onclick="beje()" id="paletaBeje"
                                     class="icon32 rounded-circle color_beje cursorHand"></div>
+                            </div>
+                        
+                            <div class="mt-4">
+                                <div class="em1-5 text_paleta" style="padding-left: 32px;"><strong>Habilidades Técnicas:</strong></div>
+                                <div class="flex flex-wrap gap-2 mt-2" style="padding-left: 32px;">
+                                    <span class="badge bg-primary">Java</span>
+                                    <span class="badge bg-success">Spring</span>
+                                    <span class="badge bg-info">JavaFX</span>
+                                    <span class="badge bg-warning">SQL</span>
+                                    <span class="badge bg-secondary">JavaScript</span>
+                                    <span class="badge bg-dark">HTML/CSS</span>
+                                    <span class="badge bg-primary">Swift</span>
+                                    <span class="badge bg-success">Selenium</span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="em1-5 text_paleta" style="padding-left: 32px; "><strong>Formação Acadêmica:</strong></div>
+                                <div class="mt-2" style="padding-left: 32px;">
+                                    <div class="text_paleta"><strong>Engenharia de Software</strong></div>
+                                    <div class="text_paleta">PUC Minas, Belo Horizonte</div>
+                                    <div class="text_paleta">2024-2027</div>
+                                </div>
+                                <div class="mt-2" style="padding-left: 32px;">
+                                    <div class="text_paleta"><strong>Técnico em Eletrônica</strong></div>
+                                    <div class="text_paleta">SENAI Horto, Belo Horizonte</div>
+                                    <div class="text_paleta">2022-2023</div>
+                                </div>
                             </div>
 
                         </div>
@@ -98,14 +125,17 @@
 
                         <div class=" ps-5">
 
-                            <div class="fontEsp em1-5 mt-4"><strong id="txtNome"></strong>
+                            <div class="fontEsp em1-5 mt-4"><strong id="txtNome"></strong></div>
+
+                            <div class="mt-4">
+                                <div class="em1-5 text_paleta"><strong>Sobre mim</strong></div>
+                                <div class="text_paleta mt-2">
+                                    Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software. Comecei a trabalhar com informática aos 12 anos, inicialmente com manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.
+                                </div>
                             </div>
 
                             <div id="txtDescricao" class="em1-5 mt-1 text-wrap text_paleta">
                             </div>
-
-                            <div class="em1-5 mt-3 text_paleta"><strong>Location: </strong> <label
-                                    id="txtLocation"></label></div>
 
                             <div class="layoutContagem pe-5">
                                 <div class="P">
@@ -128,13 +158,35 @@
                                         alt="Linkedin"></a>
                             </div>
 
+                            <div class="mt-4" style="width:100%;">
+                                <div class="em1-5 text_paleta"><strong>Experiência Profissional:</strong></div>
+                                <div class="text_paleta mt-2">
+                                    <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V2</strong></div>
+                                    <div class="text_paleta">jan 2024 - atual</div>
+                                    <div class="text_paleta mt-1">Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.</div>
+                                    <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small></div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="text_paleta"><strong>Desenvolvedor Fullstack - Disparador de Mensagens</strong></div>
+                                    <div class="text_paleta">jan 2023 - fev 2024</div>
+                                    <div class="text_paleta mt-1">Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.</div>
+                                    <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small></div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V1</strong></div>
+                                    <div class="text_paleta">jan 2022 - ago 2023</div>
+                                    <div class="text_paleta mt-1">Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.</div>
+                                    <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, Java Swing, SQL</small></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
             </section>
 
             <section class="pt-4">
                 <div>
-                    <div class="em2 mb-2 centro text_paleta"><strong id="repositorios">Repositorios</strong></div>
+                    <div class="em2 mb-2 centro text_paleta"><strong id="repositorios">Portfólio</strong></div>
                     <div class="exp2 paleta"></div>
                 </div>
 

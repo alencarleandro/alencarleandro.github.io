@@ -83,13 +83,15 @@ async function getApiGitHub_User() {
 
             dataUser = await res.json();
 
-            txtNome.innerText = dataUser.name;
-            txtDescricao.innerText = dataUser.bio;
-            txtLocation.innerText += " " + dataUser.location;
-            linkSite.href = dataUser.blog;
+            // Dados do perfil baseados no currículo
+            txtNome.innerText = "Leandro Alencar Pereira Clemente";
+//             txtDescricao.innerText = "Engenheiro de Software (em formação) apaixonado por tecnologia, especialmente por programação e arquitetura de software. Comecei a trabalhar com informática aos 12 anos e atualmente curso Engenharia de Software na PUC Minas (2024-2027). Busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.";
+            txtLocation.innerText = "Belo Horizonte, MG";
+            linkSite.href = "https://alencarleandro.github.io";
             linkGitHub.href = dataUser.html_url;
 
-            eu.style.backgroundImage = `url(${dataUser.avatar_url})`;
+            // Sempre usar a imagem local padrão azul
+            eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
         })
 }
 
@@ -168,7 +170,7 @@ function preto() {
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
 
-    eu.style.backgroundImage = `url(${"./assets/img/eu_preto.jpeg"})`;
+    eu.style.backgroundImage = `url(./assets/img/eu_preto.png)`;
 
     instanciarRepositorios("color_paleta_01");
 }
@@ -192,7 +194,7 @@ function azulMarinho() {
 
     instanciarRepositorios("color_paleta_02");
 
-    eu.style.backgroundImage = `url(${"./assets/img/eu_azul.jpg"})`;
+    eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
 
 }
 
@@ -213,13 +215,13 @@ function beje() {
     instagram.src = "./assets/img/instagram.png";
     linkedin.src = "./assets/img/linkedin.png";
 
-    eu.style.backgroundImage = `url(${"./assets/img/eu_beje.png"})`;
+    eu.style.backgroundImage = `url(./assets/img/eu_beje.png)`;
 
     instanciarRepositorios("color_paleta_03");
 }
 
 function start() {
-
+    // Configuração visual da paleta azul ao iniciar
     paleta.forEach((p) =>
         p.style.backgroundColor = "#01355c"
     );
@@ -229,11 +231,11 @@ function start() {
     fontEsp.forEach((txt) =>
         txt.style.color = "rgba(255, 255, 255, 1)"
     );
-
     seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
     folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
+    eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
 
     // Atualizar ano no footer automaticamente
     const anoAtual = new Date().getFullYear();
@@ -243,7 +245,7 @@ function start() {
     }
 
     getApiGitHub_User();
-    getApiGitHub_Repos()
+    getApiGitHub_Repos();
 }
 
 /**
