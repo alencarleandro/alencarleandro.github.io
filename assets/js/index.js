@@ -6,7 +6,6 @@ const paleta = document.querySelectorAll(".paleta");
 const eu = document.querySelector(".eu");
 const instagram = document.querySelector(".instagram");
 const linkedin = document.querySelector(".linkedin");
-const seguidor = document.querySelector(".seguidor");
 const textPaleta = document.querySelectorAll(".text_paleta");
 const scroll = document.querySelector(".cartaoH");
 const fontEsp = document.querySelectorAll(".fontEsp");
@@ -18,7 +17,6 @@ const txtDescricao = document.querySelector("#txtDescricao");
 const txtLocation = document.querySelector("#txtLocation");
 const linkSite = document.querySelector("#linkSite");
 const linkGitHub = document.querySelector("#linkGitHub");
-const txtNumeroSeguidores = document.querySelector("#txtNumeroSeguidores");
 const repositorios = document.querySelector("#repositorios");
 
 const linkInstagram = document.querySelector("#linkInstagram");
@@ -26,34 +24,19 @@ const linkLinkedIn = document.querySelector("#linkLinkedIn");
 
 const cards_repos = document.querySelector("#cards_repos");
 
-const itensCarrosel = document.querySelector("#itensCarrosel");
-const contadorCarrosel = document.querySelector("#contadorCarrosel");
 
-const colegas = document.querySelector("#colegas");
 
 var dataUser;
 var dataRepos;
 var dataSocial;
 
-var dataS_Fotos;
 var dataS_Repo;
-var dataS_Clg;
 
 /**
  * Instanciando dados pela -> JsonServer - Vercel 
  */
 
-async function getJsonServer_Fotos() {
-    fetch('https://site-pessoal-servidor.vercel.app/minhasFotos')
-        .then(async res => {
-            if (!res.ok) {
-                throw new Error(res.status);
-            }
 
-            dataS_Fotos = await res.json();
-
-        })
-}
 
 async function getJsonServer_Repositorios() {
     fetch('https://site-pessoal-servidor.vercel.app/repositorios')
@@ -83,46 +66,8 @@ async function getJsonServer_Repositorios() {
         })
 }
 
-async function getJsonServer_Recomendacoes() {
-    fetch('https://site-pessoal-servidor.vercel.app/recomendacoes')
-        .then(async res => {
-            if (!res.ok) {
-                throw new Error(res.status);
-            }
 
-            let data = await res.json();
 
-            for (i = 0; i < data.length; i++) {
-
-                if (i == 0) {
-                    pendurar_card_reco(data[i].imagem, data[i].link, i, "active")
-                } else {
-                    pendurar_card_reco(data[i].imagem, data[i].link, i, "estado")
-                }
-
-            }
-
-        })
-}
-
-async function getJsonServer_Colegas() {
-    fetch('https://site-pessoal-servidor.vercel.app/colegas')
-        .then(async res => {
-            if (!res.ok) {
-                throw new Error(res.status);
-            }
-
-            let data = await res.json();
-
-            for (i = 0; i < data.length; i++) {
-                pendurar_card_colega(data[i].foto, data[i].link, data[i].nome, "text_paleta_02");
-
-            }
-
-            dataS_Clg = data;
-
-        })
-}
 
 /**
  * Instanciando dados pela -> GitHub - API 
@@ -143,7 +88,6 @@ async function getApiGitHub_User() {
             txtLocation.innerText += " " + dataUser.location;
             linkSite.href = dataUser.blog;
             linkGitHub.href = dataUser.html_url;
-            txtNumeroSeguidores.innerText = dataUser.followers
 
             eu.style.backgroundImage = `url(${dataUser.avatar_url})`;
         })
@@ -219,15 +163,12 @@ function preto() {
         txt.style.color = "rgba(255, 255, 255, 0.8)"
     );
 
-    instanciarColegas("text_paleta_02");
-
     folha.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
     seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
-    seguidor.src = "./assets/img/seguidor_branco.png";
 
-    eu.style.backgroundImage = `url(${dataS_Fotos[0].foto})`;
+    eu.style.backgroundImage = `url(${"./assets/img/eu_preto.jpeg"})`;
 
     instanciarRepositorios("color_paleta_01");
 }
@@ -248,13 +189,10 @@ function azulMarinho() {
     folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
-    seguidor.src = "./assets/img/seguidor_branco.png";
-
-    instanciarColegas("text_paleta_02");
 
     instanciarRepositorios("color_paleta_02");
 
-    eu.style.backgroundImage = `url(${dataUser.avatar_url})`;
+    eu.style.backgroundImage = `url(${"./assets/img/eu_azul.jpg"})`;
 
 }
 
@@ -274,11 +212,8 @@ function beje() {
     seletorPaleta.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
     instagram.src = "./assets/img/instagram.png";
     linkedin.src = "./assets/img/linkedin.png";
-    seguidor.src = "./assets/img/seguidor.png";
 
-    eu.style.backgroundImage = `url(${dataS_Fotos[1].foto})`;
-
-    instanciarColegas("text_paleta_01");
+    eu.style.backgroundImage = `url(${"./assets/img/eu_beje.png"})`;
 
     instanciarRepositorios("color_paleta_03");
 }
@@ -299,15 +234,16 @@ function start() {
     folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
-    seguidor.src = "./assets/img/seguidor_branco.png";
+
+    // Atualizar ano no footer automaticamente
+    const anoAtual = new Date().getFullYear();
+    const footer = document.querySelector("footer strong");
+    if (footer) {
+        footer.innerHTML = footer.innerHTML.replace(/© \d{4}/, `© ${anoAtual}`);
+    }
 
     getApiGitHub_User();
-    getApiGitHub_Social();
     getApiGitHub_Repos()
-
-    getJsonServer_Fotos();
-    getJsonServer_Recomendacoes();
-    getJsonServer_Colegas();
 }
 
 /**
@@ -346,16 +282,7 @@ function instanciarRepositorios(paleta) {
 
 
 
-function instanciarColegas(paleta) {
 
-    colegas.innerHTML = "";
-
-    for (i = 0; i < dataS_Clg.length; i++) {
-        pendurar_card_colega(dataS_Clg[i].foto, dataS_Clg[i].link, dataS_Clg[i].nome, paleta);
-
-    }
-
-}
 
 /**
  * Elementos
@@ -392,42 +319,6 @@ function pendurar_card_repo(img, titulo, descricao, favoritos, forks, paleta, ur
     cards_repos.appendChild(x);
 }
 
-function pendurar_card_reco(img, link, n, estado) {
 
-    let card =
-        `<div class="carousel-item ${estado}">
-            <a href="${link}">
-                <img class="d-block w-100" src="${img}">
-            </a>
-            <div class="carousel-caption d-none d-md-block"></div>
-         </div>`;
 
-    const x = document.createElement('div');
-    x.innerHTML = card;
-    itensCarrosel.appendChild(x);
 
-    let card2 =
-        `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${n}"
-                                class="${estado}" aria-current="true"></button>`;
-
-    const y = document.createElement('div');
-    y.innerHTML = card2;
-    contadorCarrosel.appendChild(y);
-}
-
-function pendurar_card_colega(img, link, nome, paleta) {
-
-    let card =
-        `<div class="centro ">
-            <a class="textUnd" href="${link}">
-                <span class="textoNome textUnd">
-                    <img class="rounded-circle colegasTrabalho textUnd" src="${img}" alt="${nome}, foto perfil.">
-                    <div class="mt-3 textUnd ${paleta}"><strong>${nome}</strong></div>
-                </span>
-            </a>
-        </div>`;
-
-    const x = document.createElement('div');
-    x.innerHTML = card;
-    colegas.appendChild(x);
-}
