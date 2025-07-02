@@ -24,50 +24,11 @@ const linkLinkedIn = document.querySelector("#linkLinkedIn");
 
 const cards_repos = document.querySelector("#cards_repos");
 
-
-
 var dataUser;
 var dataRepos;
 var dataSocial;
 
 var dataS_Repo;
-
-/**
- * Instanciando dados pela -> JsonServer - Vercel 
- */
-
-
-
-async function getJsonServer_Repositorios() {
-    fetch('https://site-pessoal-servidor.vercel.app/repositorios')
-        .then(async res => {
-            if (!res.ok) {
-                throw new Error(res.status);
-            }
-
-            let data = await res.json();
-
-            for (i = 0; i < data.length; i++) {
-
-                if (!data[i].link == "") {
-                    for (j = 0; j < x.length; j++) {
-                        if (data[i].link == x[j].html_url) {
-                            pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, x[j].stargazers_count, x[j].watchers_count, paleta,x[j].url)
-                        }
-                    }
-                } else {
-                    pendurar_card_repo(data[i].foto, data[i].titulo, data[i].descricao, "0", "0", paleta,"privado")
-                }
-
-            }
-
-            dataS_Repo = data;
-
-        })
-}
-
-
-
 
 /**
  * Instanciando dados pela -> GitHub - API 
@@ -92,45 +53,6 @@ async function getApiGitHub_User() {
 
             // Sempre usar a imagem local padrão azul
             eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
-        })
-}
-
-async function getApiGitHub_Repos() {
-    fetch('https://api.github.com/users/alencarleandro/repos')
-        .then(async res => {
-            if (!res.ok) {
-                throw new Error(res.status);
-            }
-
-            var git = await res.json();
-
-            fetch('https://site-pessoal-servidor.vercel.app/repositorios')
-                .then(async res2 => {
-                    if (!res2.ok) {
-                        throw new Error(res2.status);
-                    }
-
-                    let json = await res2.json();
-
-                    for (i = 0; i < json.length; i++) {
-
-                        if (!json[i].link == "") {
-                            for (j = 0; j < git.length; j++) {
-                                if (json[i].link == git[j].html_url) {
-                                    pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, git[j].stargazers_count, git[j].watchers_count, "color_paleta_02",git[j].url)
-                                }
-                            }
-                        } else {
-                            pendurar_card_repo(json[i].foto, json[i].titulo, json[i].descricao, "0", "0", "color_paleta_02","privado")
-                        }
-
-                    }
-
-                    dataS_Repo = json;
-
-                })
-
-            dataRepos = git;
         })
 }
 
@@ -172,7 +94,6 @@ function preto() {
 
     eu.style.backgroundImage = `url(./assets/img/eu_preto.png)`;
 
-    instanciarRepositorios("color_paleta_01");
 }
 
 function azulMarinho() {
@@ -191,8 +112,6 @@ function azulMarinho() {
     folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
     instagram.src = "./assets/img/instagramBranco.png";
     linkedin.src = "./assets/img/linkedinBranco.png";
-
-    instanciarRepositorios("color_paleta_02");
 
     eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
 
@@ -217,26 +136,10 @@ function beje() {
 
     eu.style.backgroundImage = `url(./assets/img/eu_beje.png)`;
 
-    instanciarRepositorios("color_paleta_03");
 }
 
 function start() {
-    // Configuração visual da paleta azul ao iniciar
-    paleta.forEach((p) =>
-        p.style.backgroundColor = "#01355c"
-    );
-    textPaleta.forEach((txt) =>
-        txt.style.color = "#ffffff"
-    );
-    fontEsp.forEach((txt) =>
-        txt.style.color = "rgba(255, 255, 255, 1)"
-    );
-    seletorPaleta.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-    folha.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-    instagram.src = "./assets/img/instagramBranco.png";
-    linkedin.src = "./assets/img/linkedinBranco.png";
-    eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
-
+    preto();
     // Atualizar ano no footer automaticamente
     const anoAtual = new Date().getFullYear();
     const footer = document.querySelector("footer strong");
@@ -245,7 +148,7 @@ function start() {
     }
 
     getApiGitHub_User();
-    getApiGitHub_Repos();
+    getApiGitHub_Social();
 }
 
 /**
@@ -257,34 +160,6 @@ function trocar(paleta, url){
     sessionStorage.setItem("url", url);
     window.location.href = "./views/repo.html";
 }
-
-/**
- * Instanciar dados
- */
-
-function instanciarRepositorios(paleta) {
-
-    cards_repos.innerHTML = "";
-
-    for (i = 0; i < dataS_Repo.length; i++) {
-
-        if (!dataS_Repo[i].link == "") {
-            for (j = 0; j < dataRepos.length; j++) {
-                if (dataS_Repo[i].link == dataRepos[j].html_url) {
-                    pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, dataRepos[j].stargazers_count, dataRepos[j].watchers_count, paleta,dataRepos[j].url)
-                }
-            }
-        } else {
-            pendurar_card_repo(dataS_Repo[i].foto, dataS_Repo[i].titulo, dataS_Repo[i].descricao, "0", "0", paleta,"privado")
-        }
-
-    }
-
-}
-
-
-
-
 
 /**
  * Elementos
