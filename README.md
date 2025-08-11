@@ -1,5 +1,5 @@
 # 💫 Sobre mim:
-Ola! meu nome é Leandro Alencar, tenho formação técnica em eletrônica pelo SENAI e, atualmente, estou cursando Engenharia de Software pela PUC Minas. Dentre minhas habilidades, destaco minha facilidade em comunicação, trabalho em equipe e liderança. Além disso, tenho facilidade em aprender novas linguagens de programação, sendo que já possuo conhecimento em algumas, como Java, C e JavaScript. Também tenho expertise no uso de bancos de dados, com experiência em SGBDs como MySQL e PostgreSQL.
+Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software. Comecei a trabalhar com informática aos 12 anos, inicialmente com manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.
 
 # 💻 Proficiências:
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) 
