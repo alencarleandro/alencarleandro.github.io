@@ -3859,13 +3859,13 @@ td {
 .h_minContent{min-height: min-content; height: min-content; max-height: min-content;}
 
 .repo{
-    min-height: 380px; height: 380px; max-height: 380px;
-    width: 18rem;
+    min-height: 400px; height: 400px; max-height: 400px;
+	width: 500px;
 }
 
 .repo:hover{
-    min-height: 390px; height: 390px; max-height: 390px;
-    width: 18.5rem;
+    min-height: 410px; height: 410px; max-height: 410px;
+    width: 500px;
 }
 
 
@@ -4115,6 +4115,8 @@ td {
 .text_transparent-esp{color: rgba(0,0,0,0);}
 
 .exp2{height: 2px}
+
+.w_exp2{width: 2px; min-width: 2px}
 
 .wrap{text-wrap: wrap;}
 

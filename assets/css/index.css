@@ -18,26 +18,33 @@
         "foto descricao";
 }
 
-.perfil-inferior{
+.perfil-inferior {
     display: grid;
-    row-gap: 8px;
-    column-gap: 8px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2px 2fr; /* Transformando as seções em colunas horizontais */
     grid-template-rows: auto;
-    grid-template-areas:
-        "habilidades experiencia";
-    margin-top: 16px;
-    padding: 8px;
+    grid-template-areas: 
+        "habilidades divisorHorizontal experiencia";
+    align-items: start; /* Alinha as seções no início verticalmente */
 }
 
-.habilidades{
+.habilidades {
     grid-area: habilidades;
     padding: 16px;
 }
 
-.experiencia{
+.divisorHorizontal {
+    grid-area: divisorHorizontal;
+    width: 2px; /* Largura do divisor vertical */
+    height: 100%; /* Altura definida como 100% */
+    align-self: stretch; /* Garante que o divisor ocupe toda a altura da célula */
+    justify-self: center; /* Centraliza o divisor horizontalmente dentro da célula */
+}
+
+.experiencia {
     grid-area: experiencia;
-    padding: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
 }
 
 .layoutContagem{
@@ -94,7 +101,22 @@
     max-height: 220px;
 }
 
-@media only screen and (max-width: 900px) {    
+@media only screen and (max-width: 900px) {
+    .perfil-inferior {
+        grid-template-columns: auto; /* Voltar ao layout vertical para telas pequenas */
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "habilidades"
+            "divisorHorizontal"
+            "experiencia";
+    }
+
+    .divisorHorizontal {
+        width: 100%; /* Ocupa toda a largura no layout vertical */
+        height: 2px; /* Transformar em divisor horizontal no layout vertical */
+        align-self: center; /* Centraliza no layout vertical */
+    }
+
     .main{
         padding-left: 0px;
         padding-right: 0px;
@@ -110,19 +132,6 @@
         grid-template-areas:
             "foto"
             "descricao";
-    }
-
-    .perfil-inferior{
-        display: grid;
-        row-gap: 24px;
-        column-gap: 16px;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-            "habilidades"
-            "experiencia";
-        margin-top: 24px;
-        padding: 16px;
     }
 
     .folha{

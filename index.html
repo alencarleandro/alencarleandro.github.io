@@ -3,311 +3,435 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Site Pessoal
     </title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="./assets/css/fotos.css">
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/index.css" rel="stylesheet">
+    <link href="./assets/css/fotos.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body onload="start()" class="paleta body rolagemY cartaoV ">
+<body class="paleta body rolagemY cartaoV " onload="start()">
 
-    <header class="h_minContent header P">
-        <div class="paleta header P ">
+<header class="h_minContent header P">
+    <div class="paleta header P ">
 
-            <nav class="navbar navbar-expand-lg P">
-                <div class="container-fluid paleta">
+        <nav class="navbar navbar-expand-lg P">
+            <div class="container-fluid paleta">
 
-                    <div class="Nome">
-                        <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center"> <strong>Leandro
-                                Alencar</strong>
-                        </div>
+                <div class="Nome">
+                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center"><strong>Leandro
+                        Alencar</strong>
                     </div>
-
-                    <div class="radius_All_-5- color_brancoTransparent semBorda">
-                        <button class="navbar-toggler semBorda" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon semBorda"></span>
-                        </button>
-                    </div>
-
-
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav gap-3">
-                            <li class="nav-item">
-                                <a class="nav-link active text_paleta text-center botaoAnima" aria-current="page"
-                                    href="#perfil"><strong>Perfil</strong></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text_paleta text-center botaoAnima"
-                                    href="#repositorios"><strong>Portfólio</strong></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </nav>
-
-        </div>
-    </header>
-
-    <main class="main P">
-
-        <div class="pt-2 folha">
-
-            <section>
-                <div class="perfil ">
-                    <div class="coluna foto">
-
-                        <div class="flex">
-                            <div class="p-3 mp paleta"></div>
-                            <div class="p-2 mp paleta radius_TR-BR_MAX justify-content-end">
-                                <div class="eu rounded-circle  "></div>
-                            </div>
-                        </div>
-
-
-                        <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong>Paleta</strong></div>
-                        <div class="exp2 paleta w-100"></div>
-
-                        <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
-                            <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
-                                <div onclick="preto()" id="paletaPreta"
-                                    class="icon32 rounded-circle color_preto cursorHand"></div>
-                                <div onclick="azulMarinho()" id="paletaAzul"
-                                    class="icon32 rounded-circle color_azulMarinho cursorHand"></div>
-                                <div onclick="beje()" id="paletaBeje"
-                                    class="icon32 rounded-circle color_beje cursorHand"></div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="descricao pt-2">
-                        <div id="perfil" class="em2 centro mb-2 text_paleta"><strong>Perfil</strong></div>
-                        <div class="exp2 paleta"></div>
-
-                        <div class=" ps-5">
-
-                            <div class="fontEsp em1-5 mt-4"><strong>Leandro Alencar Pereira Clemente</strong></div>
-
-                            <div class="mt-4">
-                                <div class="em1-5 text_paleta"><strong>Sobre mim</strong></div>
-                                <div class="text_paleta mt-2" style="text-align: justify; padding-right: 32px;">
-                                    Sou apaixonado por tecnologia, especialmente por programação e arquitetura de
-                                    software. Comecei a trabalhar com informática aos 12 anos, inicialmente com
-                                    manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI
-                                    Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso
-                                    Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos
-                                    em projetos desafiadores, contribuindo com soluções e crescimento profissional
-                                    contínuo.
-                                </div>
-                            </div>
-
-                            <div id="txtDescricao" class="em1-5 mt-1 text-wrap text_paleta">
-                            </div>
-
-                                                        <div class="layoutContagem pe-5">
-                                <div class="P">
-                                    <div class="em1-5 mt-2 text_paleta"> <strong>GitHub: </strong>
-                                        <a href="https://github.com/alencarleandro">github/alencarleandro</a>
-                                    </div>
-
-                                    <div class="em1-5 mt-2 text_paleta"> <strong>LinkedIn: </strong>
-                                        <a href="https://www.linkedin.com/in/alencarleandro">linkedin/alencarleandro</a>
-                                    </div>
-                                </div>
-                              
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
 
-                <section class="pt-5">
-                    <div>                        
-                        <div class="exp2 paleta"></div>
-                    </div>
+                <div class="radius_All_-5- color_brancoTransparent semBorda">
+                    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler semBorda" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+                            type="button">
+                        <span class="navbar-toggler-icon semBorda"></span>
+                    </button>
+                </div>
 
-                    <div class="rolagemX cartaoHV">
-                        <div class="flex gap-3 scrollColegas centro">
 
-                            <div id="cards_repos" class="flex centro h440 ">
-                                <div class="card p-4 m-3 centro repo" style="width: 320px;">
-                                    <div class="card-body">
-                                        <img src="./assets/img/LegnuIconPreto.png" alt="Logo do projeto"
-                                            style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                        <h5 class="card-title text-center">ERP V2</h5>
-                                        <p class="card-text text-center">Sistema ERP modular para médias empresas, com
-                                            foco em escalabilidade e aplicação dos princípios SOLID.</p>
-                                        <div class="flex flex-wrap gap-2 justify-content-center">
-                                            <span class="badge bg-primary">Java</span>
-                                            <span class="badge bg-success">Spring</span>
-                                            <span class="badge bg-info">JavaFX</span>
-                                            <span class="badge bg-warning">CSS</span>
-                                            <span class="badge bg-secondary">SQL</span>
-                                            <span class="badge bg-dark">Selenium</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card p-4 m-3 centro repo" style="width: 320px;">
-                                    <div class="card-body">
-                                        <img src="./assets/img/LegnuIconPreto.png" alt="Logo do projeto"
-                                            style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                        <h5 class="card-title text-center">Disparador de Mensagens</h5>
-                                        <p class="card-text text-center">Aplicação desktop para envio automatizado de
-                                            mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
-                                        </p>
-                                        <div class="flex flex-wrap gap-2 justify-content-center">
-                                            <span class="badge bg-primary">Java</span>
-                                            <span class="badge bg-info">JavaFX</span>
-                                            <span class="badge bg-warning">CSS</span>
-                                            <span class="badge bg-secondary">SQL</span>
-                                            <span class="badge bg-dark">Selenium</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card p-4 m-3 centro repo" style="width: 320px;">
-                                    <div class="card-body">
-                                        <img src="./assets/img/LegnuIconPreto.png" alt="Logo do projeto"
-                                            style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                        <h5 class="card-title text-center">ERP V1</h5>
-                                        <p class="card-text text-center">Sistema de gestão para pequenas empresas com
-                                            funcionalidades de relatórios, ordens de serviço, estoque e controle
-                                            financeiro.</p>
-                                        <div class="flex flex-wrap gap-2 justify-content-center">
-                                            <span class="badge bg-primary">Java</span>
-                                            <span class="badge bg-info">Java Swing</span>
-                                            <span class="badge bg-secondary">SQL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a aria-current="page" class="nav-link active text_paleta text-center botaoAnima"
+                               href="#perfil"><strong>Perfil</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text_paleta text-center botaoAnima"
+                               href="#repositorios"><strong>Portfólio</strong></a>
+                        </li>
+                    </ul>
+                </div>
 
-                        </div>
-                    </div>
-                </section>
+            </div>
+        </nav>
 
-                <div class="exp2 paleta mt-2"></div>
+    </div>
+</header>
 
-                <div class="perfil-inferior">
-                    <div class="habilidades">
-                        <div class="em1-5 text_paleta mb-3"><strong>Habilidades Técnicas</strong></div>
-                        
-                        <div class="em1-2 text_paleta mt-3"><strong>Linguagens de Programação:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
-                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-                            <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
-                            <img src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift">
-                        </div>
+<main class="main P">
 
-                        <div class="em1-2 text_paleta mt-3"><strong>Frameworks & Bibliotecas:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white" alt="JavaFX">
-                            <img src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white" alt="Java Swing">
-                            <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring">
-                            <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white" alt="Hibernate">
-                            <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-                        </div>
+    <div class="pt-2 folha">
 
-                        <div class="em1-2 text_paleta mt-3"><strong>Frontend:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-                            <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-                        </div>
+        <section>
+            <div class="perfil ">
+                <div class="coluna foto">
 
-                        <div class="em1-2 text_paleta mt-3"><strong>Banco de Dados:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-                            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
-                            <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
-                        </div>
-
-                        <div class="em1-2 text_paleta mt-3"><strong>Cloud & DevOps:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white" alt="Red Hat">
-                            <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
-                            <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
-                        </div>
-
-                        <div class="em1-2 text_paleta mt-3"><strong>Ferramentas de Desenvolvimento:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-                            <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
-                            <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino">
-                        </div>
-
-                        <div class="em1-2 text_paleta mt-3"><strong>Design & Multimídia:</strong></div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-                            <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt="Canva">
-                            <img src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13" alt="Inkscape">
-                            <img src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
+                    <div class="flex">
+                        <div class="p-3 mp paleta"></div>
+                        <div class="p-2 mp paleta radius_TR-BR_MAX justify-content-end">
+                            <div class="eu rounded-circle  "></div>
                         </div>
                     </div>
 
-                    <div class="experiencia">
-                        <div class="em1-5 text_paleta mb-3"><strong>Experiência Profissional</strong></div>
-                        
-                        <div class="text_paleta mt-2">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V2</strong></div>
-                            <div class="text_paleta">jan 2024 - atual</div>
-                            <div class="text_paleta mt-1">Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.</div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small></div>
+
+                    <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong>Paleta</strong></div>
+                    <div class="exp2 paleta w-100"></div>
+
+                    <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
+                        <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
+                            <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
+                                 onclick="preto()"></div>
+                            <div class="icon32 rounded-circle color_azulMarinho cursorHand" id="paletaAzul"
+                                 onclick="azulMarinho()"></div>
+                            <div class="icon32 rounded-circle color_beje cursorHand" id="paletaBeje"
+                                 onclick="beje()"></div>
                         </div>
-                        
-                        <div class="mt-3">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - Disparador de Mensagens</strong></div>
-                            <div class="text_paleta">jan 2023 - fev 2024</div>
-                            <div class="text_paleta mt-1">Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.</div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small></div>
-                        </div>
-                        
-                        <div class="mt-3">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V1</strong></div>
-                            <div class="text_paleta">jan 2022 - ago 2023</div>
-                            <div class="text_paleta mt-1">Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.</div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, Java Swing, SQL</small></div>
-                        </div>
+
+                    </div>
+                </div>
+
+                <div class="descricao pt-2">
+                    <div class="em2 centro mb-2 text_paleta" id="perfil"><strong>Perfil</strong></div>
+                    <div class="exp2 paleta"></div>
+
+                    <div class=" ps-5">
+
+                        <div class="fontEsp em1-5 mt-4"><strong>Leandro Alencar Pereira Clemente</strong></div>
 
                         <div class="mt-4">
-                            <div class="em1-5 text_paleta"><strong>Formação Acadêmica</strong></div>
-                            <div class="mt-2">
-                                <div class="text_paleta"><strong>Engenharia de Software</strong></div>
-                                <div class="text_paleta">PUC Minas, Belo Horizonte</div>
-                                <div class="text_paleta">2024-2027</div>
-                            </div>
-                            <div class="mt-2">
-                                <div class="text_paleta"><strong>Técnico em Eletrônica</strong></div>
-                                <div class="text_paleta">SENAI Horto, Belo Horizonte</div>
-                                <div class="text_paleta">2022-2023</div>
+                            <div class="em1-5 text_paleta"><strong>Sobre mim</strong></div>
+                            <div class="text_paleta mt-2" style="text-align: justify; padding-right: 32px;">
+                                Sou apaixonado por tecnologia, especialmente por programação e arquitetura de
+                                software. Comecei a trabalhar com informática aos 12 anos, inicialmente com
+                                manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI
+                                Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso
+                                Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos
+                                em projetos desafiadores, contribuindo com soluções e crescimento profissional
+                                contínuo.
                             </div>
                         </div>
+
+                        <div class="em1-5 mt-1 text-wrap text_paleta" id="txtDescricao">
+                        </div>
+
+                        <div class="layoutContagem pe-5">
+                            <div class="P">
+                                <div class="em1-5 mt-2 text_paleta"><strong>GitHub: </strong>
+                                    <a href="https://github.com/alencarleandro">github/alencarleandro</a>
+                                </div>
+
+                                <div class="em1-5 mt-2 text_paleta"><strong>LinkedIn: </strong>
+                                    <a href="https://www.linkedin.com/in/alencarleandro">linkedin/alencarleandro</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <section class="pt-5">
+
+                <div class="em2 text_paleta centro"><strong>Portifolio</strong></div>
+
+                <div>
+                    <div class="exp2 paleta"></div>
+                </div>
+
+                <div class="rolagemX cartaoHV">
+                    <div class="flex gap-3 scrollColegas centro">
+
+                        <div class="flex centro h440 " id="cards_repos">
+
+                            <div class="card p-4 m-3 centro repo" style="width: 320px;">
+                                <div class="">
+                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
+                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
+                                    <h5 class="card-title text-center">ERP V2</h5>
+                                    <p class="card-text text-center">Sistema ERP modular para médias empresas, com
+                                        foco em escalabilidade e aplicação dos princípios SOLID.</p>
+                                    <div class="flex flex-wrap gap-2 justify-content-center">
+                                        <img alt="Java"
+                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                        <img alt="Spring"
+                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                        <img alt="JavaFX"
+                                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                        <img alt="CSS3"
+                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                        <img alt="Postgres"
+                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card p-4 m-3 centro repo" style="width: 320px;">
+                                <div class="">
+                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
+                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
+                                    <h5 class="card-title text-center">Disparador de Mensagens</h5>
+                                    <p class="card-text text-center">Aplicação desktop para envio automatizado de
+                                        mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 justify-content-center">
+                                        <img alt="Java"
+                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                        <img alt="JavaFX"
+                                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                        <img alt="CSS3"
+                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                        <img alt="Postgres"
+                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                        <img alt="Selenium"
+                                             src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card p-4 m-3 centro repo" style="width: 320px;">
+                                <div class="">
+                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
+                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
+                                    <h5 class="card-title text-center">ERP V1</h5>
+                                    <p class="card-text text-center">Sistema de gestão para pequenas empresas com
+                                        funcionalidades de relatórios, ordens de serviço, estoque e controle
+                                        financeiro.</p>
+                                    <div class="flex flex-wrap gap-2 justify-content-center">
+                                        <img alt="Java"
+                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                        <img alt="Java Swing"
+                                             src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                                        <img alt="MySQL"
+                                             src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card p-4 m-3 centro repo" style="width: 320px;">
+                                <div class="">
+                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
+                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
+                                    <h5 class="card-title text-center">Giostri Construções</h5>
+                                    <p class="card-text text-center">Sistema de gestão para pequenas empresas com
+                                        funcionalidades de relatórios, ordens de serviço, estoque e controle
+                                        financeiro.</p>
+                                    <div class="flex flex-wrap gap-2 justify-content-center">
+                                        <img alt="Java"
+                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                        <img alt="Spring"
+                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                        <img alt="Hibernate"
+                                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                        <img alt="Bootstrap"
+                                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                        <img alt="Postgres"
+                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                        <img alt="HTML5"
+                                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                        <img alt="CSS3"
+                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                        <img alt="JavaScript"
+                                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card p-4 m-3 centro repo" style="width: 320px;">
+                                <div class="">
+                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
+                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
+                                    <h5 class="card-title text-center">CineScore</h5>
+                                    <p class="card-text text-center">Sistema de gestão para pequenas empresas com
+                                        funcionalidades de relatórios, ordens de serviço, estoque e controle
+                                        financeiro.</p>
+                                    <div class="flex flex-wrap gap-2 justify-content-center">
+                                        <img alt="Java"
+                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                        <img alt="Spring"
+                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                        <img alt="Hibernate"
+                                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                        <img alt="Bootstrap"
+                                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                        <img alt="Postgres"
+                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                        <img alt="HTML5"
+                                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                        <img alt="CSS3"
+                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                        <img alt="JavaScript"
+                                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </section>
 
-        </div>
+            <div class="exp2 paleta mt-2"></div>
 
-    </main>
+            <div class="perfil-inferior">
+                <div class="habilidades">
+                    <div class="em1-5 text_paleta mb-3"><strong>Habilidades Técnicas</strong></div>
 
-    <footer class="h_minContent footer P">
-        <div class="centro pb-4 pt-4 text_paleta"><strong>© 2024 - All rights reserved - Leandro Alencar</strong></div>
-    </footer>
+                    <div class="em1-2 text_paleta mt-3"><strong>Linguagens de Programação:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="C"
+                             src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+                        <img alt="Java"
+                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                        <img alt="JavaScript"
+                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                        <img alt="Swift"
+                             src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Frameworks & Bibliotecas:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="JavaFX"
+                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                        <img alt="Java Swing"
+                             src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                        <img alt="Spring"
+                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                        <img alt="Hibernate"
+                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                        <img alt="Bootstrap"
+                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                        <img alt="Selenium"
+                             src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Frontend:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="HTML5"
+                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                        <img alt="CSS3"
+                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Banco de Dados:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="MySQL"
+                             src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                        <img alt="Postgres"
+                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                        <img alt="SQLite"
+                             src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Cloud & DevOps:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="Red Hat"
+                             src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
+                        <img alt="Google Cloud"
+                             src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+                        <img alt="Vercel"
+                             src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Ferramentas de Desenvolvimento:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="Git"
+                             src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                        <img alt="GitHub"
+                             src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                        <img alt="Postman"
+                             src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                        <img alt="Arduino"
+                             src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+                    </div>
+
+                    <div class="em1-2 text_paleta mt-3"><strong>Design & Multimídia:</strong></div>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <img alt="Figma"
+                             src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
+                        <img alt="Canva"
+                             src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
+                        <img alt="Inkscape"
+                             src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
+                        <img alt="Blender"
+                             src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
+                    </div>
+                </div>
+
+                <div class="divisorHorizontal w_exp2 paleta">
+                </div>
+
+                <div class="experiencia ">
+
+                    <div class="ms-3">
+                        <div class="em1-5 text_paleta mb-3"><strong>Experiência Profissional</strong></div>
+
+                        <div class="text_paleta mt-2">
+                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V2</strong></div>
+                            <div class="text_paleta">jan 2024 - atual</div>
+                            <div class="text_paleta mt-1">Desenvolvimento de um sistema ERP modular para médias empresas,
+                                com foco em escalabilidade e aplicação dos princípios SOLID.
+                            </div>
+                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL,
+                                Selenium, Spring</small></div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - Disparador de Mensagens</strong>
+                            </div>
+                            <div class="text_paleta">jan 2023 - fev 2024</div>
+                            <div class="text_paleta mt-1">Aplicação desktop para envio automatizado de mensagens para
+                                WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                            </div>
+                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL,
+                                Selenium</small></div>
+                        </div>
+
+                        <div class="mt-3 mb-3">
+                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V1</strong></div>
+                            <div class="text_paleta">jan 2022 - ago 2023</div>
+                            <div class="text_paleta mt-1">Sistema de gestão para pequenas empresas com funcionalidades de
+                                relatórios, ordens de serviço, estoque e controle financeiro.
+                            </div>
+                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, Java Swing, SQL</small>
+                            </div>
+                        </div>
+                    </div>
 
 
-    <script src="./assets/js/index.js"></script>
+                    <div>
+                        <div class="exp2 paleta"></div>
+                    </div>
+
+                    <div class="mt-3 ms-3">
+                        <div class="em1-5 text_paleta"><strong>Formação Acadêmica</strong></div>
+                        <div class="mt-2">
+                            <div class="text_paleta"><strong>Engenharia de Software</strong></div>
+                            <div class="text_paleta">PUC Minas, Belo Horizonte</div>
+                            <div class="text_paleta">2024-2027</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="text_paleta"><strong>Técnico em Eletrônica</strong></div>
+                            <div class="text_paleta">SENAI Horto, Belo Horizonte</div>
+                            <div class="text_paleta">2022-2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="h_minContent footer P">
+    <div class="centro pb-4 pt-4 text_paleta"><strong>© 2024 - All rights reserved - Leandro Alencar</strong></div>
+</footer>
+
+
+<script src="./assets/js/index.js"></script>
 </body>
 
 </html>
