@@ -1,5 +1,5 @@
 # 💫 Sobre mim:
-Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software. Comecei a trabalhar com informática aos 12 anos, inicialmente com manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.
+Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software. Mecho com informática des dos meus 12 anos, inicialmente com manutenção de computadores. Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.
 
 # 💻 Proficiências:
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) 
