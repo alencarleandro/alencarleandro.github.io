@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-i18n="contact.title">Contato - Leandro Alencar</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/fotos.css" rel="stylesheet">
+    <link href="../assets/css/contato.css" rel="stylesheet">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="paleta body rolagemY cartaoV " onload="start()">
+
+<header class="h_minContent header P">
+    <div class="paleta header P ">
+
+        <nav class="navbar navbar-expand-lg P">
+            <div class="container-fluid paleta">
+
+                <div class="Nome">
+                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center">
+                        <a href="../index.html" class="text-decoration-none text_paleta">
+                            <strong>Leandro Alencar</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="radius_All_-5- color_brancoTransparent semBorda">
+                    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler semBorda" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+                            type="button">
+                        <span class="navbar-toggler-icon semBorda"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="../index.html#perfil"><strong data-i18n="nav.profile">Perfil</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="../index.html#repositorios"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text_paleta text-center botaoAnima"
+                               href="#"><strong data-i18n="nav.contact">Contato</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
+                                <span data-i18n="lang.pt">PT</span>/<span data-i18n="lang.en">EN</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<main class="main P">
+
+    <div class="pt-2 folha">
+
+        <section>
+            <div class="contato-header">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong data-i18n="contact.title">Entre em Contato</strong>
+                </div>
+                <div class="exp2 paleta"></div>
+            </div>
+
+            <div class="contato-container">
+                <!-- Seção de Redes Sociais -->
+                <div class="redes-sociais">
+                    <div class="em1-5 text_paleta mb-3 centro">
+                        <strong data-i18n="contact.social.title">Redes Sociais</strong>
+                    </div>
+                    
+                    <div class="icones-container">
+                        <div class="icone-item" onclick="abrirEmail()">
+                            <div class="icone-wrapper email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.email">E-mail</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirWhatsApp()">
+                            <div class="icone-wrapper whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.whatsapp">WhatsApp</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirLinkedIn()">
+                            <div class="icone-wrapper linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.linkedin">LinkedIn</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirGitHub()">
+                            <div class="icone-wrapper github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.github">GitHub</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirInstagram()">
+                            <div class="icone-wrapper instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.instagram">Instagram</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor -->
+                <div class="divisor-vertical"></div>
+
+                <!-- Formulário de Contato -->
+                <div class="formulario-contato">
+                    <div class="em1-5 text_paleta mb-3">
+                        <strong data-i18n="contact.form.title">Envie uma Mensagem</strong>
+                    </div>
+                    
+                    <form id="contactForm" onsubmit="enviarEmail(event)">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text_paleta" data-i18n="contact.form.name">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label text_paleta" data-i18n="contact.form.email">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label text_paleta" data-i18n="contact.form.subject">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label text_paleta" data-i18n="contact.form.message">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-enviar">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            <span data-i18n="contact.form.send">Enviar Mensagem</span>
+                        </button>
+                    </form>
+                    
+                    <div id="formStatus" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- Informações de Contato Adicionais -->
+            <div class="info-contato mt-5">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="contact.info.title">Informações de Contato</strong>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.location.title">Localização</strong>
+                            <p data-i18n="contact.info.location.value">Belo Horizonte, MG - Brasil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.availability.title">Disponibilidade</strong>
+                            <p data-i18n="contact.info.availability.value">Segunda a Sexta, 9h às 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.education.title">Formação</strong>
+                            <p data-i18n="contact.info.education.value">Engenharia de Software - PUC Minas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="h_minContent footer P">
+    <div class="centro pb-4 pt-4 text_paleta">
+        <strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong>
+    </div>
+</footer>
+
+<script src="../assets/js/index.js"></script>
+<script src="../assets/js/contato.js"></script>
+</body>
+
+</html>

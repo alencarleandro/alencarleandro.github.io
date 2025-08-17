@@ -1,0 +1,770 @@
+/* Estilos específicos para a página de portfólio */
+
+/* Header da página */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Introdução do portfólio */
+.portfolio-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Grid de projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Cards de projeto */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header do projeto */
+.project-header {
+    padding: 2rem 2rem 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-logo {
+    margin-bottom: 1rem;
+}
+
+.project-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4dabf7;
+}
+
+/* Conteúdo do projeto */
+.project-content {
+    padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Características do projeto */
+.project-features {
+    margin-bottom: 1.5rem;
+}
+
+.project-features h6 {
+    color: #74b9ff;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-features li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-features li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #4dabf7;
+    font-size: 0.8rem;
+}
+
+/* Tecnologias do projeto */
+.project-tech {
+    margin-bottom: 1rem;
+}
+
+.project-tech h6 {
+    color: #74b9ff;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badges img {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.tech-badges img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção de estatísticas */
+.stats-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4dabf7;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projects-grid {
+        gap: 1.5rem;
+    }
+    
+    .project-header {
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+    
+    .project-content {
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-intro {
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio-header,
+.portfolio-intro {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.projects-grid {
+    animation: fadeInUp 1s ease-out;
+}
+
+.project-card:nth-child(odd) {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.project-card:nth-child(even) {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.stats-section {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.stat-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos para modo escuro */
+.paleta .project-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .project-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.paleta .stat-item {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .stat-item:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Efeitos de hover adicionais */
+.project-card:hover .project-title {
+    color: #74b9ff;
+}
+
+.project-features li:hover {
+    color: #4dabf7;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Scroll suave para elementos */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para links internos */
+.project-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Melhorias de acessibilidade */
+.project-card:focus-within {
+    outline: 2px solid #4dabf7;
+    outline-offset: 2px;
+}
+
+.stat-item:focus-within {
+    outline: 2px solid #4dabf7;
+    outline-offset: 2px;
+}
+
+/* CORREÇÕES DE CONTRASTE - Garantir que textos tenham contraste adequado em todas as paletas */
+
+/* Para paleta preta (fundo preto) */
+.paleta[style*="background-color: #000000"] .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #000000"] .project-description,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-description {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .project-features li,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features li {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .stat-label,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-label {
+    color: #e6e6e6 !important;
+}
+
+/* Para paleta azul (fundo azul escuro) */
+.paleta[style*="background-color: #01355c"] .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #01355c"] .project-description,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-description {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .project-features li,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-features li {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .stat-label,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .stat-label {
+    color: #f0f0f0 !important;
+}
+
+/* Para paleta beje (fundo claro) */
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .project-description,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-description {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .project-features li,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-features li {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .stat-label,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .stat-label {
+    color: #333333 !important;
+}
+
+/* Garantir contraste para elementos específicos que podem ter problemas */
+.project-description {
+    font-weight: 500;
+}
+
+.project-features li {
+    font-weight: 500;
+}
+
+.stat-label {
+    font-weight: 500;
+}
+
+/* Contraste adicional para elementos de navegação */
+.nav-link.text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para o nome do usuário no header */
+.Nome .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para títulos principais */
+.portfolio-header .text_paleta,
+.portfolio-intro .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para estatísticas */
+.stats-section .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste adicional para o footer */
+footer .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para elementos de navegação ativos */
+.nav-link.active.text_paleta {
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contraste para botões e elementos interativos */
+.btn-outline-light {
+    font-weight: 600;
+}
+
+/* Contraste para elementos que podem ter problemas específicos */
+.project-card .text_paleta {
+    font-weight: 600;
+}
+
+/* Garantir que todos os textos tenham contraste adequado */
+.text_paleta {
+    font-weight: 500;
+}
+
+/* Contraste específico para elementos em diferentes paletas */
+.paleta[style*="background-color: #000000"] footer .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] footer .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para elementos de navegação em diferentes paletas */
+.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para o nome do usuário em diferentes paletas */
+.paleta[style*="background-color: #000000"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para títulos principais em diferentes paletas */
+.paleta[style*="background-color: #000000"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #000000"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .portfolio-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #01355c"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .portfolio-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .portfolio-intro .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para estatísticas em diferentes paletas */
+.paleta[style*="background-color: #000000"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stats-section .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .stats-section .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .stats-section .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* ESTILOS ESPECÍFICOS PARA CADA PALETA */
+
+/* Paleta Preta */
+body.paleta-preta .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta .nav-link:hover {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .nav-link.active {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta a:not(.nav-link) {
+    color: #4dabf7 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta a:not(.nav-link):hover {
+    color: #74b9ff !important;
+}
+
+body.paleta-preta .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-preta .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.paleta-preta .btn-primary {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+body.paleta-preta .btn-primary:hover {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+/* Paleta Azul */
+body.paleta-azul .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul .nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .nav-link.active {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul a:not(.nav-link) {
+    color: #74b9ff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul a:not(.nav-link):hover {
+    color: #4dabf7 !important;
+}
+
+body.paleta-azul .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-azul .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #01355c !important;
+}
+
+body.paleta-azul .btn-primary {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+body.paleta-azul .btn-primary:hover {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+/* Paleta Beje */
+body.paleta-beje .nav-link {
+    color: #262626 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje .nav-link:hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .nav-link.active {
+    color: #01355c !important;
+}
+
+body.paleta-beje a:not(.nav-link) {
+    color: #01355c !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje a:not(.nav-link):hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .btn-outline-light {
+    color: #262626 !important;
+    border-color: #262626 !important;
+}
+
+body.paleta-beje .btn-outline-light:hover {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+}
+
+body.paleta-beje .btn-primary {
+    background-color: #01355c !important;
+    border-color: #01355c !important;
+}
+
+body.paleta-beje .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Estilos gerais para links e botões */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Estilos específicos para elementos do portfólio */
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.tech-badges img {
+    transition: all 0.3s ease;
+}
+
+.tech-badges img:hover {
+    transform: scale(1.1);
+}
+
+.stat-item {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}

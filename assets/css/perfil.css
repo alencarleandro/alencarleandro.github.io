@@ -1,0 +1,927 @@
+/* Estilos específicos para a página de perfil */
+
+/* Header da página */
+.perfil-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Container principal do perfil */
+.perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+/* Seção da foto e paleta */
+.perfil-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.paleta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Divisor vertical */
+.divisor-vertical {
+    width: 2px;
+    height: 100%;
+    background: var(--paleta-color, #000000);
+    justify-self: center;
+    align-self: stretch;
+}
+
+/* Seção de informações pessoais */
+.perfil-info {
+    padding: 1rem;
+}
+
+.info-pessoal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sobre-mim {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contatos {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contato-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.contato-item a {
+    color: #4dabf7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+    color: #74b9ff;
+    text-decoration: underline;
+}
+
+/* Seção de habilidades */
+.habilidades-section {
+    margin-top: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skills-badges img {
+    transition: transform 0.3s ease;
+}
+
+.skills-badges img:hover {
+    transform: scale(1.1);
+}
+
+/* Seção de experiência e formação */
+.experiencia-formacao {
+    margin-top: 3rem;
+}
+
+.exp-form-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.experiencia-section,
+.formacao-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.exp-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+    transform: translateX(5px);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-period {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #4dabf7;
+}
+
+.exp-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.exp-tech {
+    color: #74b9ff;
+    font-style: italic;
+}
+
+.formacao-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.formacao-item:hover {
+    transform: translateX(5px);
+}
+
+.formacao-header {
+    margin-bottom: 0.5rem;
+    color: #4dabf7;
+}
+
+.formacao-instituicao {
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+}
+
+.formacao-periodo {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Divisor horizontal */
+.divisor-horizontal {
+    width: 100%;
+    height: 2px;
+    background: var(--paleta-color, #000000);
+    justify-self: center;
+    align-self: center;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 900px) {
+    .perfil-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+    
+    .divisor-vertical {
+        display: none;
+    }
+    
+    .exp-form-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+    
+    .divisor-horizontal {
+        display: none;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .perfil-container {
+        gap: 1.5rem;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skills-badges {
+        justify-content: center;
+    }
+    
+    .perfil-info {
+        padding: 0.5rem;
+    }
+    
+    .sobre-mim,
+    .contatos,
+    .exp-item,
+    .formacao-item,
+    .skill-category {
+        padding: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.perfil-container,
+.habilidades-section,
+.experiencia-formacao {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.skill-category,
+.exp-item,
+.formacao-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos para modo escuro */
+.paleta .sobre-mim,
+.paleta .contatos,
+.paleta .skill-category,
+.paleta .exp-item,
+.paleta .formacao-item {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.paleta .exp-period {
+    background: rgba(255, 255, 255, 0.2);
+    color: #74b9ff;
+}
+
+/* CORREÇÕES DE CONTRASTE - Garantir que textos tenham contraste adequado em todas as paletas */
+
+/* Para paleta preta (fundo preto) */
+.paleta[style*="background-color: #000000"] .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #000000"] .perfil-info p,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-info p {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .habilidades-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .habilidades-item {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .experiencia-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .experiencia-item {
+    color: #e6e6e6 !important;
+}
+
+/* Para paleta azul (fundo azul escuro) */
+.paleta[style*="background-color: #01355c"] .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #01355c"] .perfil-info p,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-info p {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .habilidades-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .habilidades-item {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .experiencia-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .experiencia-item {
+    color: #f0f0f0 !important;
+}
+
+/* Para paleta beje (fundo claro) */
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .perfil-info p,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-info p {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .habilidades-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .habilidades-item {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .experiencia-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .experiencia-item {
+    color: #333333 !important;
+}
+
+/* Contraste para elementos específicos */
+.perfil-info p {
+    font-weight: 500;
+}
+
+.habilidades-item {
+    font-weight: 500;
+}
+
+.experiencia-item {
+    font-weight: 500;
+}
+
+/* Contraste para elementos de navegação */
+.nav-link.text_paleta {
+    font-weight: 600;
+}
+
+.nav-link.active.text_paleta {
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contraste para o nome do usuário no header */
+.Nome .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para títulos principais */
+.perfil-header .text_paleta,
+.perfil-info .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para habilidades e experiência */
+.habilidades .text_paleta,
+.experiencia .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para o footer */
+footer .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste específico para elementos em diferentes paletas */
+.paleta[style*="background-color: #000000"] footer .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] footer .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para elementos de navegação em diferentes paletas */
+.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para o nome do usuário em diferentes paletas */
+.paleta[style*="background-color: #000000"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para títulos principais em diferentes paletas */
+.paleta[style*="background-color: #000000"] .perfil-header .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-header .text_paleta,
+.paleta[style*="background-color: #000000"] .perfil-info .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-info .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .perfil-header .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-header .text_paleta,
+.paleta[style*="background-color: #01355c"] .perfil-info .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-info .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .perfil-header .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-header .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .perfil-info .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-info .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para habilidades e experiência em diferentes paletas */
+.paleta[style*="background-color: #000000"] .habilidades .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .habilidades .text_paleta,
+.paleta[style*="background-color: #000000"] .experiencia .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .experiencia .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .habilidades .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .habilidades .text_paleta,
+.paleta[style*="background-color: #01355c"] .experiencia .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .experiencia .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .habilidades .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .habilidades .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .experiencia .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .experiencia .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* ESTILOS ESPECÍFICOS PARA CADA PALETA */
+
+/* Paleta Preta */
+.paleta-preta .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-preta .nav-link:hover {
+    color: #e6e6e6 !important;
+}
+
+.paleta-preta .nav-link.active {
+    color: #4dabf7 !important;
+}
+
+.paleta-preta a:not(.nav-link) {
+    color: #4dabf7 !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-preta a:not(.nav-link):hover {
+    color: #74b9ff !important;
+}
+
+.paleta-preta .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.paleta-preta .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.paleta-preta .btn-primary {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+.paleta-preta .btn-primary:hover {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+/* Paleta Azul */
+.paleta-azul .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-azul .nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+.paleta-azul .nav-link.active {
+    color: #74b9ff !important;
+}
+
+.paleta-azul a:not(.nav-link) {
+    color: #74b9ff !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-azul a:not(.nav-link):hover {
+    color: #4dabf7 !important;
+}
+
+.paleta-azul .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.paleta-azul .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #01355c !important;
+}
+
+.paleta-azul .btn-primary {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+.paleta-azul .btn-primary:hover {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+/* Paleta Beje */
+.paleta-beje .nav-link {
+    color: #262626 !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-beje .nav-link:hover {
+    color: #000000 !important;
+}
+
+.paleta-beje .nav-link.active {
+    color: #01355c !important;
+}
+
+.paleta-beje a:not(.nav-link) {
+    color: #01355c !important;
+    transition: color 0.3s ease;
+}
+
+.paleta-beje a:not(.nav-link):hover {
+    color: #000000 !important;
+}
+
+.paleta-beje .btn-outline-light {
+    color: #262626 !important;
+    border-color: #262626 !important;
+}
+
+.paleta-beje .btn-outline-light:hover {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+}
+
+.paleta-beje .btn-primary {
+    background-color: #01355c !important;
+    border-color: #01355c !important;
+}
+
+.paleta-beje .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Estilos gerais para links e botões */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Estilos específicos para elementos do perfil */
+.perfil-container {
+    transition: all 0.3s ease;
+}
+
+.habilidades-item {
+    transition: all 0.3s ease;
+}
+
+.habilidades-item:hover {
+    transform: translateX(5px);
+}
+
+.experiencia-item {
+    transition: all 0.3s ease;
+}
+
+.experiencia-item:hover {
+    transform: translateX(5px);
+}
+
+/* ESTILOS ESPECÍFICOS PARA CARDS DE EXPERIÊNCIA E FORMAÇÃO EM CADA PALETA */
+
+/* Paleta Preta - Cards de Experiência e Formação */
+body.paleta-preta .exp-item,
+body.paleta-preta .formacao-item {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .exp-header strong,
+body.paleta-preta .formacao-header strong {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta .exp-description,
+body.paleta-preta .formacao-instituicao {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .exp-tech,
+body.paleta-preta .formacao-periodo {
+    color: #74b9ff !important;
+}
+
+/* Paleta Azul - Cards de Experiência e Formação */
+body.paleta-azul .exp-item,
+body.paleta-azul .formacao-item {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .exp-header strong,
+body.paleta-azul .formacao-header strong {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul .exp-description,
+body.paleta-azul .formacao-instituicao {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .exp-tech,
+body.paleta-azul .formacao-periodo {
+    color: #4dabf7 !important;
+}
+
+/* Paleta Beje - Cards de Experiência e Formação */
+body.paleta-beje .exp-item,
+body.paleta-beje .formacao-item {
+    color: #333333 !important;
+}
+
+body.paleta-beje .exp-header strong,
+body.paleta-beje .formacao-header strong {
+    color: #01355c !important;
+}
+
+body.paleta-beje .exp-description,
+body.paleta-beje .formacao-instituicao {
+    color: #333333 !important;
+}
+
+body.paleta-beje .exp-tech,
+body.paleta-beje .formacao-periodo {
+    color: #000000 !important;
+}
+
+/* Estilos para elementos específicos dentro dos cards */
+.exp-header strong,
+.formacao-header strong {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.exp-description,
+.formacao-instituicao {
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.exp-tech,
+.formacao-periodo,
+.exp-period {
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ESTILOS ESPECÍFICOS PARA ELEMENTOS DE HABILIDADES EM CADA PALETA */
+
+/* Paleta Preta - Habilidades */
+body.paleta-preta .skill-category {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .skill-category strong {
+    color: #4dabf7 !important;
+}
+
+/* Paleta Azul - Habilidades */
+body.paleta-azul .skill-category {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .skill-category strong {
+    color: #74b9ff !important;
+}
+
+/* Paleta Beje - Habilidades */
+body.paleta-beje .skill-category {
+    color: #333333 !important;
+}
+
+body.paleta-beje .skill-category strong {
+    color: #01355c !important;
+}
+
+/* ESTILOS ESPECÍFICOS PARA OUTROS ELEMENTOS DO PERFIL */
+
+/* Paleta Preta - Outros elementos */
+body.paleta-preta .perfil-info strong {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta .perfil-info p {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .contato-item {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .contato-item a {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta .contato-item a:hover {
+    color: #74b9ff !important;
+}
+
+/* Paleta Azul - Outros elementos */
+body.paleta-azul .perfil-info strong {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul .perfil-info p {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .contato-item {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .contato-item a {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul .contato-item a:hover {
+    color: #4dabf7 !important;
+}
+
+/* Paleta Beje - Outros elementos */
+body.paleta-beje .perfil-info strong {
+    color: #01355c !important;
+}
+
+body.paleta-beje .perfil-info p {
+    color: #333333 !important;
+}
+
+body.paleta-beje .contato-item {
+    color: #333333 !important;
+}
+
+body.paleta-beje .contato-item a {
+    color: #01355c !important;
+}
+
+body.paleta-beje .contato-item a:hover {
+    color: #000000 !important;
+}
+
+/* ESTILOS ESPECÍFICOS PARA PERÍODOS E ELEMENTOS ADICIONAIS */
+
+/* Paleta Preta - Períodos e elementos adicionais */
+body.paleta-preta .exp-period {
+    color: #74b9ff !important;
+}
+
+body.paleta-preta .exp-header {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .formacao-header {
+    color: #e6e6e6 !important;
+}
+
+/* Paleta Azul - Períodos e elementos adicionais */
+body.paleta-azul .exp-period {
+    color: #4dabf7 !important;
+}
+
+body.paleta-azul .exp-header {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .formacao-header {
+    color: #f0f0f0 !important;
+}
+
+/* Paleta Beje - Períodos e elementos adicionais */
+body.paleta-beje .exp-period {
+    color: #000000 !important;
+}
+
+body.paleta-beje .exp-header {
+    color: #333333 !important;
+}
+
+body.paleta-beje .formacao-header {
+    color: #333333 !important;
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-i18n="profile.title">Perfil - Leandro Alencar</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/fotos.css" rel="stylesheet">
+    <link href="../assets/css/perfil.css" rel="stylesheet">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="paleta body rolagemY cartaoV " onload="start()">
+
+<header class="h_minContent header P">
+    <div class="paleta header P ">
+
+        <nav class="navbar navbar-expand-lg P">
+            <div class="container-fluid paleta">
+
+                <div class="Nome">
+                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center">
+                        <a href="../index.html" class="text-decoration-none text_paleta">
+                            <strong>Leandro Alencar</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="radius_All_-5- color_brancoTransparent semBorda">
+                    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler semBorda" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+                            type="button">
+                        <span class="navbar-toggler-icon semBorda"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text_paleta text-center botaoAnima"
+                               href="#"><strong data-i18n="nav.profile">Perfil</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="./portfolio.html"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="./contato.html"><strong data-i18n="nav.contact">Contato</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
+                                <span data-i18n="lang.pt">PT</span>/<span data-i18n="lang.en">EN</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<main class="main P">
+
+    <div class="pt-2 folha">
+
+        <section>
+            <div class="perfil-header">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong data-i18n="profile.title">Meu Perfil</strong>
+                </div>
+                <div class="exp2 paleta"></div>
+            </div>
+
+            <div class="perfil-container">
+                <!-- Seção da Foto e Paleta -->
+                <div class="perfil-foto">
+                    <div class="foto-wrapper">
+                        <div class="foto-container">
+                            <div class="eu rounded-circle"></div>
+                        </div>
+                        <div class="paleta-container">
+                            <div class="em1-5 centro mb-3 text_paleta">
+                                <strong data-i18n="palette">Paleta</strong>
+                            </div>
+                            <div class="exp2 paleta w-100"></div>
+                            
+                            <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
+                                <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
+                                    <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
+                                         onclick="preto()"></div>
+                                    <div class="icon32 rounded-circle color_azulMarinho cursorHand" id="paletaAzul"
+                                         onclick="azulMarinho()"></div>
+                                    <div class="icon32 rounded-circle color_beje cursorHand" id="paletaBeje"
+                                         onclick="beje()"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor -->
+                <div class="divisor-vertical"></div>
+
+                <!-- Seção de Informações Pessoais -->
+                <div class="perfil-info">
+                    <div class="em1-5 text_paleta mb-3">
+                        <strong data-i18n="profile.personal">Informações Pessoais</strong>
+                    </div>
+                    
+                    <div class="info-pessoal">
+                        <div class="fontEsp em1-5 mb-3">
+                            <strong>Leandro Alencar Pereira Clemente</strong>
+                        </div>
+                        
+                        <div class="sobre-mim">
+                            <div class="em1-5 text_paleta mb-2">
+                                <strong data-i18n="about.title">Sobre mim</strong>
+                            </div>
+                            <div class="text_paleta" style="text-align: justify; line-height: 1.6;" data-i18n="about.description">
+                                Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software.
+                                Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação
+                                para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas
+                                (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo
+                                com soluções e crescimento profissional contínuo.
+                            </div>
+                        </div>
+
+                        <div class="contatos mt-4">
+                            <div class="em1-5 text_paleta mb-2">
+                                <strong data-i18n="profile.contacts">Contatos</strong>
+                            </div>
+                            <div class="contato-item">
+                                <strong>GitHub: </strong>
+                                <a href="https://github.com/alencarleandro" target="_blank">github/alencarleandro</a>
+                            </div>
+                            <div class="contato-item">
+                                <strong>LinkedIn: </strong>
+                                <a href="https://www.linkedin.com/in/leandroalencarclemente/" target="_blank">linkedin/leandroalencarclemente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Habilidades -->
+            <div class="habilidades-section mt-5">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="skills.title">Habilidades Técnicas</strong>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.programming">Linguagens de Programação</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+                            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frameworks">Frameworks & Bibliotecas</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                            <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                            <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                            <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frontend">Frontend</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                            <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.database">Banco de Dados</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.cloud">Cloud & DevOps</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
+                            <img alt="Google Cloud" src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+                            <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.tools">Ferramentas de Desenvolvimento</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                            <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                            <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                            <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.design">Design & Multimídia</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
+                            <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
+                            <img alt="Inkscape" src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
+                            <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Experiência e Formação -->
+            <div class="experiencia-formacao mt-5">
+                <div class="exp-form-container">
+                    <!-- Experiência Profissional -->
+                    <div class="experiencia-section">
+                        <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="experience.title">Experiência Profissional</strong>
+                        </div>
+                        
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong>
+                                <span class="exp-period">jan 2024 - atual</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp2.description">
+                                Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
+                                <span class="exp-period">jan 2023 - fev 2024</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.messenger.description">
+                                Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong>
+                                <span class="exp-period">jan 2022 - ago 2023</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp1.description">
+                                Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing, SQL</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divisor -->
+                    <div class="divisor-horizontal"></div>
+
+                    <!-- Formação Acadêmica -->
+                    <div class="formacao-section">
+                        <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="education.title">Formação Acadêmica</strong>
+                        </div>
+                        
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.software.title">Engenharia de Software</strong>
+                            </div>
+                            <div class="formacao-instituicao">PUC Minas, Belo Horizonte</div>
+                            <div class="formacao-periodo">2024-2027</div>
+                        </div>
+
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong>
+                            </div>
+                            <div class="formacao-instituicao">SENAI Horto, Belo Horizonte</div>
+                            <div class="formacao-periodo">2022-2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="h_minContent footer P">
+    <div class="centro pb-4 pt-4 text_paleta">
+        <strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong>
+    </div>
+</footer>
+
+<script src="../assets/js/index.js"></script>
+<script src="../assets/js/perfil.js"></script>
+</body>
+
+</html>

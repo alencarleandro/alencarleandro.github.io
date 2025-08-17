@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title data-i18n="portfolio.title">Portfólio - Leandro Alencar</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/fotos.css" rel="stylesheet">
+    <link href="../assets/css/portfolio.css" rel="stylesheet">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="paleta body rolagemY cartaoV " onload="start()">
+
+<header class="h_minContent header P">
+    <div class="paleta header P ">
+
+        <nav class="navbar navbar-expand-lg P">
+            <div class="container-fluid paleta">
+
+                <div class="Nome">
+                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center">
+                        <a href="../index.html" class="text-decoration-none text_paleta">
+                            <strong>Leandro Alencar</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="radius_All_-5- color_brancoTransparent semBorda">
+                    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler semBorda" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+                            type="button">
+                        <span class="navbar-toggler-icon semBorda"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="./perfil.html"><strong data-i18n="nav.profile">Perfil</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text_paleta text-center botaoAnima"
+                               href="#"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="./contato.html"><strong data-i18n="nav.contact">Contato</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
+                                <span data-i18n="lang.pt">PT</span>/<span data-i18n="lang.en">EN</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<main class="main P">
+
+    <div class="pt-2 folha">
+
+        <section>
+            <div class="portfolio-header">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong data-i18n="portfolio.title">Meu Portfólio</strong>
+                </div>
+                <div class="exp2 paleta"></div>
+            </div>
+
+            <div class="portfolio-intro">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="portfolio.subtitle">Projetos Desenvolvidos</strong>
+                </div>
+                <div class="text_paleta text-center" style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    <p data-i18n="portfolio.description">
+                        Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e abordagens de desenvolvimento.
+                        Cada projeto representa um desafio único e uma oportunidade de aprendizado.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- ERP V2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.erp2.title">ERP V2</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.erp2.description">
+                            Sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.modular">Arquitetura modular</li>
+                                <li data-i18n="portfolio.features.scalable">Altamente escalável</li>
+                                <li data-i18n="portfolio.features.solid">Princípios SOLID</li>
+                                <li data-i18n="portfolio.features.enterprise">Focado em médias empresas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disparador de Mensagens -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.messenger.title">Disparador de Mensagens</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.messenger.description">
+                            Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.automation">Automação completa</li>
+                                <li data-i18n="portfolio.features.multiplatform">Múltiplas plataformas</li>
+                                <li data-i18n="portfolio.features.media">Suporte a mídias</li>
+                                <li data-i18n="portfolio.features.batch">Envio em lote</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ERP V1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.erp1.title">ERP V1</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.erp1.description">
+                            Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.reports">Relatórios gerenciais</li>
+                                <li data-i18n="portfolio.features.inventory">Controle de estoque</li>
+                                <li data-i18n="portfolio.features.financial">Gestão financeira</li>
+                                <li data-i18n="portfolio.features.service">Ordens de serviço</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giostri Construções -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.giostri.title">Giostri Construções</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.giostri.description">
+                            O projeto Giostri Construções implementa uma plataforma digital para transformar a gestão do Depósito Giostri.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.web">Aplicação web</li>
+                                <li data-i18n="portfolio.features.management">Gestão de depósito</li>
+                                <li data-i18n="portfolio.features.modern">Interface moderna</li>
+                                <li data-i18n="portfolio.features.responsive">Totalmente responsiva</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CineScore -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.cinescore.title">CineScore</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.cinescore.description">
+                            Este projeto apresenta o desenvolvimento de uma aplicação web projetada para oferecer recomendações personalizadas de filmes e séries, baseada nas interações dos usuários, como os likes atribuídos aos conteúdos.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.recommendations">Sistema de recomendações</li>
+                                <li data-i18n="portfolio.features.personalization">Personalização</li>
+                                <li data-i18n="portfolio.features.interaction">Interação do usuário</li>
+                                <li data-i18n="portfolio.features.analytics">Análise de preferências</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Estatísticas -->
+            <div class="stats-section mt-5">
+                <div class="em1-5 text_paleta mb-4 centro">
+                    <strong data-i18n="portfolio.stats.title">Estatísticas dos Projetos</strong>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.projects">Projetos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.erps">Sistemas ERP</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.web">Aplicações Web</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.technologies">Tecnologias</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="h_minContent footer P">
+    <div class="centro pb-4 pt-4 text_paleta">
+        <strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong>
+    </div>
+</footer>
+
+<script src="../assets/js/index.js"></script>
+<script src="../assets/js/portfolio.js"></script>
+</body>
+
+</html>

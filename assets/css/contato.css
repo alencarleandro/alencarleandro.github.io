@@ -1,0 +1,785 @@
+/* Estilos específicos para a página de contato */
+
+.contato-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+/* Seção de Redes Sociais */
+.redes-sociais {
+    padding: 1rem;
+}
+
+.icones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.icone-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.icone-item:hover {
+    transform: translateY(-5px);
+}
+
+.icone-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icone-wrapper.email {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.icone-wrapper.whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.icone-wrapper.linkedin {
+    background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.icone-wrapper.github {
+    background: linear-gradient(135deg, #333, #000);
+}
+
+.icone-wrapper.instagram {
+    background: linear-gradient(135deg, #e4405f, #c13584);
+}
+
+.icone-item:hover .icone-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.icone-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    color: inherit;
+}
+
+/* Divisor vertical */
+.divisor-vertical {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--paleta-color, #000), transparent);
+    justify-self: center;
+}
+
+/* Formulário de Contato */
+.formulario-contato {
+    padding: 1rem;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: inherit;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    color: inherit;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+/* Status do formulário */
+#formStatus {
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#formStatus.success {
+    background: rgba(40, 167, 69, 0.2);
+    border: 2px solid rgba(40, 167, 69, 0.5);
+    color: #28a745;
+}
+
+#formStatus.error {
+    background: rgba(220, 53, 69, 0.2);
+    border: 2px solid rgba(220, 53, 69, 0.5);
+    color: #dc3545;
+}
+
+/* Informações de Contato */
+.info-contato {
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.info-content {
+    text-align: left;
+}
+
+.info-content strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 900px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+    
+    .divisor-vertical {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, var(--paleta-color, #000), transparent);
+    }
+    
+    .icones-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contato-container {
+        padding: 0 1rem;
+    }
+    
+    .icones-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .icone-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .info-content {
+        text-align: center;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contato-container > * {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.redes-sociais {
+    animation-delay: 0.1s;
+}
+
+.formulario-contato {
+    animation-delay: 0.2s;
+}
+
+.info-contato {
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Estilos para modo escuro/claro baseado na paleta */
+.paleta .icone-item {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.paleta .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.paleta .info-item {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para as opções alternativas de e-mail */
+.opcoes-email {
+    border: 2px solid #007bff;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    animation: slideInUp 0.5s ease;
+}
+
+.opcoes-email h6 {
+    color: #007bff !important;
+    font-weight: 700;
+}
+
+.opcoes-email p {
+    color: #495057 !important;
+}
+
+.opcoes-email .text-primary {
+    color: #007bff !important;
+    font-weight: 600;
+}
+
+.opcoes-email .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.opcoes-email .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.opcoes-email .btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.opcoes-email .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para modo escuro */
+.paleta .opcoes-email {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-color: #007bff;
+}
+
+.paleta .opcoes-email h6,
+.paleta .opcoes-email p,
+.paleta .opcoes-email .text-primary {
+    color: #ffffff !important;
+}
+
+.paleta .opcoes-email .text-primary {
+    color: #4dabf7 !important;
+}
+
+/* CORREÇÕES DE CONTRASTE - Garantir que textos tenham contraste adequado em todas as paletas */
+
+/* Para paleta preta (fundo preto) */
+.paleta[style*="background-color: #000000"] .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #000000"] .contact-info p,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-info p {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .form-label,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .form-label {
+    color: #e6e6e6 !important;
+}
+
+/* Para paleta azul (fundo azul escuro) */
+.paleta[style*="background-color: #01355c"] .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #01355c"] .contact-info p,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-info p {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .form-label,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .form-label {
+    color: #f0f0f0 !important;
+}
+
+/* Para paleta beje (fundo claro) */
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .contact-info p,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info p {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .form-label,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .form-label {
+    color: #333333 !important;
+}
+
+/* Contraste para elementos específicos */
+.contact-info p {
+    font-weight: 500;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+/* Contraste para elementos de navegação */
+.nav-link.text_paleta {
+    font-weight: 600;
+}
+
+.nav-link.active.text_paleta {
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contraste para o nome do usuário no header */
+.Nome .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para títulos principais */
+.contact-header .text_paleta,
+.contact-intro .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para informações de contato */
+.contact-info .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para o formulário */
+.contact-form .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para o footer */
+footer .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste específico para elementos em diferentes paletas */
+.paleta[style*="background-color: #000000"] footer .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] footer .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para elementos de navegação em diferentes paletas */
+.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para o nome do usuário em diferentes paletas */
+.paleta[style*="background-color: #000000"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para títulos principais em diferentes paletas */
+.paleta[style*="background-color: #000000"] .contact-header .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-header .text_paleta,
+.paleta[style*="background-color: #000000"] .contact-intro .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .contact-header .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-header .text_paleta,
+.paleta[style*="background-color: #01355c"] .contact-intro .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .contact-header .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-header .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .contact-intro .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-intro .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para informações de contato em diferentes paletas */
+.paleta[style*="background-color: #000000"] .contact-info .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-info .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .contact-info .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-info .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .contact-info .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para o formulário em diferentes paletas */
+.paleta[style*="background-color: #000000"] .contact-form .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-form .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .contact-form .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-form .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .contact-form .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-form .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para formulário e informações em diferentes paletas */
+.paleta[style*="background-color: #e7d6b9"] .contact-form .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-form .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .contact-info .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* ESTILOS ESPECÍFICOS PARA CADA PALETA */
+
+/* Paleta Preta */
+body.paleta-preta .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta .nav-link:hover {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .nav-link.active {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta a:not(.nav-link) {
+    color: #4dabf7 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta a:not(.nav-link):hover {
+    color: #74b9ff !important;
+}
+
+body.paleta-preta .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-preta .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.paleta-preta .btn-primary {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+body.paleta-preta .btn-primary:hover {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+/* Paleta Azul */
+body.paleta-azul .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul .nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .nav-link.active {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul a:not(.nav-link) {
+    color: #74b9ff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul a:not(.nav-link):hover {
+    color: #4dabf7 !important;
+}
+
+body.paleta-azul .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-azul .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #01355c !important;
+}
+
+body.paleta-azul .btn-primary {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+body.paleta-azul .btn-primary:hover {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+/* Paleta Beje */
+body.paleta-beje .nav-link {
+    color: #262626 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje .nav-link:hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .nav-link.active {
+    color: #01355c !important;
+}
+
+body.paleta-beje a:not(.nav-link) {
+    color: #01355c !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje a:not(.nav-link):hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .btn-outline-light {
+    color: #262626 !important;
+    border-color: #262626 !important;
+}
+
+body.paleta-beje .btn-outline-light:hover {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+}
+
+body.paleta-beje .btn-primary {
+    background-color: #01355c !important;
+    border-color: #01355c !important;
+}
+
+body.paleta-beje .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Estilos gerais para links e botões */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Estilos específicos para elementos de contato */
+.icone-item {
+    transition: all 0.3s ease;
+}
+
+.icone-item:hover {
+    transform: scale(1.1);
+}
+
+.info-item {
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    transform: scale(1.02);
+}
+
+.btn-enviar {
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+}

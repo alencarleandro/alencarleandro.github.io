@@ -42,11 +42,15 @@
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
                             <a aria-current="page" class="nav-link active text_paleta text-center botaoAnima"
-                               href="#perfil"><strong data-i18n="nav.profile">Perfil</strong></a>
+                               href="./views/perfil.html"><strong data-i18n="nav.profile">Perfil</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text_paleta text-center botaoAnima"
-                               href="#repositorios"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                               href="./views/portfolio.html"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="./views/contato.html"><strong data-i18n="nav.contact">Contato</strong></a>
                         </li>
                         <li class="nav-item">
                             <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
@@ -67,361 +71,83 @@
     <div class="pt-2 folha">
 
         <section>
-            <div class="perfil ">
-                <div class="coluna foto">
-
-                    <div class="flex">
-                        <div class="p-3 mp paleta"></div>
-                        <div class="p-2 mp paleta radius_TR-BR_MAX justify-content-end">
-                            <div class="eu rounded-circle  "></div>
-                        </div>
-                    </div>
-
-
-                    <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong data-i18n="palette">Paleta</strong></div>
-                    <div class="exp2 paleta w-100"></div>
-
-                    <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
-                        <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
-                            <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
-                                 onclick="preto()"></div>
-                            <div class="icon32 rounded-circle color_azulMarinho cursorHand" id="paletaAzul"
-                                 onclick="azulMarinho()"></div>
-                            <div class="icon32 rounded-circle color_beje cursorHand" id="paletaBeje"
-                                 onclick="beje()"></div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="descricao pt-2">
-                    <div class="em2 centro mb-2 text_paleta" id="perfil"><strong data-i18n="profile">Perfil</strong></div>
-                    <div class="exp2 paleta"></div>
-
-                    <div class=" ps-5">
-
-                        <div class="fontEsp em1-5 mt-4"><strong>Leandro Alencar Pereira Clemente</strong></div>
-
-                        <div class="mt-4">
-                            <div class="em1-5 text_paleta"><strong data-i18n="about.title">Sobre mim</strong></div>
-                            <div class="text_paleta mt-2" style="text-align: justify; padding-right: 32px;" data-i18n="about.description">
-                                Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software.
-                                Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação
-                                para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas
-                                (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo
-                                com soluções e crescimento profissional contínuo.
-                            </div>
-                        </div>
-
-                        <div class="em1-5 mt-1 text-wrap text_paleta" id="txtDescricao">
-                        </div>
-
-                        <div class="layoutContagem pe-5">
-                            <div class="P">
-                                <div class="em1-5 mt-2 text_paleta"><strong>GitHub: </strong>
-                                    <a href="https://github.com/alencarleandro">github/alencarleandro</a>
-                                </div>
-
-                                <div class="em1-5 mt-2 text_paleta"><strong>LinkedIn: </strong>
-                                    <a href="https://www.linkedin.com/in/alencarleandro">linkedin/alencarleandro</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <!-- Header da página principal -->
+            <div class="welcome-header text-center mb-5">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong>Bem-vindo ao meu Site Pessoal</strong>
             </div>
-
-            <section class="pt-5">
-
-                <div class="em2 text_paleta centro"><strong data-i18n="portfolio">Portfólio</strong></div>
-
-                <div>
                     <div class="exp2 paleta"></div>
                 </div>
 
-                <div class="rolagemX cartaoHV">
-                    <div class="flex gap-3 scrollColegas centro">
-
-                        <div class="flex centro h440 " id="cards_repos">
-
-                            <div class="card p-4 m-3 centro repo" style="width: 400px;">
-                                <div class="">
-                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
-                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center" data-i18n="projects.erp2.title">ERP V2</h5>
-                                    <p class="card-text text-center" data-i18n="projects.erp2.description">Sistema ERP modular para médias empresas, com
-                                        foco em escalabilidade e aplicação dos princípios SOLID.</p>
-                                    <div class="flex flex-wrap gap-2 justify-content-center">
-                                        <img alt="Java"
-                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                        <img alt="Spring"
-                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                        <img alt="JavaFX"
-                                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                                        <img alt="CSS3"
-                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                        <img alt="Postgres"
-                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+            <!-- Seção de introdução -->
+            <div class="intro-section text-center mb-5">
+                <div class="em1-5 text_paleta mb-3">
+                    <strong>Olá! Eu sou Leandro Alencar</strong>
                                     </div>
+                <div class="text_paleta" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                    <p>
+                        Desenvolvedor Fullstack apaixonado por tecnologia e inovação. 
+                        Especializado em Java, Spring Framework e desenvolvimento de sistemas empresariais.
+                    </p>
+                    <p>
+                        Atualmente cursando Engenharia de Software na PUC Minas e sempre em busca de novos desafios 
+                        para expandir minhas habilidades e contribuir com soluções inovadoras.
+                    </p>
                                 </div>
                             </div>
 
-                            <div class="card p-4 m-3 centro repo" style="width: 400px;">
-                                <div class="">
-                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
-                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center" data-i18n="projects.messenger.title">Disparador de Mensagens</h5>
-                                    <p class="card-text text-center" data-i18n="projects.messenger.description">Aplicação desktop para envio automatizado de
-                                        mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2 justify-content-center">
-                                        <img alt="Java"
-                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                        <img alt="JavaFX"
-                                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                                        <img alt="CSS3"
-                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                        <img alt="Postgres"
-                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                        <img alt="Selenium"
-                                             src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
-                                    </div>
-                                </div>
+            <!-- Seção de navegação rápida -->
+            <div class="quick-nav-section">
+                <div class="em1-5 text_paleta mb-4 centro">
+                    <strong>Navegue pelas seções</strong>
                             </div>
 
-                            <div class="card p-4 m-3 centro repo" style="width: 400px;">
-                                <div class="">
-                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
-                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center" data-i18n="projects.erp1.title">ERP V1</h5>
-                                    <p class="card-text text-center" data-i18n="projects.erp1.description">Sistema de gestão para pequenas empresas com
-                                        funcionalidades de relatórios, ordens de serviço, estoque e controle
-                                        financeiro.</p>
-                                    <div class="flex flex-wrap gap-2 justify-content-center">
-                                        <img alt="Java"
-                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                        <img alt="Java Swing"
-                                             src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                                        <img alt="MySQL"
-                                             src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                                    </div>
-                                </div>
+                <div class="quick-nav-grid">
+                    <div class="quick-nav-card" onclick="window.location.href='./views/perfil.html'">
+                        <div class="quick-nav-icon">👤</div>
+                        <h4>Perfil</h4>
+                        <p>Conheça mais sobre mim, minhas habilidades e experiência profissional</p>
+                        <div class="quick-nav-arrow">→</div>
                             </div>
 
-                            <div class="card p-4 m-3 centro repo" style="width: 400px;">
-                                <div class="">
-                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
-                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center" data-i18n="projects.giostri.title">Giostri Construções</h5>
-                                    <p class="card-text text-center" data-i18n="projects.giostri.description">O projeto Giostri Construções implementa uma
-                                        plataforma digital para
-                                        transformar a gestão do Depósito Giostri.</p>
-                                    <div class="flex flex-wrap gap-2 justify-content-center">
-                                        <img alt="Java"
-                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                        <img alt="Spring"
-                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                        <img alt="Hibernate"
-                                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                                        <img alt="Bootstrap"
-                                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                                        <img alt="Postgres"
-                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                        <img alt="HTML5"
-                                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                                        <img alt="CSS3"
-                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                        <img alt="JavaScript"
-                                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                                    </div>
-                                </div>
+                    <div class="quick-nav-card" onclick="window.location.href='./views/portfolio.html'">
+                        <div class="quick-nav-icon">💼</div>
+                        <h4>Portfólio</h4>
+                        <p>Explore os projetos que desenvolvi e as tecnologias utilizadas</p>
+                        <div class="quick-nav-arrow">→</div>
                             </div>
 
-                            <div class="card p-4 m-3 centro repo" style="width: 400px;">
-                                <div class="">
-                                    <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
-                                         style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center" data-i18n="projects.cinescore.title">CineScore</h5>
-                                    <p class="card-text text-center" data-i18n="projects.cinescore.description">Este projeto apresenta o desenvolvimento de uma
-                                        aplicação web projetada para oferecer recomendações personalizadas de filmes e
-                                        séries, baseada nas interações dos usuários, como os likes atribuídos aos
-                                        conteúdos.</p>
-                                    <div class="flex flex-wrap gap-2 justify-content-center">
-                                        <img alt="Java"
-                                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                        <img alt="Spring"
-                                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                        <img alt="Hibernate"
-                                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                                        <img alt="Bootstrap"
-                                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                                        <img alt="Postgres"
-                                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                        <img alt="HTML5"
-                                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                                        <img alt="CSS3"
-                                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                        <img alt="JavaScript"
-                                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <div class="exp2 paleta mt-2"></div>
-
-            <div class="perfil-inferior">
-                <div class="habilidades">
-                    <div class="em1-5 text_paleta mb-3"><strong data-i18n="skills.title">Habilidades Técnicas</strong></div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.programming">Linguagens de Programação:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="C"
-                             src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
-                        <img alt="Java"
-                             src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                        <img alt="JavaScript"
-                             src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                        <img alt="Swift"
-                             src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.frameworks">Frameworks & Bibliotecas:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="JavaFX"
-                             src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                        <img alt="Java Swing"
-                             src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                        <img alt="Spring"
-                             src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                        <img alt="Hibernate"
-                             src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                        <img alt="Bootstrap"
-                             src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                        <img alt="Selenium"
-                             src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.frontend">Frontend:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="HTML5"
-                             src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                        <img alt="CSS3"
-                             src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.database">Banco de Dados:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="MySQL"
-                             src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                        <img alt="Postgres"
-                             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                        <img alt="SQLite"
-                             src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.cloud">Cloud & DevOps:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="Red Hat"
-                             src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
-                        <img alt="Google Cloud"
-                             src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
-                        <img alt="Vercel"
-                             src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.tools">Ferramentas de Desenvolvimento:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="Git"
-                             src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
-                        <img alt="GitHub"
-                             src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
-                        <img alt="Postman"
-                             src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
-                        <img alt="Arduino"
-                             src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
-                    </div>
-
-                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.design">Design & Multimídia:</strong></div>
-                    <div class="flex flex-wrap gap-2 mt-1">
-                        <img alt="Figma"
-                             src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
-                        <img alt="Canva"
-                             src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
-                        <img alt="Inkscape"
-                             src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
-                        <img alt="Blender"
-                             src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
-                    </div>
-                </div>
-
-                <div class="divisorHorizontal w_exp2 paleta">
-                </div>
-
-                <div class="experiencia ">
-
-                    <div class="ms-3">
-                        <div class="em1-5 text_paleta mb-3"><strong data-i18n="experience.title">Experiência Profissional</strong></div>
-
-                        <div class="text_paleta mt-2">
-                            <div class="text_paleta"><strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong></div>
-                            <div class="text_paleta">jan 2024 - atual</div>
-                            <div class="text_paleta mt-1" data-i18n="experience.erp2.description">Desenvolvimento de um sistema ERP modular para médias
-                                empresas,
-                                com foco em escalabilidade e aplicação dos princípios SOLID.
-                            </div>
-                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL,
-                                Selenium, Spring</small></div>
-                        </div>
-
-                        <div class="mt-3">
-                            <div class="text_paleta"><strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
-                            </div>
-                            <div class="text_paleta">jan 2023 - fev 2024</div>
-                            <div class="text_paleta mt-1" data-i18n="experience.messenger.description">Aplicação desktop para envio automatizado de mensagens para
-                                WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
-                            </div>
-                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL,
-                                Selenium</small></div>
-                        </div>
-
-                        <div class="mt-3 mb-3">
-                            <div class="text_paleta"><strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong></div>
-                            <div class="text_paleta">jan 2022 - ago 2023</div>
-                            <div class="text_paleta mt-1" data-i18n="experience.erp1.description">Sistema de gestão para pequenas empresas com funcionalidades
-                                de
-                                relatórios, ordens de serviço, estoque e controle financeiro.
-                            </div>
-                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing,
-                                SQL</small>
+                    <div class="quick-nav-card" onclick="window.location.href='./views/contato.html'">
+                        <div class="quick-nav-icon">📧</div>
+                        <h4>Contato</h4>
+                        <p>Entre em contato comigo para oportunidades de trabalho ou colaborações</p>
+                        <div class="quick-nav-arrow">→</div>
                             </div>
                         </div>
                     </div>
 
-
-                    <div>
-                        <div class="exp2 paleta"></div>
+            <!-- Seção de destaque -->
+            <div class="highlight-section mt-5">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong>Destaque do Momento</strong>
                     </div>
 
-                    <div class="mt-3 ms-3">
-                        <div class="em1-5 text_paleta"><strong data-i18n="education.title">Formação Acadêmica</strong></div>
-                        <div class="mt-2">
-                            <div class="text_paleta"><strong data-i18n="education.software.title">Engenharia de Software</strong></div>
-                            <div class="text_paleta">PUC Minas, Belo Horizonte</div>
-                            <div class="text_paleta">2024-2027</div>
+                <div class="highlight-card">
+                    <div class="highlight-content">
+                        <h5>🚀 ERP V2 - Sistema Empresarial Modular</h5>
+                        <p>
+                            Meu projeto mais recente: um sistema ERP completo desenvolvido com Java, Spring Framework 
+                            e princípios SOLID. Focado em escalabilidade e manutenibilidade para médias empresas.
+                        </p>
+                        <div class="highlight-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
-                        <div class="mt-2">
-                            <div class="text_paleta"><strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong></div>
-                            <div class="text_paleta">SENAI Horto, Belo Horizonte</div>
-                            <div class="text_paleta">2022-2023</div>
-                        </div>
+                        <button class="btn btn-primary btn-sm mt-3" onclick="window.location.href='./views/portfolio.html'">
+                            Ver Todos os Projetos
+                        </button>
                     </div>
                 </div>
             </div>
