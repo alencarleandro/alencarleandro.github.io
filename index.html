@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Site Pessoal
-    </title>
+    <title data-i18n="title">Site Pessoal</title>
     <link href="./assets/css/main.css" rel="stylesheet">
     <link href="./assets/css/index.css" rel="stylesheet">
     <link href="./assets/css/fotos.css" rel="stylesheet">
@@ -39,16 +38,20 @@
                     </button>
                 </div>
 
-
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
                             <a aria-current="page" class="nav-link active text_paleta text-center botaoAnima"
-                               href="#perfil"><strong>Perfil</strong></a>
+                               href="#perfil"><strong data-i18n="nav.profile">Perfil</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text_paleta text-center botaoAnima"
-                               href="#repositorios"><strong>Portfólio</strong></a>
+                               href="#repositorios"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
+                                <span data-i18n="lang.pt">PT</span>/<span data-i18n="lang.en">EN</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -75,7 +78,7 @@
                     </div>
 
 
-                    <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong>Paleta</strong></div>
+                    <div class="em1-5 centro mb-1 mt-3 text_paleta"><strong data-i18n="palette">Paleta</strong></div>
                     <div class="exp2 paleta w-100"></div>
 
                     <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
@@ -92,7 +95,7 @@
                 </div>
 
                 <div class="descricao pt-2">
-                    <div class="em2 centro mb-2 text_paleta" id="perfil"><strong>Perfil</strong></div>
+                    <div class="em2 centro mb-2 text_paleta" id="perfil"><strong data-i18n="profile">Perfil</strong></div>
                     <div class="exp2 paleta"></div>
 
                     <div class=" ps-5">
@@ -100,8 +103,8 @@
                         <div class="fontEsp em1-5 mt-4"><strong>Leandro Alencar Pereira Clemente</strong></div>
 
                         <div class="mt-4">
-                            <div class="em1-5 text_paleta"><strong>Sobre mim</strong></div>
-                            <div class="text_paleta mt-2" style="text-align: justify; padding-right: 32px;">
+                            <div class="em1-5 text_paleta"><strong data-i18n="about.title">Sobre mim</strong></div>
+                            <div class="text_paleta mt-2" style="text-align: justify; padding-right: 32px;" data-i18n="about.description">
                                 Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software.
                                 Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação
                                 para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas
@@ -132,7 +135,7 @@
 
             <section class="pt-5">
 
-                <div class="em2 text_paleta centro"><strong>Portifolio</strong></div>
+                <div class="em2 text_paleta centro"><strong data-i18n="portfolio">Portfólio</strong></div>
 
                 <div>
                     <div class="exp2 paleta"></div>
@@ -147,8 +150,8 @@
                                 <div class="">
                                     <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
                                          style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center">ERP V2</h5>
-                                    <p class="card-text text-center">Sistema ERP modular para médias empresas, com
+                                    <h5 class="card-title text-center" data-i18n="projects.erp2.title">ERP V2</h5>
+                                    <p class="card-text text-center" data-i18n="projects.erp2.description">Sistema ERP modular para médias empresas, com
                                         foco em escalabilidade e aplicação dos princípios SOLID.</p>
                                     <div class="flex flex-wrap gap-2 justify-content-center">
                                         <img alt="Java"
@@ -169,8 +172,8 @@
                                 <div class="">
                                     <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
                                          style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center">Disparador de Mensagens</h5>
-                                    <p class="card-text text-center">Aplicação desktop para envio automatizado de
+                                    <h5 class="card-title text-center" data-i18n="projects.messenger.title">Disparador de Mensagens</h5>
+                                    <p class="card-text text-center" data-i18n="projects.messenger.description">Aplicação desktop para envio automatizado de
                                         mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
                                     </p>
                                     <div class="flex flex-wrap gap-2 justify-content-center">
@@ -192,8 +195,8 @@
                                 <div class="">
                                     <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
                                          style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center">ERP V1</h5>
-                                    <p class="card-text text-center">Sistema de gestão para pequenas empresas com
+                                    <h5 class="card-title text-center" data-i18n="projects.erp1.title">ERP V1</h5>
+                                    <p class="card-text text-center" data-i18n="projects.erp1.description">Sistema de gestão para pequenas empresas com
                                         funcionalidades de relatórios, ordens de serviço, estoque e controle
                                         financeiro.</p>
                                     <div class="flex flex-wrap gap-2 justify-content-center">
@@ -211,8 +214,8 @@
                                 <div class="">
                                     <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
                                          style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center">Giostri Construções</h5>
-                                    <p class="card-text text-center">O projeto Giostri Construções implementa uma
+                                    <h5 class="card-title text-center" data-i18n="projects.giostri.title">Giostri Construções</h5>
+                                    <p class="card-text text-center" data-i18n="projects.giostri.description">O projeto Giostri Construções implementa uma
                                         plataforma digital para
                                         transformar a gestão do Depósito Giostri.</p>
                                     <div class="flex flex-wrap gap-2 justify-content-center">
@@ -240,8 +243,8 @@
                                 <div class="">
                                     <img alt="Logo do projeto" src="./assets/img/LegnuIconPreto.png"
                                          style="display:block;margin:auto;width:64px;height:64px;margin-bottom:32px;">
-                                    <h5 class="card-title text-center">CineScore</h5>
-                                    <p class="card-text text-center">Este projeto apresenta o desenvolvimento de uma
+                                    <h5 class="card-title text-center" data-i18n="projects.cinescore.title">CineScore</h5>
+                                    <p class="card-text text-center" data-i18n="projects.cinescore.description">Este projeto apresenta o desenvolvimento de uma
                                         aplicação web projetada para oferecer recomendações personalizadas de filmes e
                                         séries, baseada nas interações dos usuários, como os likes atribuídos aos
                                         conteúdos.</p>
@@ -276,9 +279,9 @@
 
             <div class="perfil-inferior">
                 <div class="habilidades">
-                    <div class="em1-5 text_paleta mb-3"><strong>Habilidades Técnicas</strong></div>
+                    <div class="em1-5 text_paleta mb-3"><strong data-i18n="skills.title">Habilidades Técnicas</strong></div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Linguagens de Programação:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.programming">Linguagens de Programação:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="C"
                              src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
@@ -290,7 +293,7 @@
                              src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Frameworks & Bibliotecas:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.frameworks">Frameworks & Bibliotecas:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="JavaFX"
                              src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
@@ -306,7 +309,7 @@
                              src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Frontend:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.frontend">Frontend:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="HTML5"
                              src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
@@ -314,7 +317,7 @@
                              src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Banco de Dados:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.database">Banco de Dados:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="MySQL"
                              src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
@@ -324,7 +327,7 @@
                              src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Cloud & DevOps:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.cloud">Cloud & DevOps:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="Red Hat"
                              src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
@@ -334,7 +337,7 @@
                              src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Ferramentas de Desenvolvimento:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.tools">Ferramentas de Desenvolvimento:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="Git"
                              src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
@@ -346,7 +349,7 @@
                              src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
                     </div>
 
-                    <div class="em1-2 text_paleta mt-3"><strong>Design & Multimídia:</strong></div>
+                    <div class="em1-2 text_paleta mt-3"><strong data-i18n="skills.design">Design & Multimídia:</strong></div>
                     <div class="flex flex-wrap gap-2 mt-1">
                         <img alt="Figma"
                              src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
@@ -365,38 +368,38 @@
                 <div class="experiencia ">
 
                     <div class="ms-3">
-                        <div class="em1-5 text_paleta mb-3"><strong>Experiência Profissional</strong></div>
+                        <div class="em1-5 text_paleta mb-3"><strong data-i18n="experience.title">Experiência Profissional</strong></div>
 
                         <div class="text_paleta mt-2">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V2</strong></div>
+                            <div class="text_paleta"><strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong></div>
                             <div class="text_paleta">jan 2024 - atual</div>
-                            <div class="text_paleta mt-1">Desenvolvimento de um sistema ERP modular para médias
+                            <div class="text_paleta mt-1" data-i18n="experience.erp2.description">Desenvolvimento de um sistema ERP modular para médias
                                 empresas,
                                 com foco em escalabilidade e aplicação dos princípios SOLID.
                             </div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL,
+                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL,
                                 Selenium, Spring</small></div>
                         </div>
 
                         <div class="mt-3">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - Disparador de Mensagens</strong>
+                            <div class="text_paleta"><strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
                             </div>
                             <div class="text_paleta">jan 2023 - fev 2024</div>
-                            <div class="text_paleta mt-1">Aplicação desktop para envio automatizado de mensagens para
+                            <div class="text_paleta mt-1" data-i18n="experience.messenger.description">Aplicação desktop para envio automatizado de mensagens para
                                 WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
                             </div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, JavaFX, CSS, SQL,
+                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL,
                                 Selenium</small></div>
                         </div>
 
                         <div class="mt-3 mb-3">
-                            <div class="text_paleta"><strong>Desenvolvedor Fullstack - ERP V1</strong></div>
+                            <div class="text_paleta"><strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong></div>
                             <div class="text_paleta">jan 2022 - ago 2023</div>
-                            <div class="text_paleta mt-1">Sistema de gestão para pequenas empresas com funcionalidades
+                            <div class="text_paleta mt-1" data-i18n="experience.erp1.description">Sistema de gestão para pequenas empresas com funcionalidades
                                 de
                                 relatórios, ordens de serviço, estoque e controle financeiro.
                             </div>
-                            <div class="text_paleta mt-1"><small><strong>Tecnologias:</strong> Java, Java Swing,
+                            <div class="text_paleta mt-1"><small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing,
                                 SQL</small>
                             </div>
                         </div>
@@ -408,14 +411,14 @@
                     </div>
 
                     <div class="mt-3 ms-3">
-                        <div class="em1-5 text_paleta"><strong>Formação Acadêmica</strong></div>
+                        <div class="em1-5 text_paleta"><strong data-i18n="education.title">Formação Acadêmica</strong></div>
                         <div class="mt-2">
-                            <div class="text_paleta"><strong>Engenharia de Software</strong></div>
+                            <div class="text_paleta"><strong data-i18n="education.software.title">Engenharia de Software</strong></div>
                             <div class="text_paleta">PUC Minas, Belo Horizonte</div>
                             <div class="text_paleta">2024-2027</div>
                         </div>
                         <div class="mt-2">
-                            <div class="text_paleta"><strong>Técnico em Eletrônica</strong></div>
+                            <div class="text_paleta"><strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong></div>
                             <div class="text_paleta">SENAI Horto, Belo Horizonte</div>
                             <div class="text_paleta">2022-2023</div>
                         </div>
@@ -429,7 +432,7 @@
 </main>
 
 <footer class="h_minContent footer P">
-    <div class="centro pb-4 pt-4 text_paleta"><strong>© 2024 - All rights reserved - Leandro Alencar</strong></div>
+    <div class="centro pb-4 pt-4 text_paleta"><strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong></div>
 </footer>
 
 

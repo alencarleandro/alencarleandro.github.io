@@ -101,6 +101,23 @@
     max-height: 220px;
 }
 
+/* Estilos para o botão de idioma */
+#langBtn {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: 60px;
+}
+
+#langBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#langBtn:active {
+    transform: scale(0.95);
+}
+
 @media only screen and (max-width: 900px) {
     .perfil-inferior {
         grid-template-columns: auto; /* Voltar ao layout vertical para telas pequenas */
