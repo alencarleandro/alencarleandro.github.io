@@ -385,226 +385,51 @@
 /* Para paleta preta (fundo preto) */
 .paleta[style*="background-color: #000000"] .text_paleta,
 .paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    color: #f5f5f5 !important;
+}
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #90caf9 !important;
 }
 
-.paleta[style*="background-color: #000000"] .contact-info p,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-info p {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .form-label,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .form-label {
-    color: #e6e6e6 !important;
-}
-
-/* Para paleta azul (fundo azul escuro) */
+/* Paleta azul escuro: textos claros e azulados */
 .paleta[style*="background-color: #01355c"] .text_paleta,
 .paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    color: #e3f2fd !important;
+}
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #90caf9 !important;
 }
 
-.paleta[style*="background-color: #01355c"] .contact-info p,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-info p {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .form-label,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .form-label {
-    color: #f0f0f0 !important;
-}
-
-/* Para paleta beje (fundo claro) */
+/* Paleta beje: textos escuros */
 .paleta[style*="background-color: #e7d6b9"] .text_paleta,
 .paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
+    color: #2d2d2d !important;
+}
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+    color: #01355c !important;
 }
 
-.paleta[style*="background-color: #e7d6b9"] .contact-info p,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info p {
-    color: #333333 !important;
+/* Ajuste para títulos e botões */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+    color: #f5f5f5;
+    background-color: #222;
+    border-color: #90caf9;
 }
-
-.paleta[style*="background-color: #e7d6b9"] .form-label,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .form-label {
-    color: #333333 !important;
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #e3f2fd;
+    background-color: #01497c;
+    border-color: #90caf9;
 }
-
-/* Contraste para elementos específicos */
-.contact-info p {
-    font-weight: 500;
-}
-
-.form-label {
-    font-weight: 500;
-}
-
-/* Contraste para elementos de navegação */
-.nav-link.text_paleta {
-    font-weight: 600;
-}
-
-.nav-link.active.text_paleta {
-    font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Contraste para o nome do usuário no header */
-.Nome .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para títulos principais */
-.contact-header .text_paleta,
-.contact-intro .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para informações de contato */
-.contact-info .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste para o formulário */
-.contact-form .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste para o footer */
-footer .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste específico para elementos em diferentes paletas */
-.paleta[style*="background-color: #000000"] footer .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] footer .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para elementos de navegação em diferentes paletas */
-.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para o nome do usuário em diferentes paletas */
-.paleta[style*="background-color: #000000"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para títulos principais em diferentes paletas */
-.paleta[style*="background-color: #000000"] .contact-header .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-header .text_paleta,
-.paleta[style*="background-color: #000000"] .contact-intro .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-intro .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .contact-header .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-header .text_paleta,
-.paleta[style*="background-color: #01355c"] .contact-intro .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-intro .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .contact-header .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-header .text_paleta,
-.paleta[style*="background-color: #e7d6b9"] .contact-intro .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-intro .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para informações de contato em diferentes paletas */
-.paleta[style*="background-color: #000000"] .contact-info .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-info .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .contact-info .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-info .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .contact-info .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para o formulário em diferentes paletas */
-.paleta[style*="background-color: #000000"] .contact-form .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .contact-form .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .contact-form .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .contact-form .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .contact-form .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-form .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para formulário e informações em diferentes paletas */
-.paleta[style*="background-color: #e7d6b9"] .contact-form .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-form .text_paleta,
-.paleta[style*="background-color: #e7d6b9"] .contact-info .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .contact-info .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #01355c;
+    background-color: #fff;
+    border-color: #01355c;
 }
 
 /* ESTILOS ESPECÍFICOS PARA CADA PALETA */
@@ -736,6 +561,85 @@ body.paleta-beje .btn-primary {
 body.paleta-beje .btn-primary:hover {
     background-color: #000000 !important;
     border-color: #000000 !important;
+}
+
+/* Sobrescreve textos azuis para preto ou branco conforme a paleta */
+body.paleta-preta,
+body.paleta-azul {
+    /* Todos os textos devem ser brancos */
+}
+body.paleta-preta .text_paleta,
+body.paleta-preta strong,
+body.paleta-preta h1,
+body.paleta-preta h2,
+body.paleta-preta h3,
+body.paleta-preta h4,
+body.paleta-preta h5,
+body.paleta-preta h6,
+body.paleta-preta a,
+body.paleta-preta .btn,
+body.paleta-preta .icone-label,
+body.paleta-preta .info-content,
+body.paleta-preta .project-title,
+body.paleta-preta .stat-number,
+body.paleta-preta .stat-label {
+    color: #fff !important;
+}
+
+body.paleta-azul .text_paleta,
+body.paleta-azul strong,
+body.paleta-azul h1,
+body.paleta-azul h2,
+body.paleta-azul h3,
+body.paleta-azul h4,
+body.paleta-azul h5,
+body.paleta-azul h6,
+body.paleta-azul a,
+body.paleta-azul .btn,
+body.paleta-azul .icone-label,
+body.paleta-azul .info-content,
+body.paleta-azul .project-title,
+body.paleta-azul .stat-number,
+body.paleta-azul .stat-label {
+    color: #fff !important;
+}
+
+body.paleta-beje .text_paleta,
+body.paleta-beje strong,
+body.paleta-beje h1,
+body.paleta-beje h2,
+body.paleta-beje h3,
+body.paleta-beje h4,
+body.paleta-beje h5,
+body.paleta-beje h6,
+body.paleta-beje a,
+body.paleta-beje .btn,
+body.paleta-beje .icone-label,
+body.paleta-beje .info-content,
+body.paleta-beje .project-title,
+body.paleta-beje .stat-number,
+body.paleta-beje .stat-label {
+    color: #000 !important;
+}
+
+/* Remove cor azul de links e botões */
+body.paleta-preta a:not(.nav-link),
+body.paleta-azul a:not(.nav-link),
+body.paleta-beje a:not(.nav-link) {
+    color: inherit !important;
+}
+
+body.paleta-preta .btn-primary,
+body.paleta-azul .btn-primary {
+    color: #fff !important;
+    background-color: #222 !important;
+    border-color: #fff !important;
+}
+
+body.paleta-beje .btn-primary {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #000 !important;
 }
 
 /* Estilos gerais para links e botões */

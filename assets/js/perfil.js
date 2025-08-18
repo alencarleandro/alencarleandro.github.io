@@ -173,21 +173,28 @@ document.head.appendChild(tooltipStyles);
 // Função para adicionar interatividade aos itens de contato
 function adicionarInteratividadeContatos() {
     const contatoItems = document.querySelectorAll('.contato-item');
-    
+
     contatoItems.forEach(item => {
         item.style.cursor = 'pointer';
         item.style.transition = 'all 0.3s ease';
-        
+
         item.addEventListener('mouseenter', function() {
             this.style.transform = 'translateX(10px)';
-            this.style.color = '#4dabf7';
+            const paletaSelecionada = localStorage.getItem('paletaSelecionada');
+            if (paletaSelecionada === 'paleta-beje') {
+                this.style.color = '#000';
+            } else if (paletaSelecionada === 'paleta-preta' || paletaSelecionada === 'paleta-azul') {
+                this.style.color = '#fff';
+            } else {
+                this.style.color = '';
+            }
         });
-        
+
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateX(0)';
             this.style.color = '';
         });
-        
+
         item.addEventListener('click', function() {
             const link = this.querySelector('a');
             if (link) {
@@ -285,3 +292,21 @@ document.addEventListener('DOMContentLoaded', function() {
         adicionarBotaoExportacao();
     }
 });
+
+function atualizarFotoPorPaleta() {
+    const body = document.body;
+    const foto = document.getElementById('fotoPerfil');
+    if (!foto) return;
+
+    if (body.classList.contains('paleta-preta')) {
+        foto.src = '../assets/img/eu_preto.png';
+    } else if (body.classList.contains('paleta-azul')) {
+        foto.src = '../assets/img/eu_azul.png';
+    } else if (body.classList.contains('paleta-beje')) {
+        foto.src = '../assets/img/eu_beje.png';
+    } else {
+        foto.src = '../assets/img/eu_preto.png';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', atualizarFotoPorPaleta);

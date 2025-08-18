@@ -188,7 +188,7 @@
 }
 
 .quick-nav-card h4 {
-    color: #4dabf7;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -201,7 +201,7 @@
 
 .quick-nav-arrow {
     font-size: 1.5rem;
-    color: #4dabf7;
+    color: rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease;
 }
 
@@ -225,7 +225,7 @@
 }
 
 .highlight-content h5 {
-    color: #4dabf7;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -246,7 +246,7 @@
 
 .tech-tag {
     background: rgba(77, 171, 247, 0.2);
-    color: #4dabf7;
+    color: rgba(255, 255, 255, 0.8);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -400,396 +400,67 @@
 
 /* Para paleta preta (fundo preto) */
 .paleta[style*="background-color: #000000"] .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta,
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #fff !important;
 }
 
-.paleta[style*="background-color: #000000"] .intro-section p,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .intro-section p {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .quick-nav-card p,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .quick-nav-card p {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .highlight-card p,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .highlight-card p {
-    color: #e6e6e6 !important;
-}
-
-/* Para paleta azul (fundo azul escuro) */
+/* Paleta azul escuro: textos claros */
 .paleta[style*="background-color: #01355c"] .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta,
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #fff !important;
 }
 
-.paleta[style*="background-color: #01355c"] .intro-section p,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .intro-section p {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .quick-nav-card p,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .quick-nav-card p {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .highlight-card p,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .highlight-card p {
-    color: #f0f0f0 !important;
-}
-
-/* Para paleta beje (fundo claro) */
+/* Paleta beje: textos escuros */
 .paleta[style*="background-color: #e7d6b9"] .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-.paleta[style*="background-color: #e7d6b9"] .intro-section p,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .intro-section p {
-    color: #333333 !important;
-}
-
-.paleta[style*="background-color: #e7d6b9"] .quick-nav-card p,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .quick-nav-card p {
-    color: #333333 !important;
-}
-
-.paleta[style*="background-color: #e7d6b9"] .highlight-card p,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .highlight-card p {
-    color: #333333 !important;
-}
-
-/* Contraste para elementos específicos */
-.intro-section p {
-    font-weight: 500;
-}
-
-.quick-nav-card p {
-    font-weight: 500;
-}
-
-.highlight-card p {
-    font-weight: 500;
-}
-
-/* Contraste para elementos de navegação */
-.nav-link.text_paleta {
-    font-weight: 600;
-}
-
-.nav-link.active.text_paleta {
-    font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Contraste para o nome do usuário no header */
-.Nome .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para títulos principais */
-.welcome-header .text_paleta,
-.intro-section .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para navegação rápida */
-.quick-nav-section .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste para destaque */
-.highlight-section .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste para o footer */
-footer .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste específico para elementos em diferentes paletas */
-.paleta[style*="background-color: #000000"] footer .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] footer .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para elementos de navegação em diferentes paletas */
-.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para o nome do usuário em diferentes paletas */
-.paleta[style*="background-color: #000000"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para títulos principais em diferentes paletas */
-.paleta[style*="background-color: #000000"] .welcome-header .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .welcome-header .text_paleta,
-.paleta[style*="background-color: #000000"] .intro-section .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .intro-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .welcome-header .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .welcome-header .text_paleta,
-.paleta[style*="background-color: #01355c"] .intro-section .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .intro-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .welcome-header .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .welcome-header .text_paleta,
-.paleta[style*="background-color: #e7d6b9"] .intro-section .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .intro-section .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para navegação rápida em diferentes paletas */
-.paleta[style*="background-color: #000000"] .quick-nav-section .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .quick-nav-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .quick-nav-section .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .quick-nav-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .quick-nav-section .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .quick-nav-section .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para destaque em diferentes paletas */
-.paleta[style*="background-color: #000000"] .highlight-section .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .highlight-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .highlight-section .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .highlight-section .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .highlight-section .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .highlight-section .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* ESTILOS ESPECÍFICOS PARA CADA PALETA */
-
-/* Paleta Preta */
-body.paleta-preta .nav-link {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-preta .nav-link:hover {
-    color: #e6e6e6 !important;
-}
-
-body.paleta-preta .nav-link.active {
-    color: #4dabf7 !important;
-}
-
-body.paleta-preta a:not(.nav-link) {
-    color: #4dabf7 !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-preta a:not(.nav-link):hover {
-    color: #74b9ff !important;
-}
-
-body.paleta-preta .btn-outline-light {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-body.paleta-preta .btn-outline-light:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-
-body.paleta-preta .btn-primary {
-    background-color: #4dabf7 !important;
-    border-color: #4dabf7 !important;
-}
-
-body.paleta-preta .btn-primary:hover {
-    background-color: #74b9ff !important;
-    border-color: #74b9ff !important;
-}
-
-/* Paleta Azul */
-body.paleta-azul .nav-link {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-azul .nav-link:hover {
-    color: #f0f0f0 !important;
-}
-
-body.paleta-azul .nav-link.active {
-    color: #74b9ff !important;
-}
-
-body.paleta-azul a:not(.nav-link) {
-    color: #74b9ff !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-azul a:not(.nav-link):hover {
-    color: #4dabf7 !important;
-}
-
-body.paleta-azul .btn-outline-light {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-body.paleta-azul .btn-outline-light:hover {
-    background-color: #ffffff !important;
-    color: #01355c !important;
-}
-
-body.paleta-azul .btn-primary {
-    background-color: #74b9ff !important;
-    border-color: #74b9ff !important;
-}
-
-body.paleta-azul .btn-primary:hover {
-    background-color: #4dabf7 !important;
-    border-color: #4dabf7 !important;
-}
-
-/* Paleta Beje */
-body.paleta-beje .nav-link {
-    color: #262626 !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-beje .nav-link:hover {
-    color: #000000 !important;
-}
-
-body.paleta-beje .nav-link.active {
-    color: #01355c !important;
-}
-
-body.paleta-beje a:not(.nav-link) {
-    color: #01355c !important;
-    transition: color 0.3s ease;
-}
-
-body.paleta-beje a:not(.nav-link):hover {
-    color: #000000 !important;
-}
-
-body.paleta-beje .btn-outline-light {
-    color: #262626 !important;
-    border-color: #262626 !important;
-}
-
-body.paleta-beje .btn-outline-light:hover {
-    background-color: #262626 !important;
-    color: #ffffff !important;
-}
-
-body.paleta-beje .btn-primary {
-    background-color: #01355c !important;
-    border-color: #01355c !important;
-}
-
-body.paleta-beje .btn-primary:hover {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
-}
-
-/* Estilos gerais para links e botões */
-.nav-link {
-    transition: color 0.3s ease;
-}
-
-a {
-    transition: color 0.3s ease;
-}
-
-.btn {
-    transition: all 0.3s ease;
-}
-
-/* Estilos para elementos específicos */
-.quick-nav-card {
-    transition: all 0.3s ease;
-}
-
-.quick-nav-card:hover {
-    transform: translateY(-5px);
-}
-
-.tech-tag {
-    transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-    transform: scale(1.05);
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+    color: #000 !important;
+}
+
+/* Ajuste para títulos e botões */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn,
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #fff !important;
+    background-color: #222 !important;
+    border-color: #fff !important;
+}
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #000 !important;
+}
+
+/* Paleta preta e azul: fontes brancas */
+body.paleta-preta,
+body.paleta-preta *,
+body.paleta-azul,
+body.paleta-azul * {
+    color: #fff !important;
+}
+
+/* Paleta beje: fontes pretas */
+body.paleta-beje,
+body.paleta-beje * {
+    color: #000 !important;
+}
+
+/* Remova ou sobrescreva qualquer cor azul/cinza dos textos, por exemplo: */
+.quick-nav-card h4,
+.quick-nav-arrow,
+.tech-tag,
+.highlight-content h5 {
+    color: inherit !important;
+}
+
+.quick-nav-card p,
+.highlight-content p {
+    color: inherit !important;
 }

@@ -9,6 +9,7 @@ const scroll = document.querySelector(".cartaoH");
 const fontEsp = document.querySelectorAll(".fontEsp");
 const folha = document.querySelector(".folha");
 const seletorPaleta = document.querySelector(".seletorPaleta");
+const foto = document.getElementById('fotoPerfil');
 
 // Sistema de internacionalização
 const translations = {
@@ -290,6 +291,8 @@ function restaurarPaletaSelecionada() {
         console.log('Nenhuma paleta salva encontrada, aplicando padrão (preto)');
         preto();
     }
+
+    atualizarFotoPorPaleta();
 }
 
 /**
@@ -327,6 +330,11 @@ function preto() {
         if (eu) {
     eu.style.backgroundImage = `url(./assets/img/eu_preto.png)`;
         }
+        
+        
+        foto.src = '../assets/img/eu_preto.png';
+  
+
         
     trocarIconeLegnu('LegnuIconPreto.png');
 
@@ -373,6 +381,8 @@ function azulMarinho() {
         if (eu) {
     eu.style.backgroundImage = `url(./assets/img/eu_azul.png)`;
         }
+
+        foto.src = '../assets/img/eu_azul.png';
         
     trocarIconeLegnu('LegnuIconAzul.png');
 
@@ -420,6 +430,10 @@ function beje() {
     eu.style.backgroundImage = `url(./assets/img/eu_beje.png)`;
         }
         
+        
+        foto.src = '../assets/img/eu_beje.png';
+    
+
     trocarIconeLegnu('LegnuIconBeje.png');
 
         // Salva a paleta selecionada
@@ -509,168 +523,23 @@ function aplicarEstilosPaleta() {
     }
 }
 
-/**
- * Estilos específicos para paleta preta
- */
-function aplicarEstilosPaletaPreta() {
-    try {
-        const style = document.createElement('style');
-        style.id = 'paleta-estilos';
-        style.textContent = `
-            .paleta-preta .nav-link {
-                color: #ffffff !important;
-            }
-            .paleta-preta .nav-link:hover {
-                color: #e6e6e6 !important;
-            }
-            .paleta-preta .nav-link.active {
-                color: #4dabf7 !important;
-            }
-            .paleta-preta a:not(.nav-link) {
-                color: #4dabf7 !important;
-            }
-            .paleta-preta a:not(.nav-link):hover {
-                color: #74b9ff !important;
-            }
-            .paleta-preta .btn-outline-light {
-                color: #ffffff !important;
-                border-color: #ffffff !important;
-            }
-            .paleta-preta .btn-outline-light:hover {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-            }
-            .paleta-preta .btn-primary {
-                background-color: #4dabf7 !important;
-                border-color: #4dabf7 !important;
-            }
-            .paleta-preta .btn-primary:hover {
-                background-color: #74b9ff !important;
-                border-color: #74b9ff !important;
-            }
-        `;
-        
-        // Remove estilos anteriores se existirem
-        const estilosAnteriores = document.getElementById('paleta-estilos');
-        if (estilosAnteriores) {
-            estilosAnteriores.remove();
-        }
-        
-        document.head.appendChild(style);
-        console.log('Estilos da paleta preta aplicados');
-    } catch (error) {
-        console.log('Erro ao aplicar estilos da paleta preta:', error);
+function atualizarFotoPorPaleta() {
+    const body = document.body;
+    const foto = document.getElementById('fotoPerfil');
+    if (!foto) return;
+
+    if (body.classList.contains('paleta-preta')) {
+        foto.src = '../assets/img/eu_preto.png';
+    } else if (body.classList.contains('paleta-azul')) {
+        foto.src = '../assets/img/eu_azul.png';
+    } else if (body.classList.contains('paleta-beje')) {
+        foto.src = '../assets/img/eu_beje.png';
+    } else {
+        foto.src = '../assets/img/eu_preto.png';
     }
 }
 
-/**
- * Estilos específicos para paleta azul
- */
-function aplicarEstilosPaletaAzul() {
-    try {
-        const style = document.createElement('style');
-        style.id = 'paleta-estilos';
-        style.textContent = `
-            .paleta-azul .nav-link {
-                color: #ffffff !important;
-            }
-            .paleta-azul .nav-link:hover {
-                color: #f0f0f0 !important;
-            }
-            .paleta-azul .nav-link.active {
-                color: #74b9ff !important;
-            }
-            .paleta-azul a:not(.nav-link) {
-                color: #74b9ff !important;
-            }
-            .paleta-azul a:not(.nav-link):hover {
-                color: #4dabf7 !important;
-            }
-            .paleta-azul .btn-outline-light {
-                color: #ffffff !important;
-                border-color: #ffffff !important;
-            }
-            .paleta-azul .btn-outline-light:hover {
-                background-color: #ffffff !important;
-                color: #01355c !important;
-            }
-            .paleta-azul .btn-primary {
-                background-color: #74b9ff !important;
-                border-color: #74b9ff !important;
-            }
-            .paleta-azul .btn-primary:hover {
-                background-color: #4dabf7 !important;
-                border-color: #4dabf7 !important;
-            }
-        `;
-        
-        // Remove estilos anteriores se existirem
-        const estilosAnteriores = document.getElementById('paleta-estilos');
-        if (estilosAnteriores) {
-            estilosAnteriores.remove();
-        }
-        
-        document.head.appendChild(style);
-        console.log('Estilos da paleta azul aplicados');
-    } catch (error) {
-        console.log('Erro ao aplicar estilos da paleta azul:', error);
-    }
-}
-
-/**
- * Estilos específicos para paleta beje
- */
-function aplicarEstilosPaletaBeje() {
-    try {
-        const style = document.createElement('style');
-        style.id = 'paleta-estilos';
-        style.textContent = `
-            .paleta-beje .nav-link {
-                color: #262626 !important;
-            }
-            .paleta-beje .nav-link:hover {
-                color: #000000 !important;
-            }
-            .paleta-beje .nav-link.active {
-                color: #01355c !important;
-            }
-            .paleta-beje a:not(.nav-link) {
-                color: #01355c !important;
-            }
-            .paleta-beje a:not(.nav-link):hover {
-                color: #000000 !important;
-            }
-            .paleta-beje .btn-outline-light {
-                color: #262626 !important;
-                border-color: #262626 !important;
-            }
-            .paleta-beje .btn-outline-light:hover {
-                background-color: #262626 !important;
-                color: #ffffff !important;
-            }
-            .paleta-beje .btn-primary {
-                background-color: #01355c !important;
-                border-color: #01355c !important;
-            }
-            .paleta-beje .btn-primary:hover {
-                background-color: #000000 !important;
-                border-color: #000000 !important;
-            }
-        `;
-        
-        // Remove estilos anteriores se existirem
-        const estilosAnteriores = document.getElementById('paleta-estilos');
-        if (estilosAnteriores) {
-            estilosAnteriores.remove();
-        }
-        
-        document.head.appendChild(style);
-        console.log('Estilos da paleta beje aplicados');
-    } catch (error) {
-        console.log('Erro ao aplicar estilos da paleta beje:', error);
-    }
-}
-
+document.addEventListener('DOMContentLoaded', atualizarFotoPorPaleta);
 
 
 

@@ -325,350 +325,56 @@
 /* Para paleta preta (fundo preto) */
 .paleta[style*="background-color: #000000"] .text_paleta,
 .paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    color: #f5f5f5 !important;
 }
 
-.paleta[style*="background-color: #000000"] .perfil-info p,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-info p {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .habilidades-item,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .habilidades-item {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .experiencia-item,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .experiencia-item {
-    color: #e6e6e6 !important;
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #90caf9 !important;
 }
 
 /* Para paleta azul (fundo azul escuro) */
 .paleta[style*="background-color: #01355c"] .text_paleta,
 .paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    color: #e3f2fd !important;
 }
 
-.paleta[style*="background-color: #01355c"] .perfil-info p,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-info p {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .habilidades-item,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .habilidades-item {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .experiencia-item,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .experiencia-item {
-    color: #f0f0f0 !important;
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #90caf9 !important;
 }
 
 /* Para paleta beje (fundo claro) */
 .paleta[style*="background-color: #e7d6b9"] .text_paleta,
 .paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
+    color: #2d2d2d !important;
 }
 
-.paleta[style*="background-color: #e7d6b9"] .perfil-info p,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-info p {
-    color: #333333 !important;
-}
-
-.paleta[style*="background-color: #e7d6b9"] .habilidades-item,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .habilidades-item {
-    color: #333333 !important;
-}
-
-.paleta[style*="background-color: #e7d6b9"] .experiencia-item,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .experiencia-item {
-    color: #333333 !important;
-}
-
-/* Contraste para elementos específicos */
-.perfil-info p {
-    font-weight: 500;
-}
-
-.habilidades-item {
-    font-weight: 500;
-}
-
-.experiencia-item {
-    font-weight: 500;
-}
-
-/* Contraste para elementos de navegação */
-.nav-link.text_paleta {
-    font-weight: 600;
-}
-
-.nav-link.active.text_paleta {
-    font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Contraste para o nome do usuário no header */
-.Nome .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para títulos principais */
-.perfil-header .text_paleta,
-.perfil-info .text_paleta {
-    font-weight: 700;
-}
-
-/* Contraste para habilidades e experiência */
-.habilidades .text_paleta,
-.experiencia .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste para o footer */
-footer .text_paleta {
-    font-weight: 600;
-}
-
-/* Contraste específico para elementos em diferentes paletas */
-.paleta[style*="background-color: #000000"] footer .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] footer .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para elementos de navegação em diferentes paletas */
-.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para o nome do usuário em diferentes paletas */
-.paleta[style*="background-color: #000000"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para títulos principais em diferentes paletas */
-.paleta[style*="background-color: #000000"] .perfil-header .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-header .text_paleta,
-.paleta[style*="background-color: #000000"] .perfil-info .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .perfil-info .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .perfil-header .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-header .text_paleta,
-.paleta[style*="background-color: #01355c"] .perfil-info .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .perfil-info .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .perfil-header .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-header .text_paleta,
-.paleta[style*="background-color: #e7d6b9"] .perfil-info .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .perfil-info .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* Contraste para habilidades e experiência em diferentes paletas */
-.paleta[style*="background-color: #000000"] .habilidades .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .habilidades .text_paleta,
-.paleta[style*="background-color: #000000"] .experiencia .text_paleta,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .experiencia .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.paleta[style*="background-color: #01355c"] .habilidades .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .habilidades .text_paleta,
-.paleta[style*="background-color: #01355c"] .experiencia .text_paleta,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .experiencia .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.paleta[style*="background-color: #e7d6b9"] .habilidades .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .habilidades .text_paleta,
-.paleta[style*="background-color: #e7d6b9"] .experiencia .text_paleta,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .experiencia .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
-}
-
-/* ESTILOS ESPECÍFICOS PARA CADA PALETA */
-
-/* Paleta Preta */
-.paleta-preta .nav-link {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-preta .nav-link:hover {
-    color: #e6e6e6 !important;
-}
-
-.paleta-preta .nav-link.active {
-    color: #4dabf7 !important;
-}
-
-.paleta-preta a:not(.nav-link) {
-    color: #4dabf7 !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-preta a:not(.nav-link):hover {
-    color: #74b9ff !important;
-}
-
-.paleta-preta .btn-outline-light {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-.paleta-preta .btn-outline-light:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-
-.paleta-preta .btn-primary {
-    background-color: #4dabf7 !important;
-    border-color: #4dabf7 !important;
-}
-
-.paleta-preta .btn-primary:hover {
-    background-color: #74b9ff !important;
-    border-color: #74b9ff !important;
-}
-
-/* Paleta Azul */
-.paleta-azul .nav-link {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-azul .nav-link:hover {
-    color: #f0f0f0 !important;
-}
-
-.paleta-azul .nav-link.active {
-    color: #74b9ff !important;
-}
-
-.paleta-azul a:not(.nav-link) {
-    color: #74b9ff !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-azul a:not(.nav-link):hover {
-    color: #4dabf7 !important;
-}
-
-.paleta-azul .btn-outline-light {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-.paleta-azul .btn-outline-light:hover {
-    background-color: #ffffff !important;
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
     color: #01355c !important;
 }
 
-.paleta-azul .btn-primary {
-    background-color: #74b9ff !important;
-    border-color: #74b9ff !important;
+/* Ajuste para títulos e botões */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+    color: #f5f5f5;
+    background-color: #222;
+    border-color: #90caf9;
 }
 
-.paleta-azul .btn-primary:hover {
-    background-color: #4dabf7 !important;
-    border-color: #4dabf7 !important;
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #e3f2fd;
+    background-color: #01497c;
+    border-color: #90caf9;
 }
 
-/* Paleta Beje */
-.paleta-beje .nav-link {
-    color: #262626 !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-beje .nav-link:hover {
-    color: #000000 !important;
-}
-
-.paleta-beje .nav-link.active {
-    color: #01355c !important;
-}
-
-.paleta-beje a:not(.nav-link) {
-    color: #01355c !important;
-    transition: color 0.3s ease;
-}
-
-.paleta-beje a:not(.nav-link):hover {
-    color: #000000 !important;
-}
-
-.paleta-beje .btn-outline-light {
-    color: #262626 !important;
-    border-color: #262626 !important;
-}
-
-.paleta-beje .btn-outline-light:hover {
-    background-color: #262626 !important;
-    color: #ffffff !important;
-}
-
-.paleta-beje .btn-primary {
-    background-color: #01355c !important;
-    border-color: #01355c !important;
-}
-
-.paleta-beje .btn-primary:hover {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #01355c;
+    background-color: #fff;
+    border-color: #01355c;
 }
 
 /* Estilos gerais para links e botões */
@@ -924,4 +630,108 @@ body.paleta-beje .exp-header {
 
 body.paleta-beje .formacao-header {
     color: #333333 !important;
+}
+
+/* Contraste para cards de experiência e formação na paleta preta */
+.paleta[style*="background-color: #000000"] .exp-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-item,
+.paleta[style*="background-color: #000000"] .formacao-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-item {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-header strong,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-header strong,
+.paleta[style*="background-color: #000000"] .formacao-header strong,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-header strong {
+    color: #4dabf7 !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-description,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-description,
+.paleta[style*="background-color: #000000"] .formacao-instituicao,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-instituicao {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-tech,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-tech,
+.paleta[style*="background-color: #000000"] .formacao-periodo,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-periodo {
+    color: #b0cfff !important;
+}
+.eu {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-image: url('../assets/img/perfil.jpg'); /* ajuste o caminho conforme necessário */
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+/* Ajuste de cor dos textos para combinar com a paleta de fundo */
+
+/* Paleta preta: textos claros */
+.paleta[style*="background-color: #000000"] .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+    color: #f5f5f5 !important;
+}
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #90caf9 !important;
+}
+
+/* Paleta azul escuro: textos claros e azulados */
+.paleta[style*="background-color: #01355c"] .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+    color: #e3f2fd !important;
+}
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #90caf9 !important;
+}
+
+/* Paleta beje: textos escuros */
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+    color: #2d2d2d !important;
+}
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+    color: #01355c !important;
+}
+
+/* Ajuste para títulos e botões */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+    color: #f5f5f5;
+    background-color: #222;
+    border-color: #90caf9;
+}
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #e3f2fd;
+    background-color: #01497c;
+    border-color: #90caf9;
+}
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #01355c;
+    background-color: #fff;
+    border-color: #01355c;
+}
+
+/* Controle de cor dos textos da seção de contatos conforme a paleta */
+body.paleta-preta .contatos,
+body.paleta-preta .contatos *,
+body.paleta-azul .contatos,
+body.paleta-azul .contatos * {
+    color: #fff !important;
+}
+
+body.paleta-beje .contatos,
+body.paleta-beje .contatos * {
+    color: #000 !important;
 }

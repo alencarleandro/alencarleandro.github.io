@@ -12,3 +12,19 @@
     max-width: 250px;
     max-height: 250px;
 }
+
+/* Moldura da foto troca a cor da borda conforme a paleta */
+body.paleta-preta .eu,
+body.paleta-preta #fotoPerfil {
+    border-color: #000 !important;
+}
+
+body.paleta-azul .eu,
+body.paleta-azul #fotoPerfil {
+    border-color: #01355c !important;
+}
+
+body.paleta-beje .eu,
+body.paleta-beje #fotoPerfil {
+    border-color: #e7d6b9 !important;
+}

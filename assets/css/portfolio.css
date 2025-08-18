@@ -259,6 +259,7 @@
     }
 }
 
+
 /* Animações */
 @keyframes fadeInUp {
     from {
@@ -376,67 +377,51 @@ html {
 /* Para paleta preta (fundo preto) */
 .paleta[style*="background-color: #000000"] .text_paleta,
 .paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    color: #f5f5f5 !important;
+}
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #90caf9 !important;
 }
 
-.paleta[style*="background-color: #000000"] .project-description,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .project-description {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .project-features li,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features li {
-    color: #e6e6e6 !important;
-}
-
-.paleta[style*="background-color: #000000"] .stat-label,
-.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-label {
-    color: #e6e6e6 !important;
-}
-
-/* Para paleta azul (fundo azul escuro) */
+/* Paleta azul (fundo azul escuro) */
 .paleta[style*="background-color: #01355c"] .text_paleta,
 .paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    color: #e3f2fd !important;
+}
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #90caf9 !important;
 }
 
-.paleta[style*="background-color: #01355c"] .project-description,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .project-description {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .project-features li,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .project-features li {
-    color: #f0f0f0 !important;
-}
-
-.paleta[style*="background-color: #01355c"] .stat-label,
-.paleta[style*="background-color: rgb(1, 53, 92)"] .stat-label {
-    color: #f0f0f0 !important;
-}
-
-/* Para paleta beje (fundo claro) */
+/* Paleta beje (fundo claro) */
 .paleta[style*="background-color: #e7d6b9"] .text_paleta,
 .paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
-    color: #262626 !important;
-    text-shadow: none;
+    color: #2d2d2d !important;
+}
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+    color: #01355c !important;
 }
 
-.paleta[style*="background-color: #e7d6b9"] .project-description,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .project-description {
-    color: #333333 !important;
+/* Ajuste para títulos e botões */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+    color: #f5f5f5;
+    background-color: #222;
+    border-color: #90caf9;
 }
-
-.paleta[style*="background-color: #e7d6b9"] .project-features li,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .project-features li {
-    color: #333333 !important;
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #e3f2fd;
+    background-color: #01497c;
+    border-color: #90caf9;
 }
-
-.paleta[style*="background-color: #e7d6b9"] .stat-label,
-.paleta[style*="background-color: rgb(231, 214, 185)"] .stat-label {
-    color: #333333 !important;
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #01355c;
+    background-color: #fff;
+    border-color: #01355c;
 }
 
 /* Garantir contraste para elementos específicos que podem ter problemas */
@@ -730,6 +715,7 @@ body.paleta-beje .btn-primary:hover {
     background-color: #000000 !important;
     border-color: #000000 !important;
 }
+
 
 /* Estilos gerais para links e botões */
 .nav-link {
