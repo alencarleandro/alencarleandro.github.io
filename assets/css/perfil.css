@@ -660,6 +660,217 @@ body.paleta-beje .formacao-header {
 .paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-periodo {
     color: #b0cfff !important;
 }
+
+/* ESTILOS ESPECÍFICOS PARA PALETA PRETA - CORREÇÃO DE CONTRASTE */
+body.paleta-preta .exp-item,
+body.paleta-preta .formacao-item,
+body.paleta-preta .skill-category {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+body.paleta-preta .exp-header strong,
+body.paleta-preta .formacao-header strong,
+body.paleta-preta .skill-category strong {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta .exp-description,
+body.paleta-preta .formacao-instituicao {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .exp-tech,
+body.paleta-preta .formacao-periodo {
+    color: #b0cfff !important;
+}
+
+body.paleta-preta .exp-period {
+    color: #74b9ff !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ESTILOS ESPECÍFICOS PARA PALETA AZUL */
+body.paleta-azul .exp-item,
+body.paleta-azul .formacao-item,
+body.paleta-azul .skill-category {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .exp-header strong,
+body.paleta-azul .formacao-header strong,
+body.paleta-azul .skill-category strong {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul .exp-description,
+body.paleta-azul .formacao-instituicao {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .exp-tech,
+body.paleta-azul .formacao-periodo {
+    color: #4dabf7 !important;
+}
+
+body.paleta-azul .exp-period {
+    color: #4dabf7 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ESTILOS ESPECÍFICOS PARA PALETA BEJE */
+body.paleta-beje .exp-item,
+body.paleta-beje .formacao-item,
+body.paleta-beje .skill-category {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #333333 !important;
+}
+
+body.paleta-beje .exp-header strong,
+body.paleta-beje .formacao-header strong,
+body.paleta-beje .skill-category strong {
+    color: #01355c !important;
+}
+
+body.paleta-beje .exp-description,
+body.paleta-beje .formacao-instituicao {
+    color: #333333 !important;
+}
+
+body.paleta-beje .exp-tech,
+body.paleta-beje .formacao-periodo {
+    color: #000000 !important;
+}
+
+body.paleta-beje .exp-period {
+    color: #000000 !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ESTILOS DE FALLBACK PARA GARANTIR CONTRASTE ADEQUADO */
+/* Estes estilos garantem que mesmo se o JavaScript falhar, o contraste será adequado */
+
+/* Para paleta preta - fallback */
+.paleta[style*="background-color: #000000"] .exp-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-item,
+.paleta[style*="background-color: #000000"] .formacao-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-item,
+.paleta[style*="background-color: #000000"] .skill-category {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-header strong,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-header strong,
+.paleta[style*="background-color: #000000"] .formacao-header strong,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-header strong,
+.paleta[style*="background-color: #000000"] .skill-category strong {
+    color: #4dabf7 !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-description,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-description,
+.paleta[style*="background-color: #000000"] .formacao-instituicao,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-instituicao {
+    color: #e6e6e6 !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-tech,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-tech,
+.paleta[style*="background-color: #000000"] .formacao-periodo,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-periodo {
+    color: #b0cfff !important;
+}
+
+.paleta[style*="background-color: #000000"] .exp-period,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .exp-period {
+    color: #74b9ff !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Para paleta azul - fallback */
+.paleta[style*="background-color: #01355c"] .exp-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .exp-item,
+.paleta[style*="background-color: #01355c"] .formacao-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .formacao-item,
+.paleta[style*="background-color: #01355c"] .skill-category {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .exp-header strong,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .exp-header strong,
+.paleta[style*="background-color: #01355c"] .formacao-header strong,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .formacao-header strong,
+.paleta[style*="background-color: #01355c"] .skill-category strong {
+    color: #74b9ff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .exp-description,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .exp-description,
+.paleta[style*="background-color: #01355c"] .formacao-instituicao,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .formacao-instituicao {
+    color: #f0f0f0 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .exp-tech,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .exp-tech,
+.paleta[style*="background-color: #01355c"] .formacao-periodo,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .formacao-periodo {
+    color: #4dabf7 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .exp-period,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .exp-period {
+    color: #4dabf7 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Para paleta beje - fallback */
+.paleta[style*="background-color: #e7d6b9"] .exp-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .exp-item,
+.paleta[style*="background-color: #e7d6b9"] .formacao-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .formacao-item,
+.paleta[style*="background-color: #e7d6b9"] .skill-category {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .exp-header strong,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .exp-header strong,
+.paleta[style*="background-color: #e7d6b9"] .formacao-header strong,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .formacao-header strong,
+.paleta[style*="background-color: #e7d6b9"] .skill-category strong {
+    color: #01355c !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .exp-description,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .exp-description,
+.paleta[style*="background-color: #e7d6b9"] .formacao-instituicao,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .formacao-instituicao {
+    color: #333333 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .exp-tech,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .exp-tech,
+.paleta[style*="background-color: #e7d6b9"] .formacao-periodo,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .formacao-periodo {
+    color: #000000 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .exp-period,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .exp-period {
+    color: #000000 !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 .eu {
     width: 160px;
     height: 160px;

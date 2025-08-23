@@ -344,6 +344,9 @@ function preto() {
         // Aplica estilos específicos da paleta
         aplicarEstilosPaleta();
         
+        // Dispara evento personalizado
+        document.dispatchEvent(new CustomEvent('paletaChanged', { detail: 'preto' }));
+        
         console.log('Paleta preta aplicada com sucesso');
     } catch (error) {
         console.log('Erro ao aplicar paleta preta:', error);
@@ -391,6 +394,9 @@ function azulMarinho() {
         
         // Aplica estilos específicos da paleta
         aplicarEstilosPaleta();
+        
+        // Dispara evento personalizado
+        document.dispatchEvent(new CustomEvent('paletaChanged', { detail: 'azul' }));
         
         console.log('Paleta azul aplicada com sucesso');
     } catch (error) {
@@ -442,6 +448,9 @@ function beje() {
         // Aplica estilos específicos da paleta
         aplicarEstilosPaleta();
         
+        // Dispara evento personalizado
+        document.dispatchEvent(new CustomEvent('paletaChanged', { detail: 'beje' }));
+        
         console.log('Paleta beje aplicada com sucesso');
     } catch (error) {
         console.log('Erro ao aplicar paleta beje:', error);
@@ -461,6 +470,9 @@ function start() {
         // Se já está carregado, aguarda um pouco para garantir que todos os elementos estejam prontos
         setTimeout(inicializarAplicacao, 100);
     }
+    
+    // Adiciona listener para mudanças na paleta
+    document.addEventListener('paletaChanged', aplicarEstilosPaleta);
 }
 
 function inicializarAplicacao() {
@@ -480,8 +492,23 @@ function inicializarAplicacao() {
     updateLanguage();
     updateHTML();
     
-    // Aplica estilos específicos da paleta atual
-    aplicarEstilosPaleta();
+    // Aguarda um pouco mais para garantir que todos os elementos estejam renderizados
+    setTimeout(() => {
+        // Aplica estilos específicos da paleta atual
+        aplicarEstilosPaleta();
+        
+        // Força a aplicação dos estilos novamente para garantir
+        const paletaSalva = localStorage.getItem('paletaSelecionada') || 'preto';
+        if (paletaSalva === 'preto') {
+            aplicarEstilosPaletaPreta();
+        } else if (paletaSalva === 'azul') {
+            aplicarEstilosPaletaAzul();
+        } else if (paletaSalva === 'beje') {
+            aplicarEstilosPaletaBeje();
+        }
+        
+        console.log('Estilos aplicados após delay');
+    }, 300);
     
     console.log('Inicialização concluída');
 }
@@ -520,6 +547,519 @@ function aplicarEstilosPaleta() {
         console.log('Estilos da paleta aplicados com sucesso');
     } catch (error) {
         console.log('Erro ao aplicar estilos da paleta:', error);
+    }
+}
+
+/**
+ * Aplica estilos específicos para a paleta preta
+ */
+function aplicarEstilosPaletaPreta() {
+    try {
+        // Aplica estilos específicos para cards de experiência e formação
+        const expItems = document.querySelectorAll('.exp-item');
+        const formacaoItems = document.querySelectorAll('.formacao-item');
+        const skillCategories = document.querySelectorAll('.skill-category');
+        
+        // Cards de experiência
+        expItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Cards de formação
+        formacaoItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Cards de habilidades
+        skillCategories.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Títulos dos cards
+        const expHeaders = document.querySelectorAll('.exp-header strong');
+        const formacaoHeaders = document.querySelectorAll('.formacao-header strong');
+        const skillHeaders = document.querySelectorAll('.skill-category strong');
+        
+        expHeaders.forEach(header => {
+            header.style.color = '#4dabf7';
+        });
+        
+        formacaoHeaders.forEach(header => {
+            header.style.color = '#4dabf7';
+        });
+        
+        skillHeaders.forEach(header => {
+            header.style.color = '#4dabf7';
+        });
+        
+        // Períodos e tecnologias
+        const expPeriods = document.querySelectorAll('.exp-period');
+        const expTechs = document.querySelectorAll('.exp-tech');
+        const formacaoPeriodos = document.querySelectorAll('.formacao-periodo');
+        
+        expPeriods.forEach(period => {
+            period.style.color = '#74b9ff';
+            period.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        expTechs.forEach(tech => {
+            tech.style.color = '#b0cfff';
+        });
+        
+        formacaoPeriodos.forEach(periodo => {
+            periodo.style.color = '#b0cfff';
+        });
+        
+        // Instituições
+        const formacaoInstituicoes = document.querySelectorAll('.formacao-instituicao');
+        formacaoInstituicoes.forEach(instituicao => {
+            instituicao.style.color = '#e6e6e6';
+        });
+        
+        // =========================
+        // CARDS DO PORTFÓLIO - PALETA PRETA
+        // =========================
+        
+        // Cards de projeto
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.style.color = '#ffffff';
+            card.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            card.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Títulos dos projetos
+        const projectTitles = document.querySelectorAll('.project-title');
+        projectTitles.forEach(title => {
+            title.style.color = '#4dabf7';
+        });
+        
+        // Descrições dos projetos
+        const projectDescriptions = document.querySelectorAll('.project-description');
+        projectDescriptions.forEach(desc => {
+            desc.style.color = '#ffffff';
+        });
+        
+        // Subtítulos das características e tecnologias
+        const projectSubtitles = document.querySelectorAll('.project-features h6, .project-tech h6');
+        projectSubtitles.forEach(subtitle => {
+            subtitle.style.color = '#74b9ff';
+        });
+        
+        // Listas de características
+        const projectFeatures = document.querySelectorAll('.project-features li');
+        projectFeatures.forEach(feature => {
+            feature.style.color = '#ffffff';
+        });
+        
+        // Textos de tecnologias
+        const projectTechTexts = document.querySelectorAll('.project-tech small');
+        projectTechTexts.forEach(tech => {
+            tech.style.color = '#b0cfff';
+        });
+        
+        // Cards de estatísticas
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(stat => {
+            stat.style.color = '#ffffff';
+            stat.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            stat.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Números das estatísticas
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(number => {
+            number.style.color = '#4dabf7';
+        });
+        
+        // Labels das estatísticas
+        const statLabels = document.querySelectorAll('.stat-label');
+        statLabels.forEach(label => {
+            label.style.color = '#ffffff';
+        });
+        
+        // =========================
+        // CARDS DE INFORMAÇÃO DE CONTATO - PALETA PRETA
+        // =========================
+        
+        // Cards de informação de contato
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            item.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Títulos dos cards de informação
+        const infoTitles = document.querySelectorAll('.info-content strong');
+        infoTitles.forEach(title => {
+            title.style.color = '#ffffff';
+        });
+        
+        // Descrições dos cards de informação
+        const infoDescriptions = document.querySelectorAll('.info-content p');
+        infoDescriptions.forEach(desc => {
+            desc.style.color = '#ffffff';
+        });
+        
+        // Ícones dos cards de informação
+        const infoIcons = document.querySelectorAll('.info-icon');
+        infoIcons.forEach(icon => {
+            icon.style.background = 'linear-gradient(135deg, #4dabf7, #74b9ff)';
+            icon.style.color = '#ffffff';
+        });
+        
+        console.log('Estilos da paleta preta aplicados com sucesso');
+    } catch (error) {
+        console.log('Erro ao aplicar estilos da paleta preta:', error);
+    }
+}
+
+/**
+ * Aplica estilos específicos para a paleta azul
+ */
+function aplicarEstilosPaletaAzul() {
+    try {
+        // Aplica estilos específicos para cards de experiência e formação
+        const expItems = document.querySelectorAll('.exp-item');
+        const formacaoItems = document.querySelectorAll('.formacao-item');
+        const skillCategories = document.querySelectorAll('.skill-category');
+        
+        // Cards de experiência
+        expItems.forEach(item => {
+            item.style.color = '#f0f0f0';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Cards de formação
+        formacaoItems.forEach(item => {
+            item.style.color = '#f0f0f0';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Cards de habilidades
+        skillCategories.forEach(item => {
+            item.style.color = '#f0f0f0';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Títulos dos cards
+        const expHeaders = document.querySelectorAll('.exp-header strong');
+        const formacaoHeaders = document.querySelectorAll('.formacao-header strong');
+        const skillHeaders = document.querySelectorAll('.skill-category strong');
+        
+        expHeaders.forEach(header => {
+            header.style.color = '#74b9ff';
+        });
+        
+        formacaoHeaders.forEach(header => {
+            header.style.color = '#74b9ff';
+        });
+        
+        skillHeaders.forEach(header => {
+            header.style.color = '#74b9ff';
+        });
+        
+        // Períodos e tecnologias
+        const expPeriods = document.querySelectorAll('.exp-period');
+        const expTechs = document.querySelectorAll('.exp-tech');
+        const formacaoPeriodos = document.querySelectorAll('.formacao-periodo');
+        
+        expPeriods.forEach(period => {
+            period.style.color = '#4dabf7';
+            period.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        expTechs.forEach(tech => {
+            tech.style.color = '#4dabf7';
+        });
+        
+        formacaoPeriodos.forEach(periodo => {
+            periodo.style.color = '#4dabf7';
+        });
+        
+        // Instituições
+        const formacaoInstituicoes = document.querySelectorAll('.formacao-instituicao');
+        formacaoInstituicoes.forEach(instituicao => {
+            instituicao.style.color = '#f0f0f0';
+        });
+        
+        // =========================
+        // CARDS DO PORTFÓLIO - PALETA AZUL
+        // =========================
+        
+        // Cards de projeto
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.style.color = '#ffffff';
+            card.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            card.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Títulos dos projetos
+        const projectTitles = document.querySelectorAll('.project-title');
+        projectTitles.forEach(title => {
+            title.style.color = '#74b9ff';
+        });
+        
+        // Descrições dos projetos
+        const projectDescriptions = document.querySelectorAll('.project-description');
+        projectDescriptions.forEach(desc => {
+            desc.style.color = '#ffffff';
+        });
+        
+        // Subtítulos das características e tecnologias
+        const projectSubtitles = document.querySelectorAll('.project-features h6, .project-tech h6');
+        projectSubtitles.forEach(subtitle => {
+            subtitle.style.color = '#4dabf7';
+        });
+        
+        // Listas de características
+        const projectFeatures = document.querySelectorAll('.project-features li');
+        projectFeatures.forEach(feature => {
+            feature.style.color = '#ffffff';
+        });
+        
+        // Textos de tecnologias
+        const projectTechTexts = document.querySelectorAll('.project-tech small');
+        projectTechTexts.forEach(tech => {
+            tech.style.color = '#b0cfff';
+        });
+        
+        // Cards de estatísticas
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(stat => {
+            stat.style.color = '#ffffff';
+            stat.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            stat.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Números das estatísticas
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(number => {
+            number.style.color = '#74b9ff';
+        });
+        
+        // Labels das estatísticas
+        const statLabels = document.querySelectorAll('.stat-label');
+        statLabels.forEach(label => {
+            label.style.color = '#ffffff';
+        });
+        
+        // =========================
+        // CARDS DE INFORMAÇÃO DE CONTATO - PALETA AZUL
+        // =========================
+        
+        // Cards de informação de contato
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Títulos dos cards de informação
+        const infoTitles = document.querySelectorAll('.info-content strong');
+        infoTitles.forEach(title => {
+            title.style.color = '#ffffff';
+        });
+        
+        // Descrições dos cards de informação
+        const infoDescriptions = document.querySelectorAll('.info-content p');
+        infoDescriptions.forEach(desc => {
+            desc.style.color = '#ffffff';
+        });
+        
+        // Ícones dos cards de informação
+        const infoIcons = document.querySelectorAll('.info-icon');
+        infoIcons.forEach(icon => {
+            icon.style.background = 'linear-gradient(135deg, #74b9ff, #4dabf7)';
+            icon.style.color = '#ffffff';
+        });
+        
+        console.log('Estilos da paleta azul aplicados com sucesso');
+    } catch (error) {
+        console.log('Erro ao aplicar estilos da paleta azul:', error);
+    }
+}
+
+/**
+ * Aplica estilos específicos para a paleta beje
+ */
+function aplicarEstilosPaletaBeje() {
+    try {
+        // Aplica estilos específicos para cards de experiência e formação
+        const expItems = document.querySelectorAll('.exp-item');
+        const formacaoItems = document.querySelectorAll('.formacao-item');
+        const skillCategories = document.querySelectorAll('.skill-category');
+        
+        // Cards de experiência
+        expItems.forEach(item => {
+            item.style.color = '#333333';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Cards de formação
+        formacaoItems.forEach(item => {
+            item.style.color = '#333333';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Cards de habilidades
+        skillCategories.forEach(item => {
+            item.style.color = '#333333';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Títulos dos cards
+        const expHeaders = document.querySelectorAll('.exp-header strong');
+        const formacaoHeaders = document.querySelectorAll('.formacao-header strong');
+        const skillHeaders = document.querySelectorAll('.skill-category strong');
+        
+        expHeaders.forEach(header => {
+            header.style.color = '#01355c';
+        });
+        
+        formacaoHeaders.forEach(header => {
+            header.style.color = '#01355c';
+        });
+        
+        skillHeaders.forEach(header => {
+            header.style.color = '#01355c';
+        });
+        
+        // Períodos e tecnologias
+        const expPeriods = document.querySelectorAll('.exp-period');
+        const expTechs = document.querySelectorAll('.exp-tech');
+        const formacaoPeriodos = document.querySelectorAll('.formacao-periodo');
+        
+        expPeriods.forEach(period => {
+            period.style.color = '#000000';
+            period.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        expTechs.forEach(tech => {
+            tech.style.color = '#000000';
+        });
+        
+        formacaoPeriodos.forEach(periodo => {
+            periodo.style.color = '#000000';
+        });
+        
+        // Instituições
+        const formacaoInstituicoes = document.querySelectorAll('.formacao-instituicao');
+        formacaoInstituicoes.forEach(instituicao => {
+            instituicao.style.color = '#333333';
+        });
+        
+        // =========================
+        // CARDS DO PORTFÓLIO - PALETA BEJE
+        // =========================
+        
+        // Cards de projeto
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.style.color = '#000000';
+            card.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            card.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Títulos dos projetos
+        const projectTitles = document.querySelectorAll('.project-title');
+        projectTitles.forEach(title => {
+            title.style.color = '#01355c';
+        });
+        
+        // Descrições dos projetos
+        const projectDescriptions = document.querySelectorAll('.project-description');
+        projectDescriptions.forEach(desc => {
+            desc.style.color = '#000000';
+        });
+        
+        // Subtítulos das características e tecnologias
+        const projectSubtitles = document.querySelectorAll('.project-features h6, .project-tech h6');
+        projectSubtitles.forEach(subtitle => {
+            subtitle.style.color = '#01355c';
+        });
+        
+        // Listas de características
+        const projectFeatures = document.querySelectorAll('.project-features li');
+        projectFeatures.forEach(feature => {
+            feature.style.color = '#000000';
+        });
+        
+        // Textos de tecnologias
+        const projectTechTexts = document.querySelectorAll('.project-tech small');
+        projectTechTexts.forEach(tech => {
+            tech.style.color = '#01355c';
+        });
+        
+        // Cards de estatísticas
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(stat => {
+            stat.style.color = '#000000';
+            stat.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            stat.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Números das estatísticas
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(number => {
+            number.style.color = '#01355c';
+        });
+        
+        // Labels das estatísticas
+        const statLabels = document.querySelectorAll('.stat-label');
+        statLabels.forEach(label => {
+            label.style.color = '#000000';
+        });
+        
+        // =========================
+        // CARDS DE INFORMAÇÃO DE CONTATO - PALETA BEJE
+        // =========================
+        
+        // Cards de informação de contato
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach(item => {
+            item.style.color = '#000000';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.border = '1px solid rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Títulos dos cards de informação
+        const infoTitles = document.querySelectorAll('.info-content strong');
+        infoTitles.forEach(title => {
+            title.style.color = '#000000';
+        });
+        
+        // Descrições dos cards de informação
+        const infoDescriptions = document.querySelectorAll('.info-content p');
+        infoDescriptions.forEach(desc => {
+            desc.style.color = '#000000';
+        });
+        
+        // Ícones dos cards de informação
+        const infoIcons = document.querySelectorAll('.info-icon');
+        infoIcons.forEach(icon => {
+            icon.style.background = 'linear-gradient(135deg, #01355c, #000000)';
+            icon.style.color = '#ffffff';
+        });
+        
+        console.log('Estilos da paleta beje aplicados com sucesso');
+    } catch (error) {
+        console.log('Erro ao aplicar estilos da paleta beje:', error);
     }
 }
 

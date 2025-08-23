@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title data-i18n="title">Site Pessoal</title>
-    <link href="./assets/css/main.css" rel="stylesheet">
-    <link href="./assets/css/index.css" rel="stylesheet">
-    <link href="./assets/css/fotos.css" rel="stylesheet">
+    <title data-i18n="main.title">Leandro Alencar - Desenvolvedor Fullstack</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/colors.css" rel="stylesheet">
+    <link href="../assets/css/layout.css" rel="stylesheet">
+    <link href="../assets/css/components.css" rel="stylesheet">
+    <link href="../assets/css/typography.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/fotos.css" rel="stylesheet">
+    <link href="../assets/css/perfil.css" rel="stylesheet">
+    <link href="../assets/css/portfolio.css" rel="stylesheet">
+    <link href="../assets/css/contato.css" rel="stylesheet">
 
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
     <script crossorigin="anonymous"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="paleta body rolagemY cartaoV " onload="start()">
@@ -25,8 +35,10 @@
             <div class="container-fluid paleta">
 
                 <div class="Nome">
-                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center"><strong>Leandro
-                        Alencar</strong>
+                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center">
+                        <a href="../index.html" class="text-decoration-none text_paleta">
+                            <strong>Leandro Alencar</strong>
+                        </a>
                     </div>
                 </div>
 
@@ -41,16 +53,16 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
-                            <a aria-current="page" class="nav-link active text_paleta text-center botaoAnima"
-                               href="./views/perfil.html"><strong data-i18n="nav.profile">Perfil</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text_paleta text-center botaoAnima"
-                               href="./views/portfolio.html"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="#perfil"><strong data-i18n="nav.profile">Perfil</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text_paleta text-center botaoAnima"
-                               href="./views/contato.html"><strong data-i18n="nav.contact">Contato</strong></a>
+                               href="#portfolio"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text_paleta text-center botaoAnima"
+                               href="#contato"><strong data-i18n="nav.contact">Contato</strong></a>
                         </li>
                         <li class="nav-item">
                             <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
@@ -70,84 +82,629 @@
 
     <div class="pt-2 folha">
 
-        <section>
-            <!-- Header da página principal -->
-            <div class="welcome-header text-center mb-5">
+        <!-- =========================
+             SEÇÃO PERFIL
+             ========================= -->
+        <section id="perfil">
+            <div class="perfil-header">
                 <div class="em2 centro mb-4 text_paleta">
-                    <strong>Bem-vindo ao meu Site Pessoal</strong>
-            </div>
-                    <div class="exp2 paleta"></div>
+                    <strong data-i18n="profile.title">Meu Perfil</strong>
                 </div>
+                <div class="exp2 paleta"></div>
+            </div>
 
-            <!-- Seção de introdução -->
-            <div class="intro-section text-center mb-5">
-                <div class="em1-5 text_paleta mb-3">
-                    <strong>Olá! Eu sou Leandro Alencar</strong>
-                                    </div>
-                <div class="text_paleta" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                    <p>
-                        Desenvolvedor Fullstack apaixonado por tecnologia e inovação. 
-                        Especializado em Java, Spring Framework e desenvolvimento de sistemas empresariais.
-                    </p>
-                    <p>
-                        Atualmente cursando Engenharia de Software na PUC Minas e sempre em busca de novos desafios 
-                        para expandir minhas habilidades e contribuir com soluções inovadoras.
-                    </p>
+            <div class="perfil-container">
+                <!-- Seção da Foto e Paleta -->
+                <div class="perfil-foto">
+                    <div class="foto-wrapper">
+                        <div class="foto-container">
+                            <img id="fotoPerfil" src="../assets/img/eu_preto.jpg" alt="Foto de perfil" class="eu rounded-circle" style="width:160px; height:160px; object-fit:cover; border:3px solid #4dabf7; box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                        </div>
+                        <div class="paleta-container">
+                            <div class="em1-5 centro mb-3 text_paleta">
+                                <strong data-i18n="palette">Paleta</strong>
+                            </div>
+                            <div class="exp2 paleta w-100"></div>
+                            
+                            <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
+                                <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
+                                    <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
+                                         onclick="preto()"></div>
+                                    <div class="icon32 rounded-circle color_azulMarinho cursorHand" id="paletaAzul"
+                                         onclick="azulMarinho()"></div>
+                                    <div class="icon32 rounded-circle color_beje cursorHand" id="paletaBeje"
+                                         onclick="beje()"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Seção de navegação rápida -->
-            <div class="quick-nav-section">
-                <div class="em1-5 text_paleta mb-4 centro">
-                    <strong>Navegue pelas seções</strong>
+                <!-- Divisor -->
+                <div class="divisor-vertical"></div>
+
+                <!-- Seção de Informações Pessoais -->
+                <div class="perfil-info">
+                    <div class="em1-5 text_paleta mb-3">
+                        <strong data-i18n="profile.personal">Informações Pessoais</strong>
+                    </div>
+                    
+                    <div class="info-pessoal">
+                        <div class="fontEsp em1-5 mb-3">
+                            <strong>Leandro Alencar Pereira Clemente</strong>
+                        </div>
+                        
+                        <div class="sobre-mim">
+                            <div class="em1-5 text_paleta mb-2">
+                                <strong data-i18n="about.title">Sobre mim</strong>
                             </div>
-
-                <div class="quick-nav-grid">
-                    <div class="quick-nav-card" onclick="window.location.href='./views/perfil.html'">
-                        <div class="quick-nav-icon">👤</div>
-                        <h4>Perfil</h4>
-                        <p>Conheça mais sobre mim, minhas habilidades e experiência profissional</p>
-                        <div class="quick-nav-arrow">→</div>
+                            <div class="text_paleta" style="text-align: justify; line-height: 1.6;" data-i18n="about.description">
+                                Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software.
+                                Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação
+                                para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas
+                                (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo
+                                com soluções e crescimento profissional contínuo.
                             </div>
+                        </div>
 
-                    <div class="quick-nav-card" onclick="window.location.href='./views/portfolio.html'">
-                        <div class="quick-nav-icon">💼</div>
-                        <h4>Portfólio</h4>
-                        <p>Explore os projetos que desenvolvi e as tecnologias utilizadas</p>
-                        <div class="quick-nav-arrow">→</div>
+                        <div class="contatos mt-4">
+                            <div class="em1-5 text_paleta mb-2">
+                                <strong data-i18n="profile.contacts">Contatos</strong>
                             </div>
-
-                    <div class="quick-nav-card" onclick="window.location.href='./views/contato.html'">
-                        <div class="quick-nav-icon">📧</div>
-                        <h4>Contato</h4>
-                        <p>Entre em contato comigo para oportunidades de trabalho ou colaborações</p>
-                        <div class="quick-nav-arrow">→</div>
+                            <div class="contato-item">
+                                <strong>GitHub: </strong>
+                                <a href="https://github.com/alencarleandro" target="_blank">github/alencarleandro</a>
+                            </div>
+                            <div class="contato-item">
+                                <strong>LinkedIn: </strong>
+                                <a href="https://www.linkedin.com/in/leandroalencarclemente/" target="_blank">linkedin/leandroalencarclemente</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-            <!-- Seção de destaque -->
-            <div class="highlight-section mt-5">
+            <!-- Seção de Habilidades -->
+            <div class="habilidades-section mt-5">
                 <div class="em1-5 text_paleta mb-3 centro">
-                    <strong>Destaque do Momento</strong>
+                    <strong data-i18n="skills.title">Habilidades Técnicas</strong>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.programming">Linguagens de Programação</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+                            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
+                        </div>
                     </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h5>🚀 ERP V2 - Sistema Empresarial Modular</h5>
-                        <p>
-                            Meu projeto mais recente: um sistema ERP completo desenvolvido com Java, Spring Framework 
-                            e princípios SOLID. Focado em escalabilidade e manutenibilidade para médias empresas.
-                        </p>
-                        <div class="highlight-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring</span>
-                            <span class="tech-tag">JavaFX</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frameworks">Frameworks & Bibliotecas</strong>
                         </div>
-                        <button class="btn btn-primary btn-sm mt-3" onclick="window.location.href='./views/portfolio.html'">
-                            Ver Todos os Projetos
+                        <div class="skills-badges">
+                            <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                            <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                            <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                            <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frontend">Frontend</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                            <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.database">Banco de Dados</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.cloud">Cloud & DevOps</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
+                            <img alt="Google Cloud" src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+                            <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.tools">Ferramentas de Desenvolvimento</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                            <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                            <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                            <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.design">Design & Multimídia</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
+                            <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
+                            <img alt="Inkscape" src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
+                            <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Experiência e Formação -->
+            <div class="experiencia-formacao mt-5">
+                <div class="exp-form-container">
+                    <!-- Experiência Profissional -->
+                    <div class="experiencia-section">
+                        <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="experience.title">Experiência Profissional</strong>
+                        </div>
+                        
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong>
+                                <span class="exp-period">jan 2024 - atual</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp2.description">
+                                Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
+                                <span class="exp-period">jan 2023 - fev 2024</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.messenger.description">
+                                Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong>
+                                <span class="exp-period">jan 2022 - ago 2023</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp1.description">
+                                Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing, SQL</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divisor -->
+                    <div class="divisor-horizontal"></div>
+
+                    <!-- Formação Acadêmica -->
+                    <div class="formacao-section">
+                        <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="education.title">Formação Acadêmica</strong>
+                        </div>
+                        
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.software.title">Engenharia de Software</strong>
+                            </div>
+                            <div class="formacao-instituicao">PUC Minas, Belo Horizonte</div>
+                            <div class="formacao-periodo">2024-2027</div>
+                        </div>
+
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong>
+                            </div>
+                            <div class="formacao-instituicao">SENAI Horto, Belo Horizonte</div>
+                            <div class="formacao-periodo">2022-2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SEÇÃO PORTFÓLIO
+             ========================= -->
+        <section id="portfolio" class="mt-5">
+            <div class="portfolio-header">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong data-i18n="portfolio.title">Meu Portfólio</strong>
+                </div>
+                <div class="exp2 paleta"></div>
+            </div>
+
+            <div class="portfolio-intro">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="portfolio.subtitle">Projetos Desenvolvidos</strong>
+                </div>
+                <div class="text_paleta text-center" style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    <p data-i18n="portfolio.description">
+                        Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e abordagens de desenvolvimento.
+                        Cada projeto representa um desafio único e uma oportunidade de aprendizado.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- ERP V2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.erp2.title">ERP V2</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.erp2.description">
+                            Sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.modular">Arquitetura modular</li>
+                                <li data-i18n="portfolio.features.scalable">Altamente escalável</li>
+                                <li data-i18n="portfolio.features.solid">Princípios SOLID</li>
+                                <li data-i18n="portfolio.features.enterprise">Focado em médias empresas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disparador de Mensagens -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.messenger.title">Disparador de Mensagens</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.messenger.description">
+                            Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.automation">Automação completa</li>
+                                <li data-i18n="portfolio.features.multiplatform">Múltiplas plataformas</li>
+                                <li data-i18n="portfolio.features.media">Suporte a mídias</li>
+                                <li data-i18n="portfolio.features.batch">Envio em lote</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ERP V1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.erp1.title">ERP V1</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.erp1.description">
+                            Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.reports">Relatórios gerenciais</li>
+                                <li data-i18n="portfolio.features.inventory">Controle de estoque</li>
+                                <li data-i18n="portfolio.features.financial">Gestão financeira</li>
+                                <li data-i18n="portfolio.features.service">Ordens de serviço</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                                <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giostri Construções -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.giostri.title">Giostri Construções</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.giostri.description">
+                            O projeto Giostri Construções implementa uma plataforma digital para transformar a gestão do Depósito Giostri.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.web">Aplicação web</li>
+                                <li data-i18n="portfolio.features.management">Gestão de depósito</li>
+                                <li data-i18n="portfolio.features.modern">Interface moderna</li>
+                                <li data-i18n="portfolio.features.responsive">Totalmente responsiva</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CineScore -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
+                        </div>
+                        <h5 class="project-title" data-i18n="projects.cinescore.title">CineScore</h5>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="projects.cinescore.description">
+                            Este projeto apresenta o desenvolvimento de uma aplicação web projetada para oferecer recomendações personalizadas de filmes e séries, baseada nas interações dos usuários, como os likes atribuídos aos conteúdos.
+                        </p>
+                        
+                        <div class="project-features">
+                            <h6 data-i18n="portfolio.features">Características:</h6>
+                            <ul>
+                                <li data-i18n="portfolio.features.recommendations">Sistema de recomendações</li>
+                                <li data-i18n="portfolio.features.personalization">Personalização</li>
+                                <li data-i18n="portfolio.features.interaction">Interação do usuário</li>
+                                <li data-i18n="portfolio.features.analytics">Análise de preferências</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
+                            <div class="tech-badges">
+                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Estatísticas -->
+            <div class="stats-section mt-5">
+                <div class="em1-5 text_paleta mb-4 centro">
+                    <strong data-i18n="portfolio.stats.title">Estatísticas dos Projetos</strong>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.projects">Projetos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.erps">Sistemas ERP</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.web">Aplicações Web</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-i18n="portfolio.stats.technologies">Tecnologias</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SEÇÃO CONTATO
+             ========================= -->
+        <section id="contato" class="mt-5">
+            <div class="contato-header">
+                <div class="em2 centro mb-4 text_paleta">
+                    <strong data-i18n="contact.title">Entre em Contato</strong>
+                </div>
+                <div class="exp2 paleta"></div>
+            </div>
+
+            <div class="contato-container">
+                <!-- Seção de Redes Sociais -->
+                <div class="redes-sociais">
+                    <div class="em1-5 text_paleta mb-3 centro">
+                        <strong data-i18n="contact.social.title">Redes Sociais</strong>
+                    </div>
+                    
+                    <div class="icones-container">
+                        <div class="icone-item" onclick="abrirEmail()">
+                            <div class="icone-wrapper email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.email">E-mail</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirWhatsApp()">
+                            <div class="icone-wrapper whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.whatsapp">WhatsApp</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirLinkedIn()">
+                            <div class="icone-wrapper linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.linkedin">LinkedIn</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirGitHub()">
+                            <div class="icone-wrapper github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.github">GitHub</span>
+                        </div>
+                        
+                        <div class="icone-item" onclick="abrirInstagram()">
+                            <div class="icone-wrapper instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span class="icone-label" data-i18n="contact.social.instagram">Instagram</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor -->
+                <div class="divisor-vertical"></div>
+
+                <!-- Formulário de Contato -->
+                <div class="formulario-contato">
+                    <div class="em1-5 text_paleta mb-3">
+                        <strong data-i18n="contact.form.title">Envie uma Mensagem</strong>
+                    </div>
+                    
+                    <form id="contactForm" onsubmit="enviarEmail(event)">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text_paleta" data-i18n="contact.form.name">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label text_paleta" data-i18n="contact.form.email">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label text_paleta" data-i18n="contact.form.subject">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label text_paleta" data-i18n="contact.form.message">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-enviar">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            <span data-i18n="contact.form.send">Enviar Mensagem</span>
                         </button>
+                    </form>
+                    
+                    <div id="formStatus" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- Informações de Contato Adicionais -->
+            <div class="info-contato mt-5">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="contact.info.title">Informações de Contato</strong>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.location.title">Localização</strong>
+                            <p data-i18n="contact.info.location.value">Belo Horizonte, MG - Brasil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.availability.title">Disponibilidade</strong>
+                            <p data-i18n="contact.info.availability.value">Segunda a Sexta, 9h às 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong data-i18n="contact.info.education.title">Formação</strong>
+                            <p data-i18n="contact.info.education.value">Engenharia de Software - PUC Minas</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,11 +715,15 @@
 </main>
 
 <footer class="h_minContent footer P">
-    <div class="centro pb-4 pt-4 text_paleta"><strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong></div>
+    <div class="centro pb-4 pt-4 text_paleta">
+        <strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong>
+    </div>
 </footer>
 
-
-<script src="./assets/js/index.js"></script>
+<script src="../assets/js/index.js"></script>
+<script src="../assets/js/perfil.js"></script>
+<script src="../assets/js/portfolio.js"></script>
+<script src="../assets/js/contato.js"></script>
 </body>
 
 </html>
