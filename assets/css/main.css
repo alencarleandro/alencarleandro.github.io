@@ -46,13 +46,13 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
+	align-items: center;
 }
 
 .cCentro {
     display: flex;
     justify-content: center;
-    align-items: center;
+	align-items: center;
 }
 
 .jCentro { display: flex; justify-content: center; }
@@ -496,34 +496,34 @@
 .radius_TR-BR_MAX { border-radius: 0% 100% 100% 0%; }
 
 /* Utilitários de Scroll */
-.cartaoV::-webkit-scrollbar {
-    width: 10px;
+  .cartaoV::-webkit-scrollbar {
+	width: 10px;
     background-color: rgb(0, 0, 0, 0);
-    margin-top: 30px;
-}
+	margin-top: 30px;
+  }
+  
+  .cartaoV::-webkit-scrollbar-thumb {
+	background-color: #d0d7de;
+	border-radius: 40px 0px 0px 40px;
+  }
 
-.cartaoV::-webkit-scrollbar-thumb {
-    background-color: #d0d7de;
-    border-radius: 40px 0px 0px 40px;
-}
-
-.cartaoH::-webkit-scrollbar {
-    width: 10px;
+  .cartaoH::-webkit-scrollbar {
+	width: 10px;
     background-color: rgb(0, 0, 0, 0);
-}
+  }
+  
+  .cartaoH::-webkit-scrollbar-thumb {
+	background-color: #d0d7de;
+	border-radius: 40px 40px 0px 0px;
+  }
 
-.cartaoH::-webkit-scrollbar-thumb {
-    background-color: #d0d7de;
-    border-radius: 40px 40px 0px 0px;
-}
-
-.cartaoHV::-webkit-scrollbar {
-    width: 10px;
+  .cartaoHV::-webkit-scrollbar {
+	width: 10px;
     background-color: rgb(0, 0, 0, 0);
-}
-
-.cartaoHV::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0, 0.5);
+  }
+  
+  .cartaoHV::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 0, 0, 0.5);
     border-radius: 40px;
 }
 
@@ -579,16 +579,16 @@
 
 /* Utilitários de Input */
 .hBox_paraInput {
-    background-color: white;
-    border-radius: 5px;
+	background-color: white;
+	border-radius: 5px;
     border-color: gray;
 }
 
 .hBox_paraInputDesativado {
-    background-color: #808080;
-    border-radius: 5px;
+	background-color: #808080;
+	border-radius: 5px;
     border-color: gray;
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
 .hBox_paraInputDesativado:hover { opacity: 1; }
@@ -598,10 +598,10 @@
 
 /* Utilitários de Layout */
 .layoutHeader {
-    display: grid;
+	display: grid;
     row-gap: 16px;
     column-gap: 16px;
-    grid-template-columns: auto min-content;
+	grid-template-columns: auto min-content;
     grid-template-rows: auto;
 }
 
@@ -614,7 +614,7 @@
 }
 
 .minhasReceitasDieta {
-    display: grid;
+		display: grid;
     grid-template-columns: auto min-content;
 }
 
@@ -642,14 +642,14 @@
 
 /* Utilitários de Tamanho */
 .x100x300 {
-    max-width: 100px;
-    max-height: 300px;
+   max-width: 100px;
+   max-height: 300px; 
 }
 
 .x100x200 {
     max-width: 100px;
-    max-height: 200px;
-}
+    max-height: 200px; 
+ }
 
 /* Utilitários de Border Radius rápidos */
 .rad5 { border-radius: 5px; }

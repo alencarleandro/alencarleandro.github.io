@@ -1,0 +1,351 @@
+/* =========================
+   LAYOUT.CSS - Layouts e grids
+   ========================= */
+
+/* Layout principal */
+.body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.main {
+    padding-left: 48px;
+    padding-right: 28px;
+    grid-area: main;
+}
+
+/* Layout de perfil */
+.perfil {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto;
+    grid-template-areas: "foto descricao";
+}
+
+.perfil-inferior {
+    display: grid;
+    grid-template-columns: 1fr 2px 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "habilidades divisorHorizontal experiencia";
+    align-items: start;
+}
+
+/* Layout de contagem */
+.layoutContagem {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto;
+}
+
+/* Layout de header */
+.layoutHeader {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto;
+}
+
+/* Grids específicos */
+.grid2x2 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid2x2HT {
+    display: grid;
+    grid-template-rows: auto min-content;
+}
+
+.grid2x2VT {
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.grid2x2VT-alt {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.grid2x2VB {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+.grid2x2VB-esp {
+    display: grid;
+    grid-template-rows: 35vh auto;
+}
+
+.grid2x2HB {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+.grid3x3 {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+.grid3x3HT {
+    display: grid;
+    grid-template-rows: auto min-content min-content;
+}
+
+.grid3x3HB {
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+}
+
+.grid3x3CC {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+}
+
+.grid4x4 {
+    display: grid;
+    grid-template-rows: min-content min-content min-content auto;
+}
+
+.gridMain {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.gridCard {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+/* Layout de portfólio */
+.portfolio-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout de perfil */
+.perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.exp-form-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Layout de contato */
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.icones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Layout de navegação rápida */
+.quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 900px) {
+    .main {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .perfil {
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "foto"
+            "descricao";
+    }
+
+    .perfil-inferior {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "habilidades"
+            "divisorHorizontal"
+            "experiencia";
+    }
+
+    .divisorHorizontal {
+        width: 100%;
+        height: 2px;
+        align-self: center;
+    }
+
+    .layoutContagem {
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: auto;
+        grid-template-rows: auto min-content;
+    }
+
+    .gridMain {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .perfil-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+
+    .exp-form-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
+    .icones-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .quick-nav-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .layoutContagem {
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: auto;
+        grid-template-rows: auto min-content;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .icones-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-nav-grid {
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .clienteSize {
+        max-height: 120px;
+        min-height: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-esquerda {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-esquerda-imagem {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .login-esquerda-imagem {
+        width: 35vw;
+    }
+}

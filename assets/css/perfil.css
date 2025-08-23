@@ -13,6 +13,7 @@
     gap: 2rem;
     margin-bottom: 3rem;
     align-items: start;
+    min-height: 500px;
 }
 
 /* Seção da foto e paleta */
@@ -20,20 +21,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem 1rem;
 }
 
 .foto-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 300px;
 }
 
 .foto-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0;
+    width: 300px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.foto-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .paleta-container {
@@ -41,6 +67,11 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Divisor vertical */
@@ -55,6 +86,10 @@
 /* Seção de informações pessoais */
 .perfil-info {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
 }
 
 .info-pessoal {
@@ -233,6 +268,17 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         gap: 2rem;
+        min-height: auto;
+    }
+    
+    .perfil-foto {
+        min-height: 300px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .perfil-info {
+        min-height: auto;
+        padding: 1rem;
     }
     
     .divisor-vertical {
@@ -257,6 +303,26 @@
 @media only screen and (max-width: 600px) {
     .perfil-container {
         gap: 1.5rem;
+        min-height: auto;
+    }
+    
+    .perfil-foto {
+        min-height: 250px;
+        padding: 1rem 0.5rem;
+    }
+    
+    .foto-wrapper {
+        max-width: 250px;
+        gap: 1.5rem;
+    }
+    
+    .foto-container {
+        padding: 1rem;
+    }
+    
+    .paleta-container {
+        padding: 1rem;
+        gap: 1rem;
     }
     
     .exp-header {
@@ -270,6 +336,7 @@
     
     .perfil-info {
         padding: 0.5rem;
+        min-height: auto;
     }
     
     .sobre-mim,
@@ -872,14 +939,15 @@ body.paleta-beje .exp-period {
 }
 
 .eu {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
     background-image: url('../assets/img/perfil.jpg'); /* ajuste o caminho conforme necessário */
     background-size: cover;
     background-position: center;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
 }
 
 /* Ajuste de cor dos textos para combinar com a paleta de fundo */

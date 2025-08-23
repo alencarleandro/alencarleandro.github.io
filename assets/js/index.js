@@ -29,7 +29,6 @@ const translations = {
         "about.description": "Sou apaixonado por tecnologia, especialmente por programação e arquitetura de software. Em 2022, durante o curso Técnico em Eletrônica no SENAI Horto, percebi minha vocação para o desenvolvimento de software. Atualmente curso Engenharia de Software na PUC Minas (2024-2027) e busco aplicar meus conhecimentos em projetos desafiadores, contribuindo com soluções e crescimento profissional contínuo.",
         portfolio: "Portfólio",
         "portfolio.title": "Meu Portfólio",
-        "portfolio.subtitle": "Projetos Desenvolvidos",
         "portfolio.description": "Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e abordagens de desenvolvimento. Cada projeto representa um desafio único e uma oportunidade de aprendizado.",
         "portfolio.features": "Características",
         "portfolio.features.modular": "Arquitetura modular",
@@ -126,7 +125,6 @@ const translations = {
         "about.description": "I am passionate about technology, especially programming and software architecture. In 2022, during the Electronics Technician course at SENAI Horto, I realized my vocation for software development. I am currently studying Software Engineering at PUC Minas (2024-2027) and seek to apply my knowledge in challenging projects, contributing with solutions and continuous professional growth.",
         portfolio: "Portfolio",
         "portfolio.title": "My Portfolio",
-        "portfolio.subtitle": "Developed Projects",
         "portfolio.description": "Here are some of the projects I developed, demonstrating my skills in different technologies and development approaches. Each project represents a unique challenge and a learning opportunity.",
         "portfolio.features": "Features",
         "portfolio.features.modular": "Modular architecture",
@@ -494,8 +492,8 @@ function inicializarAplicacao() {
     
     // Aguarda um pouco mais para garantir que todos os elementos estejam renderizados
     setTimeout(() => {
-        // Aplica estilos específicos da paleta atual
-        aplicarEstilosPaleta();
+    // Aplica estilos específicos da paleta atual
+    aplicarEstilosPaleta();
         
         // Força a aplicação dos estilos novamente para garantir
         const paletaSalva = localStorage.getItem('paletaSelecionada') || 'preto';
@@ -715,6 +713,24 @@ function aplicarEstilosPaletaPreta() {
             icon.style.color = '#ffffff';
         });
         
+        // =========================
+        // CARDS DAS REDES SOCIAIS - PALETA PRETA
+        // =========================
+        
+        // Cards das redes sociais
+        const iconeItems = document.querySelectorAll('.icone-item');
+        iconeItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            item.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+        });
+        
+        // Labels das redes sociais
+        const iconeLabels = document.querySelectorAll('.icone-label');
+        iconeLabels.forEach(label => {
+            label.style.color = '#ffffff';
+        });
+        
         console.log('Estilos da paleta preta aplicados com sucesso');
     } catch (error) {
         console.log('Erro ao aplicar estilos da paleta preta:', error);
@@ -884,6 +900,24 @@ function aplicarEstilosPaletaAzul() {
         infoIcons.forEach(icon => {
             icon.style.background = 'linear-gradient(135deg, #74b9ff, #4dabf7)';
             icon.style.color = '#ffffff';
+        });
+        
+        // =========================
+        // CARDS DAS REDES SOCIAIS - PALETA AZUL
+        // =========================
+        
+        // Cards das redes sociais
+        const iconeItems = document.querySelectorAll('.icone-item');
+        iconeItems.forEach(item => {
+            item.style.color = '#ffffff';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+        });
+        
+        // Labels das redes sociais
+        const iconeLabels = document.querySelectorAll('.icone-label');
+        iconeLabels.forEach(label => {
+            label.style.color = '#ffffff';
         });
         
         console.log('Estilos da paleta azul aplicados com sucesso');
@@ -1057,6 +1091,24 @@ function aplicarEstilosPaletaBeje() {
             icon.style.color = '#ffffff';
         });
         
+        // =========================
+        // CARDS DAS REDES SOCIAIS - PALETA BEJE
+        // =========================
+        
+        // Cards das redes sociais
+        const iconeItems = document.querySelectorAll('.icone-item');
+        iconeItems.forEach(item => {
+            item.style.color = '#000000';
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            item.style.border = '1px solid rgba(0, 0, 0, 0.1)';
+        });
+        
+        // Labels das redes sociais
+        const iconeLabels = document.querySelectorAll('.icone-label');
+        iconeLabels.forEach(label => {
+            label.style.color = '#000000';
+        });
+        
         console.log('Estilos da paleta beje aplicados com sucesso');
     } catch (error) {
         console.log('Erro ao aplicar estilos da paleta beje:', error);
@@ -1081,5 +1133,289 @@ function atualizarFotoPorPaleta() {
 
 document.addEventListener('DOMContentLoaded', atualizarFotoPorPaleta);
 
+// Funções para abrir links das redes sociais
+function abrirEmail() {
+    // Remove card de email existente se houver
+    const emailCardExistente = document.getElementById('emailCard');
+    if (emailCardExistente) {
+        emailCardExistente.remove();
+        return;
+    }
+    
+    // Cria o card do email
+    const emailCard = document.createElement('div');
+    emailCard.id = 'emailCard';
+    emailCard.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        border: 2px solid #4dabf7;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        text-align: center;
+        min-width: 300px;
+        animation: fadeIn 0.3s ease-in-out;
+    `;
+    
+    // Adiciona o conteúdo do card
+    emailCard.innerHTML = `
+        <div style="margin-bottom: 1rem;">
+            <i class="fas fa-envelope" style="font-size: 2rem; color: #4dabf7; margin-bottom: 1rem;"></i>
+            <h4 style="margin: 0 0 1rem 0; color: #4dabf7;">Email de Contato</h4>
+            <p style="font-size: 1.2rem; margin: 0 0 1.5rem 0; word-break: break-all;">leandro130333.dev@gmail.com</p>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+            <button onclick="copiarEmail()" style="
+                background: #4dabf7;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 0.9rem;
+            ">Copiar Email</button>
+            <button onclick="enviarEmail()" style="
+                background: #28a745;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 0.9rem;
+            ">Enviar Email</button>
+            <button onclick="fecharEmailCard()" style="
+                background: #dc3545;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 0.9rem;
+            ">Fechar</button>
+        </div>
+    `;
+    
+    // Adiciona o card ao body
+    document.body.appendChild(emailCard);
+    
+    // Adiciona overlay para fechar ao clicar fora
+    const overlay = document.createElement('div');
+    overlay.id = 'emailOverlay';
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        animation: fadeIn 0.3s ease-in-out;
+    `;
+    overlay.onclick = fecharEmailCard;
+    document.body.appendChild(overlay);
+}
+
+function copiarEmail() {
+    navigator.clipboard.writeText('leandro130333.dev@gmail.com').then(() => {
+        // Mostra feedback visual
+        const botao = event.target;
+        const textoOriginal = botao.textContent;
+        botao.textContent = 'Copiado!';
+        botao.style.background = '#28a745';
+        
+        setTimeout(() => {
+            botao.textContent = textoOriginal;
+            botao.style.background = '#4dabf7';
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar email:', err);
+        alert('Erro ao copiar email. Tente copiar manualmente: leandro130333.dev@gmail.com');
+    });
+}
+
+function enviarEmail() {
+    window.open('mailto:leandro130333.dev@gmail.com', '_blank');
+    fecharEmailCard();
+}
+
+function fecharEmailCard() {
+    const emailCard = document.getElementById('emailCard');
+    const overlay = document.getElementById('emailOverlay');
+    
+    if (emailCard) {
+        emailCard.remove();
+    }
+    if (overlay) {
+        overlay.remove();
+    }
+}
+
+function abrirWhatsApp() {
+    window.open('https://wa.me/553183479067', '_blank');
+}
+
+function abrirLinkedIn() {
+    window.open('https://www.linkedin.com/in/leandroalencarclemente', '_blank');
+}
+
+function abrirGitHub() {
+    window.open('https://github.com/alencarleandro', '_blank');
+}
+
+function abrirInstagram() {
+    window.open('https://www.instagram.com/leandro_a_clemente/', '_blank');
+}
+
+// =========================
+// FUNCIONALIDADES DO SCROLL HORIZONTAL COM DRAG
+// =========================
+
+// Variáveis globais para o drag
+// Sistema de drag and drop para scroll horizontal
+let isDragging = false;
+let startX = 0;
+let startScrollLeft = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.portfolio-carousel');
+    const track = document.querySelector('.carousel-track');
+    
+    if (carousel && track) {
+        // Adiciona classe para indicar que há scroll
+        if (track.scrollWidth > carousel.clientWidth) {
+            carousel.classList.add('has-scroll');
+        }
+        
+        // Inicializa o sistema de drag
+        initDragToScroll(carousel);
+        
+
+    }
+});
+
+// Inicializa o sistema de drag para scroll
+function initDragToScroll(carousel) {
+    // Mouse events
+    carousel.addEventListener('mousedown', function(e) {
+        startDragging(e, carousel);
+    });
+    
+    // Touch events para mobile
+    carousel.addEventListener('touchstart', function(e) {
+        startDragging(e, carousel);
+    });
+}
+
+// Inicia o drag
+function startDragging(e, carousel) {
+    isDragging = true;
+    carousel.classList.add('dragging');
+    
+    // Pega a posição inicial
+    if (e.type === 'mousedown') {
+        startX = e.pageX;
+        
+        const mouseMoveHandler = function(e) { 
+            drag(e, carousel); 
+        };
+        const mouseUpHandler = function() { 
+            stopDragging(carousel, mouseMoveHandler, mouseUpHandler); 
+        };
+        
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+        
+        // Armazena os handlers para remoção
+        carousel._mouseMoveHandler = mouseMoveHandler;
+        carousel._mouseUpHandler = mouseUpHandler;
+        
+    } else if (e.type === 'touchstart') {
+        startX = e.touches[0].pageX;
+        
+        const touchMoveHandler = function(e) { 
+            drag(e, carousel); 
+        };
+        const touchEndHandler = function() { 
+            stopDragging(carousel, touchMoveHandler, touchEndHandler); 
+        };
+        
+        carousel.addEventListener('touchmove', touchMoveHandler);
+        carousel.addEventListener('touchend', touchEndHandler);
+        
+        // Armazena os handlers para remoção
+        carousel._touchMoveHandler = touchMoveHandler;
+        carousel._touchEndHandler = touchEndHandler;
+    }
+    
+    // Pega a posição atual do scroll
+    startScrollLeft = carousel.scrollLeft;
+    
+    // Previne comportamento padrão
+    e.preventDefault();
+}
+
+// Executa o drag
+function drag(e, carousel) {
+    if (!isDragging) return;
+    
+    e.preventDefault();
+    
+    // Calcula a nova posição
+    let currentX;
+    if (e.type === 'mousemove') {
+        currentX = e.pageX;
+    } else if (e.type === 'touchmove') {
+        currentX = e.touches[0].pageX;
+    }
+    
+    const diff = currentX - startX;
+    const newScrollLeft = startScrollLeft - diff;
+    
+    // Aplica o scroll diretamente no carousel
+    carousel.scrollLeft = newScrollLeft;
+    
+    // Atualiza o indicador
+    updateScrollIndicator(carousel, carousel);
+}
+
+// Para o drag
+function stopDragging(carousel, moveHandler, upHandler) {
+    isDragging = false;
+    carousel.classList.remove('dragging');
+    
+    // Remove event listeners específicos
+    if (carousel._mouseMoveHandler) {
+        document.removeEventListener('mousemove', carousel._mouseMoveHandler);
+        document.removeEventListener('mouseup', carousel._mouseUpHandler);
+        delete carousel._mouseMoveHandler;
+        delete carousel._mouseUpHandler;
+    }
+    
+    if (carousel._touchMoveHandler) {
+        carousel.removeEventListener('touchmove', carousel._touchMoveHandler);
+        carousel.removeEventListener('touchend', carousel._touchEndHandler);
+        delete carousel._touchMoveHandler;
+        delete carousel._touchEndHandler;
+    }
+}
 
 
+
+// Navegação por teclado para scroll horizontal
+document.addEventListener('keydown', function(e) {
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+        if (e.key === 'ArrowLeft') {
+            track.scrollLeft -= 200;
+            updateScrollIndicator(document.querySelector('.portfolio-carousel'), track);
+        } else if (e.key === 'ArrowRight') {
+            track.scrollLeft += 200;
+            updateScrollIndicator(document.querySelector('.portfolio-carousel'), track);
+        }
+    }
+});

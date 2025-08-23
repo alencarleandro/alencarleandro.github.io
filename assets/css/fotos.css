@@ -1,30 +1,14 @@
 .eu{
     background-image: url("../img/eu2.png");
-    background-size: auto 105%;
+    background-size: cover;
     background-position: center;
 
-    min-height: 250px;
-    min-width: 250px;
-
-    height: 250px;
-    width: 250px;
-
-    max-width: 250px;
-    max-height: 250px;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
 }
 
-/* Moldura da foto troca a cor da borda conforme a paleta */
-body.paleta-preta .eu,
-body.paleta-preta #fotoPerfil {
-    border-color: #000 !important;
-}
-
-body.paleta-azul .eu,
-body.paleta-azul #fotoPerfil {
-    border-color: #01355c !important;
-}
-
-body.paleta-beje .eu,
-body.paleta-beje #fotoPerfil {
-    border-color: #e7d6b9 !important;
-}
+/* A foto agora está integrada ao card sem borda */

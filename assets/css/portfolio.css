@@ -21,18 +21,110 @@
     opacity: 0.9;
 }
 
-/* Grid de projetos */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 4rem;
+/* Scroll horizontal de projetos */
+.portfolio-carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto 4rem auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
 }
+
+.portfolio-carousel:active {
+    cursor: grabbing;
+}
+
+.carousel-container {
+    position: relative;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    min-width: max-content;
+}
+
+.carousel-track .project-card {
+    width: 450px;
+    flex-shrink: 0;
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    scroll-behavior: smooth;
+}
+
+/* Estilização da scrollbar para Webkit (Chrome, Safari, Edge) */
+.carousel-track .project-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.carousel-track .project-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carousel-track .project-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.carousel-track .project-card::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Esconder a scrollbar horizontal do carrossel mas manter funcionalidade */
+.portfolio-carousel::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.portfolio-carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.portfolio-carousel::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Para Firefox */
+.portfolio-carousel {
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+}
+
+/* Estados do drag */
+.portfolio-carousel.dragging {
+    cursor: grabbing;
+}
+
+.portfolio-carousel.dragging .carousel-track {
+    cursor: grabbing;
+}
+
+.portfolio-carousel.dragging .project-card {
+    cursor: grabbing;
+    user-select: none;
+}
+
+/* Feedback visual durante o drag */
+.portfolio-carousel.dragging .project-card {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+
+
+
 
 /* Cards de projeto */
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -42,7 +134,8 @@
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .project-card::before {
@@ -65,18 +158,18 @@
 
 /* Header do projeto */
 .project-header {
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-logo {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-icon {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
@@ -86,7 +179,7 @@
 }
 
 .project-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin: 0;
     color: #4dabf7;
@@ -94,25 +187,25 @@
 
 /* Conteúdo do projeto */
 .project-content {
-    padding: 1.5rem 2rem 2rem 2rem;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
 }
 
 .project-description {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
     text-align: justify;
 }
 
 /* Características do projeto */
 .project-features {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .project-features h6 {
     color: #74b9ff;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .project-features ul {
@@ -122,9 +215,10 @@
 }
 
 .project-features li {
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.8rem;
+    font-size: 1rem;
 }
 
 .project-features li::before {
@@ -132,24 +226,24 @@
     position: absolute;
     left: 0;
     color: #4dabf7;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* Tecnologias do projeto */
 .project-tech {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-tech h6 {
     color: #74b9ff;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .tech-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
 }
 
 .tech-badges img {
@@ -229,15 +323,15 @@
     }
     
     .project-header {
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
     
     .project-content {
-        padding: 1rem 1rem 1.5rem 1rem;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
     }
     
     .project-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .stats-grid {
@@ -321,13 +415,14 @@
 
 /* Estilos para modo escuro */
 .paleta .project-card {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .paleta .project-card:hover {
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .paleta .stat-item {
@@ -716,8 +811,40 @@ body.paleta-beje .btn-primary:hover {
     border-color: #000000 !important;
 }
 
+/* =========================
+   ESTILOS RESPONSIVOS DO SCROLL HORIZONTAL
+   ========================= */
 
-/* Estilos gerais para links e botões */
+@media (max-width: 768px) {
+    .portfolio-carousel {
+        width: 100%;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .carousel-track .project-card {
+        width: 400px;
+        max-height: 550px;
+    }
+    
+    .scroll-indicator {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track .project-card {
+        width: 350px;
+        max-height: 500px;
+    }
+    
+    .scroll-indicator {
+        font-size: 0.75rem;
+    }
+}
+
+/* =========================
+   ESTILOS RESPONSIVOS DO CARROSSEL
+   ========================= */
 .nav-link {
     transition: color 0.3s ease;
 }

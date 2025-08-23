@@ -24,6 +24,7 @@ main{
 
 .folha{
     border-radius: 30px;
+    padding: 2rem;
 }
 
 @media only screen and (max-width: 900px) {    
@@ -44,6 +45,7 @@ main{
 
     .folha{
         border-radius: 0px;
+        padding: 1rem;
     }
 }
 

@@ -6,16 +6,45 @@
 }
 
 .contato-container {
-    display: grid;
-    grid-template-columns: 1fr 2px 1fr;
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 3rem;
-    align-items: start;
 }
 
 /* Seção de Redes Sociais */
 .redes-sociais {
     padding: 1rem;
+}
+
+/* Redes Sociais no perfil (versão compacta) */
+.redes-sociais .icones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais .icone-item {
+    padding: 1rem 0.5rem;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais .icone-wrapper {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.redes-sociais .icone-label {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .icones-container {

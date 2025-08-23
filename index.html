@@ -89,24 +89,22 @@
             <div class="perfil-header">
                 <div class="em2 centro mb-4 text_paleta">
                     <strong data-i18n="profile.title">Meu Perfil</strong>
-                </div>
-                <div class="exp2 paleta"></div>
             </div>
+                    <div class="exp2 paleta"></div>
+                </div>
 
             <div class="perfil-container">
                 <!-- Seção da Foto e Paleta -->
                 <div class="perfil-foto">
                     <div class="foto-wrapper">
                         <div class="foto-container">
-                            <img id="fotoPerfil" src="../assets/img/eu_preto.jpg" alt="Foto de perfil" class="eu rounded-circle" style="width:160px; height:160px; object-fit:cover; border:3px solid #4dabf7; box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                            <img id="fotoPerfil" src="../assets/img/eu_preto.jpg" alt="Foto de perfil" class="eu foto-perfil">
                         </div>
                         <div class="paleta-container">
-                            <div class="em1-5 centro mb-3 text_paleta">
+                            <div class="em1-5 centro text_paleta">
                                 <strong data-i18n="palette">Paleta</strong>
                             </div>
-                            <div class="exp2 paleta w-100"></div>
-                            
-                            <div class="flex mt-3" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
+                            <div class="flex" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
                                 <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
                                     <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
                                          onclick="preto()"></div>
@@ -147,191 +145,46 @@
                             </div>
                         </div>
 
-                        <div class="contatos mt-4">
+                        <div class="redes-sociais mt-4">
                             <div class="em1-5 text_paleta mb-2">
-                                <strong data-i18n="profile.contacts">Contatos</strong>
+                                <strong data-i18n="profile.social">Redes Sociais</strong>
                             </div>
-                            <div class="contato-item">
-                                <strong>GitHub: </strong>
-                                <a href="https://github.com/alencarleandro" target="_blank">github/alencarleandro</a>
-                            </div>
-                            <div class="contato-item">
-                                <strong>LinkedIn: </strong>
-                                <a href="https://www.linkedin.com/in/leandroalencarclemente/" target="_blank">linkedin/leandroalencarclemente</a>
+                            <div class="icones-container">
+                                <div class="icone-item" onclick="abrirWhatsApp()">
+                                    <div class="icone-wrapper whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <span class="icone-label">WhatsApp</span>
+                                </div>
+                                
+                                <div class="icone-item" onclick="abrirLinkedIn()">
+                                    <div class="icone-wrapper linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <span class="icone-label">LinkedIn</span>
+                                </div>
+                                
+                                <div class="icone-item" onclick="abrirGitHub()">
+                                    <div class="icone-wrapper github">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <span class="icone-label">GitHub</span>
+                                </div>
+                                
+                                <div class="icone-item" onclick="abrirInstagram()">
+                                    <div class="icone-wrapper instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <span class="icone-label">Instagram</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Seção de Habilidades -->
-            <div class="habilidades-section mt-5">
-                <div class="em1-5 text_paleta mb-3 centro">
-                    <strong data-i18n="skills.title">Habilidades Técnicas</strong>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.programming">Linguagens de Programação</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
-                            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                            <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.frameworks">Frameworks & Bibliotecas</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                            <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                            <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                            <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                            <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                            <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.frontend">Frontend</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                            <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.database">Banco de Dados</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.cloud">Cloud & DevOps</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
-                            <img alt="Google Cloud" src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
-                            <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.tools">Ferramentas de Desenvolvimento</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
-                            <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
-                            <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
-                            <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.design">Design & Multimídia</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
-                            <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
-                            <img alt="Inkscape" src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
-                            <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seção de Experiência e Formação -->
-            <div class="experiencia-formacao mt-5">
-                <div class="exp-form-container">
-                    <!-- Experiência Profissional -->
-                    <div class="experiencia-section">
-                        <div class="em1-5 text_paleta mb-3">
-                            <strong data-i18n="experience.title">Experiência Profissional</strong>
-                        </div>
-                        
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong>
-                                <span class="exp-period">jan 2024 - atual</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.erp2.description">
-                                Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small>
-                            </div>
-                        </div>
-
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
-                                <span class="exp-period">jan 2023 - fev 2024</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.messenger.description">
-                                Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small>
-                            </div>
-                        </div>
-
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong>
-                                <span class="exp-period">jan 2022 - ago 2023</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.erp1.description">
-                                Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing, SQL</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Divisor -->
-                    <div class="divisor-horizontal"></div>
-
-                    <!-- Formação Acadêmica -->
-                    <div class="formacao-section">
-                        <div class="em1-5 text_paleta mb-3">
-                            <strong data-i18n="education.title">Formação Acadêmica</strong>
-                        </div>
-                        
-                        <div class="formacao-item">
-                            <div class="formacao-header">
-                                <strong data-i18n="education.software.title">Engenharia de Software</strong>
-                            </div>
-                            <div class="formacao-instituicao">PUC Minas, Belo Horizonte</div>
-                            <div class="formacao-periodo">2024-2027</div>
-                        </div>
-
-                        <div class="formacao-item">
-                            <div class="formacao-header">
-                                <strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong>
-                            </div>
-                            <div class="formacao-instituicao">SENAI Horto, Belo Horizonte</div>
-                            <div class="formacao-periodo">2022-2023</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Divisor entre Informações Pessoais e Portfólio -->
+            <div class="divisor-secao"></div>
 
         <!-- =========================
              SEÇÃO PORTFÓLIO
@@ -344,19 +197,9 @@
                 <div class="exp2 paleta"></div>
             </div>
 
-            <div class="portfolio-intro">
-                <div class="em1-5 text_paleta mb-3 centro">
-                    <strong data-i18n="portfolio.subtitle">Projetos Desenvolvidos</strong>
-                </div>
-                <div class="text_paleta text-center" style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
-                    <p data-i18n="portfolio.description">
-                        Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e abordagens de desenvolvimento.
-                        Cada projeto representa um desafio único e uma oportunidade de aprendizado.
-                    </p>
-                </div>
-            </div>
-
-            <div class="projects-grid">
+            <div class="portfolio-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
                 <!-- ERP V2 -->
                 <div class="project-card">
                     <div class="project-header">
@@ -464,7 +307,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                            </div>
 
                 <!-- Giostri Construções -->
                 <div class="project-card">
@@ -473,8 +316,8 @@
                             <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
                         </div>
                         <h5 class="project-title" data-i18n="projects.giostri.title">Giostri Construções</h5>
-                    </div>
-                    
+                            </div>
+
                     <div class="project-content">
                         <p class="project-description" data-i18n="projects.giostri.description">
                             O projeto Giostri Construções implementa uma plataforma digital para transformar a gestão do Depósito Giostri.
@@ -488,8 +331,8 @@
                                 <li data-i18n="portfolio.features.modern">Interface moderna</li>
                                 <li data-i18n="portfolio.features.responsive">Totalmente responsiva</li>
                             </ul>
-                        </div>
-                        
+                            </div>
+
                         <div class="project-tech">
                             <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
                             <div class="tech-badges">
@@ -502,9 +345,9 @@
                                 <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
                                 <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
                             </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <!-- CineScore -->
                 <div class="project-card">
@@ -514,7 +357,7 @@
                         </div>
                         <h5 class="project-title" data-i18n="projects.cinescore.title">CineScore</h5>
                     </div>
-                    
+
                     <div class="project-content">
                         <p class="project-description" data-i18n="projects.cinescore.description">
                             Este projeto apresenta o desenvolvimento de uma aplicação web projetada para oferecer recomendações personalizadas de filmes e séries, baseada nas interações dos usuários, como os likes atribuídos aos conteúdos.
@@ -545,34 +388,190 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Seção de Estatísticas -->
-            <div class="stats-section mt-5">
-                <div class="em1-5 text_paleta mb-4 centro">
-                    <strong data-i18n="portfolio.stats.title">Estatísticas dos Projetos</strong>
+                    </div>
                 </div>
                 
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label" data-i18n="portfolio.stats.projects">Projetos</div>
+
+            </div>
+            </section>
+
+            <!-- Divisor entre Portfólio e Habilidades -->
+            <div class="divisor-secao"></div>
+
+            <!-- Seção de Habilidades -->
+            <div class="habilidades-section mt-5">
+                <div class="em1-5 text_paleta mb-3 centro">
+                    <strong data-i18n="skills.title">Habilidades Técnicas</strong>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.programming">Linguagens de Programação</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+                            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label" data-i18n="portfolio.stats.erps">Sistemas ERP</div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frameworks">Frameworks & Bibliotecas</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
+                            <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                            <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                            <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                            <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label" data-i18n="portfolio.stats.web">Aplicações Web</div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.frontend">Frontend</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                            <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label" data-i18n="portfolio.stats.technologies">Tecnologias</div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.database">Banco de Dados</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.cloud">Cloud & DevOps</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
+                            <img alt="Google Cloud" src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+                            <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.tools">Ferramentas de Desenvolvimento</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                            <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                            <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                            <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="em1-2 text_paleta mb-2">
+                            <strong data-i18n="skills.design">Design & Multimídia</strong>
+                        </div>
+                        <div class="skills-badges">
+                            <img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
+                            <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
+                            <img alt="Inkscape" src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
+                            <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divisor entre Habilidades e Experiência/Formação -->
+            <div class="divisor-secao"></div>
+
+            <!-- Seção de Experiência e Formação -->
+            <div class="experiencia-formacao mt-5">
+                <div class="exp-form-container">
+                    <!-- Experiência Profissional -->
+                    <div class="experiencia-section">
+                        <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="experience.title">Experiência Profissional</strong>
+                        </div>
+                        
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp2.title">Desenvolvedor Fullstack - ERP V2</strong>
+                                <span class="exp-period">jan 2024 - atual</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp2.description">
+                                Desenvolvimento de um sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium, Spring</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.messenger.title">Desenvolvedor Fullstack - Disparador de Mensagens</strong>
+                                <span class="exp-period">jan 2023 - fev 2024</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.messenger.description">
+                                Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, JavaFX, CSS, SQL, Selenium</small>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <strong data-i18n="experience.erp1.title">Desenvolvedor Fullstack - ERP V1</strong>
+                                <span class="exp-period">jan 2022 - ago 2023</span>
+                            </div>
+                            <div class="exp-description" data-i18n="experience.erp1.description">
+                                Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
+                            </div>
+                            <div class="exp-tech">
+                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, Java Swing, SQL</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divisor entre Experiência Profissional e Formação Acadêmica -->
+                    <div class="divisor-vertical"></div>
+
+                    <!-- Formação Acadêmica -->
+                    <div class="formacao-section">
+                <div class="em1-5 text_paleta mb-3">
+                            <strong data-i18n="education.title">Formação Acadêmica</strong>
+                        </div>
+                        
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.software.title">Engenharia de Software</strong>
+                            </div>
+                            <div class="formacao-instituicao">PUC Minas, Belo Horizonte</div>
+                            <div class="formacao-periodo">2024-2027</div>
+                        </div>
+
+                        <div class="formacao-item">
+                            <div class="formacao-header">
+                                <strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong>
+                            </div>
+                            <div class="formacao-instituicao">SENAI Horto, Belo Horizonte</div>
+                            <div class="formacao-periodo">2022-2023</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Divisor entre Perfil e Contato -->
+        <div class="divisor-secao"></div>
 
         <!-- =========================
              SEÇÃO CONTATO
@@ -580,64 +579,14 @@
         <section id="contato" class="mt-5">
             <div class="contato-header">
                 <div class="em2 centro mb-4 text_paleta">
-                    <strong data-i18n="contact.title">Entre em Contato</strong>
+                    <strong data-i18n="contact.title">Envie uma Mensagem</strong>
                 </div>
                 <div class="exp2 paleta"></div>
             </div>
 
             <div class="contato-container">
-                <!-- Seção de Redes Sociais -->
-                <div class="redes-sociais">
-                    <div class="em1-5 text_paleta mb-3 centro">
-                        <strong data-i18n="contact.social.title">Redes Sociais</strong>
-                    </div>
-                    
-                    <div class="icones-container">
-                        <div class="icone-item" onclick="abrirEmail()">
-                            <div class="icone-wrapper email">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <span class="icone-label" data-i18n="contact.social.email">E-mail</span>
-                        </div>
-                        
-                        <div class="icone-item" onclick="abrirWhatsApp()">
-                            <div class="icone-wrapper whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <span class="icone-label" data-i18n="contact.social.whatsapp">WhatsApp</span>
-                        </div>
-                        
-                        <div class="icone-item" onclick="abrirLinkedIn()">
-                            <div class="icone-wrapper linkedin">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <span class="icone-label" data-i18n="contact.social.linkedin">LinkedIn</span>
-                        </div>
-                        
-                        <div class="icone-item" onclick="abrirGitHub()">
-                            <div class="icone-wrapper github">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <span class="icone-label" data-i18n="contact.social.github">GitHub</span>
-                        </div>
-                        
-                        <div class="icone-item" onclick="abrirInstagram()">
-                            <div class="icone-wrapper instagram">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <span class="icone-label" data-i18n="contact.social.instagram">Instagram</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Divisor -->
-                <div class="divisor-vertical"></div>
-
                 <!-- Formulário de Contato -->
                 <div class="formulario-contato">
-                    <div class="em1-5 text_paleta mb-3">
-                        <strong data-i18n="contact.form.title">Envie uma Mensagem</strong>
-                    </div>
                     
                     <form id="contactForm" onsubmit="enviarEmail(event)">
                         <div class="mb-3">
@@ -670,44 +619,7 @@
                 </div>
             </div>
 
-            <!-- Informações de Contato Adicionais -->
-            <div class="info-contato mt-5">
-                <div class="em1-5 text_paleta mb-3 centro">
-                    <strong data-i18n="contact.info.title">Informações de Contato</strong>
-                </div>
-                
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong data-i18n="contact.info.location.title">Localização</strong>
-                            <p data-i18n="contact.info.location.value">Belo Horizonte, MG - Brasil</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong data-i18n="contact.info.availability.title">Disponibilidade</strong>
-                            <p data-i18n="contact.info.availability.value">Segunda a Sexta, 9h às 18h</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong data-i18n="contact.info.education.title">Formação</strong>
-                            <p data-i18n="contact.info.education.value">Engenharia de Software - PUC Minas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </section>
 
     </div>

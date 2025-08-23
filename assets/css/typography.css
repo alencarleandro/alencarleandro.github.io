@@ -1,0 +1,442 @@
+/* =========================
+   TYPOGRAPHY.CSS - Tipografia e textos
+   ========================= */
+
+/* Tamanhos de fonte */
+.em1 { font-size: 1em; }
+.em1-5 { font-size: 1.5em; }
+.em2 { font-size: 2em; }
+.em2-5 { font-size: 2.5em; }
+.em3 { font-size: 3em; }
+.em4 { font-size: 4em; }
+.em5 { font-size: 5em; }
+.em6 { font-size: 6em; }
+
+/* Classes de fonte */
+.font_footer { font-size: 0.9em; }
+.textResp { font-size: 1em; }
+
+/* Alinhamento de texto */
+.textCentro { text-align: center; }
+.textStart { text-align: start; }
+.textWp { text-wrap: wrap; }
+
+/* Decoração de texto */
+.textUnd { text-decoration: none; }
+.txtLink:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* Títulos */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4dabf7;
+}
+
+.project-features h6 {
+    color: #74b9ff;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.project-tech h6 {
+    color: #74b9ff;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4dabf7;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.quick-nav-card h4 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quick-nav-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-content h5 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.highlight-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Descrições */
+.project-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.portfolio-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Listas */
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-features li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    font-weight: 500;
+}
+
+.project-features li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #4dabf7;
+    font-size: 0.8rem;
+}
+
+/* Labels e textos específicos */
+.icone-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    color: inherit;
+}
+
+.info-content strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.exp-header strong {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.exp-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.exp-tech {
+    color: #74b9ff;
+    font-style: italic;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.formacao-header strong {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.formacao-instituicao {
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.formacao-periodo {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.skill-category strong {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Períodos */
+.exp-period {
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Tecnologias */
+.tech-tag {
+    font-size: 0.9rem;
+}
+
+/* Navegação */
+.nav-link {
+    font-weight: 600;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões */
+.btn-outline-light {
+    font-weight: 600;
+}
+
+.btn-enviar {
+    font-weight: 600;
+}
+
+/* Contraste para estatísticas */
+.stats-section .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para elementos de navegação */
+.nav-link.text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para o nome do usuário no header */
+.Nome .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para títulos principais */
+.portfolio-header .text_paleta,
+.portfolio-intro .text_paleta {
+    font-weight: 700;
+}
+
+/* Contraste para estatísticas */
+.stats-section .text_paleta {
+    font-weight: 600;
+}
+
+/* Contraste para elementos de navegação ativos */
+.nav-link.active.text_paleta {
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contraste para botões e elementos interativos */
+.btn-outline-light {
+    font-weight: 600;
+}
+
+/* Contraste para elementos que podem ter problemas específicos */
+.project-card .text_paleta {
+    font-weight: 600;
+}
+
+/* Garantir que todos os textos tenham contraste adequado */
+.text_paleta {
+    font-weight: 500;
+}
+
+/* Contraste específico para elementos em diferentes paletas */
+.paleta[style*="background-color: #000000"] footer .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] footer .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] footer .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] footer .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] footer .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para elementos de navegação em diferentes paletas */
+.paleta[style*="background-color: #000000"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .nav-link.text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .nav-link.text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .nav-link.text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para o nome do usuário em diferentes paletas */
+.paleta[style*="background-color: #000000"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .Nome .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .Nome .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .Nome .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para títulos principais em diferentes paletas */
+.paleta[style*="background-color: #000000"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #000000"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .portfolio-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #01355c"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .portfolio-intro .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .portfolio-header .text_paleta,
+.paleta[style*="background-color: #e7d6b9"] .portfolio-intro .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .portfolio-intro .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Contraste para estatísticas em diferentes paletas */
+.paleta[style*="background-color: #000000"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stats-section .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.paleta[style*="background-color: #01355c"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .stats-section .text_paleta {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.paleta[style*="background-color: #e7d6b9"] .stats-section .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .stats-section .text_paleta {
+    color: #262626 !important;
+    text-shadow: none;
+}
+
+/* Remova ou sobrescreva qualquer cor azul/cinza dos textos */
+.quick-nav-card h4,
+.quick-nav-arrow,
+.tech-tag,
+.highlight-content h5 {
+    color: inherit !important;
+}
+
+.quick-nav-card p,
+.highlight-content p {
+    color: inherit !important;
+}
+
+/* Estilos para modo escuro */
+.paleta .quick-nav-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .quick-nav-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.paleta .highlight-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .project-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .project-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.paleta .stat-item {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.paleta .stat-item:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.paleta .icone-item {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.paleta .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.paleta .info-item {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para modo escuro das opções de email */
+.paleta .opcoes-email {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-color: #007bff;
+}
+
+.paleta .opcoes-email h6,
+.paleta .opcoes-email p,
+.paleta .opcoes-email .text-primary {
+    color: #ffffff !important;
+}
+
+.paleta .opcoes-email .text-primary {
+    color: #4dabf7 !important;
+}

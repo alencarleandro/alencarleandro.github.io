@@ -1,0 +1,629 @@
+/* =========================
+   COMPONENTS.CSS - Componentes reutilizáveis
+   ========================= */
+
+/* Botões */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: 60px;
+}
+
+.btn-outline-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-outline-light:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+.btnForm {
+    padding: 12px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+}
+
+.quick-nav-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-nav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.quick-nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.exp-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+    transform: translateX(5px);
+}
+
+.formacao-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.formacao-item:hover {
+    transform: translateX(5px);
+}
+
+.icone-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.icone-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Formulários */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: inherit;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    color: inherit;
+    transform: scale(1.02);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Status do formulário */
+#formStatus {
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#formStatus.success {
+    background: rgba(40, 167, 69, 0.2);
+    border: 2px solid rgba(40, 167, 69, 0.5);
+    color: #28a745;
+}
+
+#formStatus.error {
+    background: rgba(220, 53, 69, 0.2);
+    border: 2px solid rgba(220, 53, 69, 0.5);
+    color: #dc3545;
+}
+
+/* Divisores */
+.divisor-vertical {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--paleta-color, #000), transparent);
+    justify-self: center;
+}
+
+.divisor-horizontal {
+    width: 100%;
+    height: 2px;
+    background: var(--paleta-color, #000000);
+    justify-self: center;
+    align-self: center;
+}
+
+.divisorHorizontal {
+    width: 2px;
+    height: 100%;
+    align-self: stretch;
+    justify-self: center;
+}
+
+/* Ícones */
+.icone-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icone-wrapper.email {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.icone-wrapper.whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.icone-wrapper.linkedin {
+    background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.icone-wrapper.github {
+    background: linear-gradient(135deg, #333, #000);
+}
+
+.icone-wrapper.instagram {
+    background: linear-gradient(135deg, #e4405f, #c13584);
+}
+
+.icone-item:hover .icone-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Badges e tags */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-badges img {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.tech-badges img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skills-badges img {
+    transition: transform 0.3s ease;
+}
+
+.skills-badges img:hover {
+    transform: scale(1.1);
+}
+
+.tech-tag {
+    background: rgba(77, 171, 247, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(77, 171, 247, 0.3);
+}
+
+.tech-tag:hover {
+    background: rgba(77, 171, 247, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Períodos */
+.exp-period {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #4dabf7;
+}
+
+/* Opções de email */
+.opcoes-email {
+    border: 2px solid #007bff;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    animation: slideInUp 0.5s ease;
+}
+
+.opcoes-email h6 {
+    color: #007bff !important;
+    font-weight: 700;
+}
+
+.opcoes-email p {
+    color: #495057 !important;
+}
+
+.opcoes-email .text-primary {
+    color: #007bff !important;
+    font-weight: 600;
+}
+
+.opcoes-email .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.opcoes-email .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.opcoes-email .btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.opcoes-email .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Animações */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicação de animações */
+.portfolio-header,
+.portfolio-intro {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.projects-grid {
+    animation: fadeInUp 1s ease-out;
+}
+
+.project-card:nth-child(odd) {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.project-card:nth-child(even) {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.stats-section {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.stat-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.quick-nav-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.highlight-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.contato-container > * {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.redes-sociais {
+    animation-delay: 0.1s;
+}
+
+.formulario-contato {
+    animation-delay: 0.2s;
+}
+
+.info-contato {
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.perfil-container,
+.habilidades-section,
+.experiencia-formacao {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.skill-category,
+.exp-item,
+.formacao-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.welcome-header,
+.intro-section,
+.quick-nav-section,
+.highlight-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Efeitos de hover */
+.project-card:hover .project-title {
+    color: #74b9ff;
+}
+
+.project-features li:hover {
+    color: #4dabf7;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-arrow {
+    transform: translateX(10px);
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Acessibilidade */
+.project-card:focus-within {
+    outline: 2px solid #4dabf7;
+    outline-offset: 2px;
+}
+
+.stat-item:focus-within {
+    outline: 2px solid #4dabf7;
+    outline-offset: 2px;
+}
+
+/* Transições */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+.icone-item {
+    transition: all 0.3s ease;
+}
+
+.info-item {
+    transition: all 0.3s ease;
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.btn-enviar {
+    transition: all 0.3s ease;
+}
+
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.tech-badges img {
+    transition: all 0.3s ease;
+}
+
+.stat-item {
+    transition: all 0.3s ease;
+}
+
+.skill-category {
+    transition: all 0.3s ease;
+}
+
+.exp-item {
+    transition: all 0.3s ease;
+}
+
+.formacao-item {
+    transition: all 0.3s ease;
+}

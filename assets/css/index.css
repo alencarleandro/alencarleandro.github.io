@@ -79,7 +79,8 @@
 }
 
 .folha{
-    border-radius: 0px 30px 30px 30px;
+    border-radius: 30px;
+    padding: 2rem;
 }
 
 .footer{
@@ -289,6 +290,7 @@
 
     .folha{
         border-radius: 0px;
+        padding: 1rem;
     }
 
     .colegas{
@@ -463,4 +465,33 @@ body.paleta-beje * {
 .quick-nav-card p,
 .highlight-content p {
     color: inherit !important;
+}
+
+/* =========================
+   ANIMAÇÕES PARA CARD DE EMAIL
+   ========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Estilos responsivos para o card de email */
+@media (max-width: 768px) {
+    #emailCard {
+        min-width: 280px !important;
+        margin: 1rem;
+        padding: 1.5rem !important;
+    }
+    
+    #emailCard button {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
 }

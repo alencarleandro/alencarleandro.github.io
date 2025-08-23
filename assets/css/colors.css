@@ -1,0 +1,1651 @@
+/* =========================
+   COLORS.CSS - Sistema de cores e paletas
+   ========================= */
+
+/* Estilos para foto de perfil com cores específicas de cada paleta */
+.foto-perfil {
+    border: 3px solid #4dabf7;
+}
+
+body.paleta-preta .foto-perfil {
+    border-color: #ffffff !important;
+}
+
+body.paleta-azul .foto-perfil {
+    border-color: #74b9ff !important;
+}
+
+body.paleta-beje .foto-perfil {
+    border-color: #01355c !important;
+}
+
+/* Estilos para borda dos cards de projeto com cores específicas de cada paleta */
+body.paleta-preta .project-card::before {
+    background: linear-gradient(90deg, #ffffff, #e6e6e6, #ffffff) !important;
+}
+
+body.paleta-azul .project-card::before {
+    background: linear-gradient(90deg, #74b9ff, #4dabf7, #74b9ff) !important;
+}
+
+body.paleta-beje .project-card::before {
+    background: linear-gradient(90deg, #01355c, #000000, #01355c) !important;
+}
+
+/* Divisores entre seções */
+.divisor-secao {
+    width: 100%;
+    height: 2px;
+    margin: 3rem 0;
+    background: linear-gradient(to right, transparent, var(--paleta-color, #000), transparent);
+    justify-self: center;
+    align-self: center;
+}
+
+body.paleta-preta .divisor-secao,
+body.paleta-preta .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #000000, transparent) !important;
+}
+
+body.paleta-azul .divisor-secao,
+body.paleta-azul .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #01355c, transparent) !important;
+}
+
+body.paleta-beje .divisor-secao,
+body.paleta-beje .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #e7d6b9, transparent) !important;
+}
+
+/* Divisor vertical com cores específicas de cada paleta */
+body.paleta-preta .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #000000, transparent) !important;
+}
+
+body.paleta-azul .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #01355c, transparent) !important;
+}
+
+body.paleta-beje .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #e7d6b9, transparent) !important;
+}
+
+/* Cores base */
+.color_mudo { background-color: #e0e0e0; }
+.color_brancoGelo { background-color: #f6f6f6; }
+.color_pretoCarvao { background-color: #262626; }
+.color_cinzas { background-color: #808080; }
+.color_cinzasEscuras { background-color: #404040; }
+.color_preto { background-color: #000000; }
+.color_cinzaClaro { background-color: #d0d0d0; }
+.color_transparent { background-color: transparent; }
+.color_blue { background-color: #0d6efd; }
+.color_success { background-color: #20c997; }
+.color_success-dark { background-color: #198754; }
+.color_falue { background-color: #dc3545; }
+.color_purple { background-color: #6f42c1; }
+.color_indigo { background-color: #6610f2; }
+.color_orange { background-color: #ff4a00; }
+.color_yellow { background-color: #ffc700; }
+.color_transparent-esp { background-color: rgba(0, 0, 0, 0); }
+.color_azulMarinho { background-color: #01355c; }
+.color_azulMarinhoOpaco { background-color: #5D8AA8; }
+
+/* Cores de texto */
+.text_mudo { color: #e0e0e0; }
+.text_brancoGelo { color: #f6f6f6; }
+.text_pretoCarvao { color: #262626; }
+.text_cinzas { color: #808080; }
+.text_cinzasEscuras { color: #404040; }
+.text_preto { color: #000000; }
+.text_cinzaClaro { color: #d0d0d0; }
+.text_cinzaEscrita { color: #dadada; }
+.text_transparent { color: transparent; }
+.text_success { color: #20c997; }
+.text_success-dark { color: #198754; }
+.text_falue { color: #dc3545; }
+.text_purple { color: #6f42c1; }
+.text_indigo { color: #6610f2; }
+.text_orange { color: #ff4a00; }
+.text_yellow { color: #ffc700; }
+.text_transparent-esp { color: rgba(0, 0, 0, 0); }
+
+/* Sistema de paletas */
+.paleta-preta-circulo {
+    background-color: #e7d6b9;
+    border: 2px solid #01355c;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 4px #bfae8f;
+}
+
+.color_beje,
+#paletaBeje {
+    background-color: #e7d6b9 !important;
+}
+
+/* Controle de cores por paleta */
+body.paleta-preta,
+body.paleta-preta * {
+    color: #fff !important;
+}
+
+body.paleta-azul,
+body.paleta-azul * {
+    color: #fff !important;
+}
+
+body.paleta-beje,
+body.paleta-beje * {
+    color: #000 !important;
+}
+
+/* Estilos específicos para cada paleta */
+body.paleta-preta .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta .nav-link:hover {
+    color: #e6e6e6 !important;
+}
+
+body.paleta-preta .nav-link.active {
+    color: #4dabf7 !important;
+}
+
+body.paleta-preta a:not(.nav-link) {
+    color: #4dabf7 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-preta a:not(.nav-link):hover {
+    color: #74b9ff !important;
+}
+
+body.paleta-preta .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-preta .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.paleta-preta .btn-primary {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+body.paleta-preta .btn-primary:hover {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+/* Paleta Azul */
+body.paleta-azul .nav-link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul .nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+body.paleta-azul .nav-link.active {
+    color: #74b9ff !important;
+}
+
+body.paleta-azul a:not(.nav-link) {
+    color: #74b9ff !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-azul a:not(.nav-link):hover {
+    color: #4dabf7 !important;
+}
+
+body.paleta-azul .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.paleta-azul .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #01355c !important;
+}
+
+body.paleta-azul .btn-primary {
+    background-color: #74b9ff !important;
+    border-color: #74b9ff !important;
+}
+
+body.paleta-azul .btn-primary:hover {
+    background-color: #4dabf7 !important;
+    border-color: #4dabf7 !important;
+}
+
+/* Paleta Beje */
+body.paleta-beje .nav-link {
+    color: #262626 !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje .nav-link:hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .nav-link.active {
+    color: #01355c !important;
+}
+
+body.paleta-beje a:not(.nav-link) {
+    color: #01355c !important;
+    transition: color 0.3s ease;
+}
+
+body.paleta-beje a:not(.nav-link):hover {
+    color: #000000 !important;
+}
+
+body.paleta-beje .btn-outline-light {
+    color: #262626 !important;
+    border-color: #262626 !important;
+}
+
+body.paleta-beje .btn-outline-light:hover {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+}
+
+body.paleta-beje .btn-primary {
+    background-color: #01355c !important;
+    border-color: #01355c !important;
+}
+
+body.paleta-beje .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Controle de cor para todos os textos dos cards */
+body.paleta-preta .projects-grid .project-card,
+body.paleta-preta .projects-grid .project-card *,
+body.paleta-azul .projects-grid .project-card,
+body.paleta-azul .projects-grid .project-card * {
+    color: #fff !important;
+}
+
+body.paleta-beje .projects-grid .project-card,
+body.paleta-beje .projects-grid .project-card * {
+    color: #000 !important;
+}
+
+/* Controle de cor para elementos específicos */
+body.paleta-preta .text_paleta,
+body.paleta-preta strong,
+body.paleta-preta b,
+body.paleta-preta h1,
+body.paleta-preta h2,
+body.paleta-preta h3,
+body.paleta-preta h4,
+body.paleta-preta h5,
+body.paleta-preta h6,
+body.paleta-preta a,
+body.paleta-preta .btn,
+body.paleta-preta .icone-label,
+body.paleta-preta .info-content,
+body.paleta-preta .project-title,
+body.paleta-preta .stat-number,
+body.paleta-preta .stat-label {
+    color: #fff !important;
+}
+
+body.paleta-azul .text_paleta,
+body.paleta-azul strong,
+body.paleta-azul b,
+body.paleta-azul h1,
+body.paleta-azul h2,
+body.paleta-azul h3,
+body.paleta-azul h4,
+body.paleta-azul h5,
+body.paleta-azul h6,
+body.paleta-azul a,
+body.paleta-azul .btn,
+body.paleta-azul .icone-label,
+body.paleta-azul .info-content,
+body.paleta-azul .project-title,
+body.paleta-azul .stat-number,
+body.paleta-azul .stat-label {
+    color: #fff !important;
+}
+
+body.paleta-beje .text_paleta,
+body.paleta-beje strong,
+body.paleta-beje b,
+body.paleta-beje h1,
+body.paleta-beje h2,
+body.paleta-beje h3,
+body.paleta-beje h4,
+body.paleta-beje h5,
+body.paleta-beje h6,
+body.paleta-beje a,
+body.paleta-beje .btn,
+body.paleta-beje .icone-label,
+body.paleta-beje .info-content,
+body.paleta-beje .project-title,
+body.paleta-beje .stat-number,
+body.paleta-beje .stat-label {
+    color: #000 !important;
+}
+
+/* Remove cor azul de links e botões */
+body.paleta-preta a:not(.nav-link),
+body.paleta-azul a:not(.nav-link),
+body.paleta-beje a:not(.nav-link) {
+    color: inherit !important;
+}
+
+body.paleta-preta .btn-primary,
+body.paleta-azul .btn-primary {
+    color: #fff !important;
+    background-color: #222 !important;
+    border-color: #fff !important;
+}
+
+body.paleta-beje .btn-primary {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #000 !important;
+}
+
+/* Controle de cor para inputs e textareas */
+body.paleta-preta input,
+body.paleta-preta textarea,
+body.paleta-azul input,
+body.paleta-azul textarea {
+    color: #fff !important;
+    background: #222 !important;
+    border-color: #4dabf700 !important;
+}
+
+body.paleta-beje input,
+body.paleta-beje textarea {
+    color: #000 !important;
+    background: #fff !important;
+    border-color: #01355c00 !important;
+}
+
+/* Controle de cor para cards e elementos de destaque */
+body.paleta-preta .card,
+body.paleta-preta .project-card,
+body.paleta-preta .highlight-card,
+body.paleta-preta .exp-item,
+body.paleta-preta .formacao-item,
+body.paleta-preta .skill-category {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.paleta-azul .card,
+body.paleta-azul .project-card,
+body.paleta-azul .highlight-card,
+body.paleta-azul .exp-item,
+body.paleta-azul .formacao-item,
+body.paleta-azul .skill-category {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.paleta-beje .card,
+body.paleta-beje .project-card,
+body.paleta-beje .highlight-card,
+body.paleta-beje .exp-item,
+body.paleta-beje .formacao-item,
+body.paleta-beje .skill-category {
+    color: #000 !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Controle de cor para descrições de projeto */
+body.paleta-preta .project-description {
+    color: #fff !important;
+}
+
+body.paleta-azul .project-description {
+    color: #fff !important;
+}
+
+body.paleta-beje .project-description {
+    color: #000 !important;
+}
+
+/* Controle específico para todos os textos dos cards de portfólio na paleta preta */
+body.paleta-preta .project-card,
+body.paleta-preta .project-card *,
+body.paleta-preta .project-title,
+body.paleta-preta .project-description,
+body.paleta-preta .project-features h6,
+body.paleta-preta .project-features li,
+body.paleta-preta .project-tech h6,
+body.paleta-preta .project-tech small,
+body.paleta-preta .stat-item,
+body.paleta-preta .stat-number,
+body.paleta-preta .stat-label {
+    color: #ffffff !important;
+}
+
+/* Controle específico para todos os textos dos cards de portfólio na paleta azul */
+body.paleta-azul .project-card,
+body.paleta-azul .project-card *,
+body.paleta-azul .project-title,
+body.paleta-azul .project-description,
+body.paleta-azul .project-features h6,
+body.paleta-azul .project-features li,
+body.paleta-azul .project-tech h6,
+body.paleta-azul .project-tech small,
+body.paleta-azul .stat-item,
+body.paleta-azul .stat-number,
+body.paleta-azul .stat-label {
+    color: #ffffff !important;
+}
+
+/* Controle específico para todos os textos dos cards de portfólio na paleta beje */
+body.paleta-beje .project-card,
+body.paleta-beje .project-card *,
+body.paleta-beje .project-title,
+body.paleta-beje .project-description,
+body.paleta-beje .project-features h6,
+body.paleta-beje .project-features li,
+body.paleta-beje .project-tech h6,
+body.paleta-beje .project-tech small,
+body.paleta-beje .stat-item,
+body.paleta-beje .stat-number,
+body.paleta-beje .stat-label {
+    color: #000000 !important;
+}
+
+/* =========================
+   CARDS DE INFORMAÇÃO DE CONTATO
+   ========================= */
+
+/* Controle específico para cards de informação de contato na paleta preta */
+body.paleta-preta .info-item,
+body.paleta-preta .info-item *,
+body.paleta-preta .info-content strong,
+body.paleta-preta .info-content p {
+    color: #ffffff !important;
+}
+
+body.paleta-preta .info-item {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Controle específico para cards de informação de contato na paleta azul */
+body.paleta-azul .info-item,
+body.paleta-azul .info-item *,
+body.paleta-azul .info-content strong,
+body.paleta-azul .info-content p {
+    color: #ffffff !important;
+}
+
+body.paleta-azul .info-item {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Controle específico para cards de informação de contato na paleta beje */
+body.paleta-beje .info-item,
+body.paleta-beje .info-item *,
+body.paleta-beje .info-content strong,
+body.paleta-beje .info-content p {
+    color: #000000 !important;
+}
+
+body.paleta-beje .info-item {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Controle específico para ícones dos cards de informação de contato */
+body.paleta-preta .info-icon {
+    background: linear-gradient(135deg, #4dabf7, #74b9ff) !important;
+    color: #ffffff !important;
+}
+
+body.paleta-azul .info-icon {
+    background: linear-gradient(135deg, #74b9ff, #4dabf7) !important;
+    color: #ffffff !important;
+}
+
+body.paleta-beje .info-icon {
+    background: linear-gradient(135deg, #01355c, #000000) !important;
+    color: #ffffff !important;
+}
+
+/* =========================
+   CARDS DAS REDES SOCIAIS
+   ========================= */
+
+/* Controle específico para cards das redes sociais na paleta preta */
+body.paleta-preta .icone-item,
+body.paleta-preta .icone-item *,
+body.paleta-preta .icone-label {
+    color: #ffffff !important;
+}
+
+body.paleta-preta .icone-item {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Controle específico para cards das redes sociais na paleta azul */
+body.paleta-azul .icone-item,
+body.paleta-azul .icone-item *,
+body.paleta-azul .icone-label {
+    color: #ffffff !important;
+}
+
+body.paleta-azul .icone-item {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Controle específico para cards das redes sociais na paleta beje */
+body.paleta-beje .icone-item,
+body.paleta-beje .icone-item *,
+body.paleta-beje .icone-label {
+    color: #000000 !important;
+}
+
+body.paleta-beje .icone-item {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Controle de cor para elementos específicos */
+body.paleta-preta p,
+body.paleta-azul p {
+    color: #fff !important;
+}
+
+body.paleta-beje p {
+    color: #000 !important;
+}
+
+body.paleta-preta strong,
+body.paleta-preta b {
+    color: #fff !important;
+}
+
+body.paleta-azul strong,
+body.paleta-azul b {
+    color: #fff !important;
+}
+
+body.paleta-beje strong,
+body.paleta-beje b {
+    color: #000 !important;
+}
+
+/* Controle de cor para elementos de navegação */
+body.paleta-preta .nav-link.text_paleta,
+body.paleta-azul .nav-link.text_paleta {
+    color: #ffffff !important;
+}
+
+body.paleta-beje .nav-link.text_paleta {
+    color: #262626 !important;
+}
+
+/* Contraste para elementos em diferentes paletas */
+.paleta[style*="background-color: #000000"] .text_paleta,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+    color: #f5f5f5 !important;
+}
+
+.paleta[style*="background-color: #01355c"] .text_paleta,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+    color: #e3f2fd !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+    color: #2d2d2d !important;
+}
+
+/* Contraste para links em diferentes paletas */
+.paleta[style*="background-color: #000000"] a,
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+    color: #90caf9 !important;
+}
+
+.paleta[style*="background-color: #01355c"] a,
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+    color: #90caf9 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] a,
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+    color: #01355c !important;
+}
+
+/* Contraste para botões em diferentes paletas */
+.paleta[style*="background-color: #000000"] .btn,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+    color: #f5f5f5;
+    background-color: #222;
+    border-color: #90caf9;
+}
+
+.paleta[style*="background-color: #01355c"] .btn,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+    color: #e3f2fd;
+    background-color: #01497c;
+    border-color: #90caf9;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .btn,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+    color: #01355c;
+    background-color: #fff;
+    border-color: #01355c;
+}
+
+/* =========================
+   REGRAS DE FALLBACK PARA CARDS DO PORTFÓLIO
+   ========================= */
+
+/* Fallback para paleta preta - cards do portfólio */
+.paleta[style*="background-color: #000000"] .project-card,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.paleta[style*="background-color: #000000"] .project-card *,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-card * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #000000"] .project-title,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-title,
+.paleta[style*="background-color: #000000"] .project-description,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-description,
+.paleta[style*="background-color: #000000"] .project-features h6,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features h6,
+.paleta[style*="background-color: #000000"] .project-features li,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features li,
+.paleta[style*="background-color: #000000"] .project-tech h6,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-tech h6,
+.paleta[style*="background-color: #000000"] .project-tech small,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-tech small,
+.paleta[style*="background-color: #000000"] .stat-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-item,
+.paleta[style*="background-color: #000000"] .stat-number,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-number,
+.paleta[style*="background-color: #000000"] .stat-label,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-label {
+    color: #ffffff !important;
+}
+
+/* Fallback para paleta azul - cards do portfólio */
+.paleta[style*="background-color: #01355c"] .project-card,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.paleta[style*="background-color: #01355c"] .project-card *,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-card * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .project-title,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-title,
+.paleta[style*="background-color: #01355c"] .project-description,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-description,
+.paleta[style*="background-color: #01355c"] .project-features h6,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-features li,
+.paleta[style*="background-color: #01355c"] .project-tech h6,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-tech small,
+.paleta[style*="background-color: #01355c"] .stat-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .stat-number,
+.paleta[style*="background-color: #01355c"] .stat-label {
+    color: #ffffff !important;
+}
+
+/* Fallback para paleta beje - cards do portfólio */
+.paleta[style*="background-color: #e7d6b9"] .project-card,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fallback para divisores em diferentes paletas */
+.paleta[style*="background-color: #000000"] .divisor-secao,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .divisor-secao,
+.paleta[style*="background-color: #000000"] .formacao-section .divisor-secao,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #000000, transparent) !important;
+}
+
+.paleta[style*="background-color: #01355c"] .divisor-secao,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .divisor-secao,
+.paleta[style*="background-color: #01355c"] .formacao-section .divisor-secao,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #01355c, transparent) !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .divisor-secao,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .divisor-secao,
+.paleta[style*="background-color: #e7d6b9"] .formacao-section .divisor-secao,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .formacao-section .divisor-secao {
+    background: linear-gradient(to right, transparent, #e7d6b9, transparent) !important;
+}
+
+/* Fallback para divisor vertical em diferentes paletas */
+.paleta[style*="background-color: #000000"] .divisor-vertical,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #000000, transparent) !important;
+}
+
+.paleta[style*="background-color: #01355c"] .divisor-vertical,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #01355c, transparent) !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .divisor-vertical,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .divisor-vertical {
+    background: linear-gradient(to bottom, transparent, #e7d6b9, transparent) !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .project-card *,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-card * {
+    color: #000000 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .project-title,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-title,
+.paleta[style*="background-color: #e7d6b9"] .project-description,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-description,
+.paleta[style*="background-color: #e7d6b9"] .project-features h6,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-features li,
+.paleta[style*="background-color: #e7d6b9"] .project-tech h6,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-tech small,
+.paleta[style*="background-color: #e7d6b9"] .stat-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .stat-number,
+.paleta[style*="background-color: #e7d6b9"] .stat-label {
+    color: #000000 !important;
+}
+
+/* =========================
+   FALLBACK PARA CARDS DE INFORMAÇÃO DE CONTATO
+   ========================= */
+
+/* Fallback para paleta preta - cards de informação de contato */
+.paleta[style*="background-color: #000000"] .info-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-item,
+.paleta[style*="background-color: #000000"] .info-item *,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-item * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #000000"] .info-content strong,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-content strong,
+.paleta[style*="background-color: #000000"] .info-content p,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-content p {
+    color: #ffffff !important;
+}
+
+/* Fallback para paleta azul - cards de informação de contato */
+.paleta[style*="background-color: #01355c"] .info-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-item,
+.paleta[style*="background-color: #01355c"] .info-item *,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-item * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .info-content strong,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-content strong,
+.paleta[style*="background-color: #01355c"] .info-content p,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-content p {
+    color: #ffffff !important;
+}
+
+/* Fallback para paleta beje - cards de informação de contato */
+.paleta[style*="background-color: #e7d6b9"] .info-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-item,
+.paleta[style*="background-color: #e7d6b9"] .info-item *,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-item * {
+    color: #000000 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .info-content strong,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-content strong,
+.paleta[style*="background-color: #e7d6b9"] .info-content p,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-content p {
+    color: #000000 !important;
+}
+
+/* Fallback para ícones dos cards de informação de contato */
+.paleta[style*="background-color: #000000"] .info-icon {
+    background: linear-gradient(135deg, #4dabf7, #74b9ff) !important;
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .info-icon {
+    background: linear-gradient(135deg, #74b9ff, #4dabf7) !important;
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .info-icon {
+    background: linear-gradient(135deg, #01355c, #000000) !important;
+    color: #ffffff !important;
+}
+
+/* Fallback para cards das redes sociais */
+.paleta[style*="background-color: #000000"] .icone-item,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-item,
+.paleta[style*="background-color: #000000"] .icone-item *,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-item * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #000000"] .icone-label,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-label {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .icone-item,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-item,
+.paleta[style*="background-color: #01355c"] .icone-item *,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-item * {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #01355c"] .icone-label,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-label {
+    color: #ffffff !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .icone-item,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-item,
+.paleta[style*="background-color: #e7d6b9"] .icone-item *,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-item * {
+    color: #000000 !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .icone-label,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-label {
+    color: #000000 !important;
+}
+
+
+
+
+/* =========================
+
+   CARDS DE INFORMAÇÃO DE CONTATO
+
+   ========================= */
+
+
+
+/* Controle específico para cards de informação de contato na paleta preta */
+
+body.paleta-preta .info-item,
+
+body.paleta-preta .info-item *,
+
+body.paleta-preta .info-content strong,
+
+body.paleta-preta .info-content p {
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-preta .info-item {
+
+    background-color: rgba(0, 0, 0, 0.3) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+}
+
+
+
+/* Controle específico para cards de informação de contato na paleta azul */
+
+body.paleta-azul .info-item,
+
+body.paleta-azul .info-item *,
+
+body.paleta-azul .info-content strong,
+
+body.paleta-azul .info-content p {
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-azul .info-item {
+
+    background-color: rgba(255, 255, 255, 0.05) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+}
+
+
+
+/* Controle específico para cards de informação de contato na paleta beje */
+
+body.paleta-beje .info-item,
+
+body.paleta-beje .info-item *,
+
+body.paleta-beje .info-content strong,
+
+body.paleta-beje .info-content p {
+
+    color: #000000 !important;
+
+}
+
+
+
+body.paleta-beje .info-item {
+
+    background-color: rgba(255, 255, 255, 0.05) !important;
+
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+
+}
+
+
+
+/* Controle específico para ícones dos cards de informação de contato */
+
+body.paleta-preta .info-icon {
+
+    background: linear-gradient(135deg, #4dabf7, #74b9ff) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-azul .info-icon {
+
+    background: linear-gradient(135deg, #74b9ff, #4dabf7) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-beje .info-icon {
+
+    background: linear-gradient(135deg, #01355c, #000000) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* =========================
+
+   CARDS DAS REDES SOCIAIS
+
+   ========================= */
+
+
+
+/* Controle específico para cards das redes sociais na paleta preta */
+
+body.paleta-preta .icone-item,
+
+body.paleta-preta .icone-item *,
+
+body.paleta-preta .icone-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-preta .icone-item {
+
+    background-color: rgba(0, 0, 0, 0.3) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+}
+
+
+
+/* Controle específico para cards das redes sociais na paleta azul */
+
+body.paleta-azul .icone-item,
+
+body.paleta-azul .icone-item *,
+
+body.paleta-azul .icone-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-azul .icone-item {
+
+    background-color: rgba(255, 255, 255, 0.05) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+}
+
+
+
+/* Controle específico para cards das redes sociais na paleta beje */
+
+body.paleta-beje .icone-item,
+
+body.paleta-beje .icone-item *,
+
+body.paleta-beje .icone-label {
+
+    color: #000000 !important;
+
+}
+
+
+
+body.paleta-beje .icone-item {
+
+    background-color: rgba(255, 255, 255, 0.05) !important;
+
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+
+}
+
+
+
+/* Controle de cor para elementos específicos */
+
+body.paleta-preta p,
+
+body.paleta-azul p {
+
+    color: #fff !important;
+
+}
+
+
+
+body.paleta-beje p {
+
+    color: #000 !important;
+
+}
+
+
+
+body.paleta-preta strong,
+
+body.paleta-preta b {
+
+    color: #fff !important;
+
+}
+
+
+
+body.paleta-azul strong,
+
+body.paleta-azul b {
+
+    color: #fff !important;
+
+}
+
+
+
+body.paleta-beje strong,
+
+body.paleta-beje b {
+
+    color: #000 !important;
+
+}
+
+
+
+/* Controle de cor para elementos de navegação */
+
+body.paleta-preta .nav-link.text_paleta,
+
+body.paleta-azul .nav-link.text_paleta {
+
+    color: #ffffff !important;
+
+}
+
+
+
+body.paleta-beje .nav-link.text_paleta {
+
+    color: #262626 !important;
+
+}
+
+
+
+/* Contraste para elementos em diferentes paletas */
+
+.paleta[style*="background-color: #000000"] .text_paleta,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .text_paleta {
+
+    color: #f5f5f5 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .text_paleta,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .text_paleta {
+
+    color: #e3f2fd !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .text_paleta,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .text_paleta {
+
+    color: #2d2d2d !important;
+
+}
+
+
+
+/* Contraste para links em diferentes paletas */
+
+.paleta[style*="background-color: #000000"] a,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] a {
+
+    color: #90caf9 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] a,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] a {
+
+    color: #90caf9 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] a,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] a {
+
+    color: #01355c !important;
+
+}
+
+
+
+/* Contraste para botões em diferentes paletas */
+
+.paleta[style*="background-color: #000000"] .btn,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .btn {
+
+    color: #f5f5f5;
+
+    background-color: #222;
+
+    border-color: #90caf9;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .btn,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .btn {
+
+    color: #e3f2fd;
+
+    background-color: #01497c;
+
+    border-color: #90caf9;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .btn,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .btn {
+
+    color: #01355c;
+
+    background-color: #fff;
+
+    border-color: #01355c;
+
+}
+
+
+
+/* =========================
+
+   REGRAS DE FALLBACK PARA CARDS DO PORTFÓLIO
+
+   ========================= */
+
+
+
+/* Fallback para paleta preta - cards do portfólio */
+
+.paleta[style*="background-color: #000000"] .project-card,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.paleta[style*="background-color: #000000"] .project-card *,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-card * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #000000"] .project-title,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-title,
+
+.paleta[style*="background-color: #000000"] .project-description,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-description,
+
+.paleta[style*="background-color: #000000"] .project-features h6,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features h6,
+
+.paleta[style*="background-color: #000000"] .project-features li,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-features li,
+
+.paleta[style*="background-color: #000000"] .project-tech h6,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-tech h6,
+
+.paleta[style*="background-color: #000000"] .project-tech small,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .project-tech small,
+
+.paleta[style*="background-color: #000000"] .stat-item,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-item,
+
+.paleta[style*="background-color: #000000"] .stat-number,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-number,
+
+.paleta[style*="background-color: #000000"] .stat-label,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .stat-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* Fallback para paleta azul - cards do portfólio */
+
+.paleta[style*="background-color: #01355c"] .project-card,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.paleta[style*="background-color: #01355c"] .project-card *,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-card * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .project-title,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-title,
+
+.paleta[style*="background-color: #01355c"] .project-description,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-description,
+
+.paleta[style*="background-color: #01355c"] .project-features h6,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-features li,
+
+.paleta[style*="background-color: #01355c"] .project-tech h6,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .project-tech small,
+
+.paleta[style*="background-color: #01355c"] .stat-item,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .stat-number,
+
+.paleta[style*="background-color: #01355c"] .stat-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* Fallback para paleta beje - cards do portfólio */
+
+.paleta[style*="background-color: #e7d6b9"] .project-card,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-card {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fallback para divisores em diferentes paletas */
+.paleta[style*="background-color: #000000"] .divisor-secao,
+.paleta[style*="background-color: rgb(0, 0, 0)"] .divisor-secao {
+    background: linear-gradient(to right, transparent, #000000, transparent) !important;
+}
+
+.paleta[style*="background-color: #01355c"] .divisor-secao,
+.paleta[style*="background-color: rgb(1, 53, 92)"] .divisor-secao {
+    background: linear-gradient(to right, transparent, #01355c, transparent) !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .divisor-secao,
+.paleta[style*="background-color: rgb(231, 214, 185)"] .divisor-secao {
+    background: linear-gradient(to right, transparent, #e7d6b9, transparent) !important;
+}
+
+.paleta[style*="background-color: #e7d6b9"] .project-card *,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-card * {
+
+    color: #000000 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .project-title,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-title,
+
+.paleta[style*="background-color: #e7d6b9"] .project-description,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-description,
+
+.paleta[style*="background-color: #e7d6b9"] .project-features h6,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-features li,
+
+.paleta[style*="background-color: #e7d6b9"] .project-tech h6,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .project-tech small,
+
+.paleta[style*="background-color: #e7d6b9"] .stat-item,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .stat-number,
+
+.paleta[style*="background-color: #e7d6b9"] .stat-label {
+
+    color: #000000 !important;
+
+}
+
+
+
+/* =========================
+
+   FALLBACK PARA CARDS DE INFORMAÇÃO DE CONTATO
+
+   ========================= */
+
+
+
+/* Fallback para paleta preta - cards de informação de contato */
+
+.paleta[style*="background-color: #000000"] .info-item,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-item,
+
+.paleta[style*="background-color: #000000"] .info-item *,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-item * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #000000"] .info-content strong,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-content strong,
+
+.paleta[style*="background-color: #000000"] .info-content p,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .info-content p {
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* Fallback para paleta azul - cards de informação de contato */
+
+.paleta[style*="background-color: #01355c"] .info-item,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-item,
+
+.paleta[style*="background-color: #01355c"] .info-item *,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-item * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .info-content strong,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-content strong,
+
+.paleta[style*="background-color: #01355c"] .info-content p,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .info-content p {
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* Fallback para paleta beje - cards de informação de contato */
+
+.paleta[style*="background-color: #e7d6b9"] .info-item,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-item,
+
+.paleta[style*="background-color: #e7d6b9"] .info-item *,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-item * {
+
+    color: #000000 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .info-content strong,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-content strong,
+
+.paleta[style*="background-color: #e7d6b9"] .info-content p,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .info-content p {
+
+    color: #000000 !important;
+
+}
+
+
+
+/* Fallback para ícones dos cards de informação de contato */
+
+.paleta[style*="background-color: #000000"] .info-icon {
+
+    background: linear-gradient(135deg, #4dabf7, #74b9ff) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .info-icon {
+
+    background: linear-gradient(135deg, #74b9ff, #4dabf7) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .info-icon {
+
+    background: linear-gradient(135deg, #01355c, #000000) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+
+/* Fallback para cards das redes sociais */
+
+.paleta[style*="background-color: #000000"] .icone-item,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-item,
+
+.paleta[style*="background-color: #000000"] .icone-item *,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-item * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #000000"] .icone-label,
+
+.paleta[style*="background-color: rgb(0, 0, 0)"] .icone-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .icone-item,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-item,
+
+.paleta[style*="background-color: #01355c"] .icone-item *,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-item * {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #01355c"] .icone-label,
+
+.paleta[style*="background-color: rgb(1, 53, 92)"] .icone-label {
+
+    color: #ffffff !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .icone-item,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-item,
+
+.paleta[style*="background-color: #e7d6b9"] .icone-item *,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-item * {
+
+    color: #000000 !important;
+
+}
+
+
+
+.paleta[style*="background-color: #e7d6b9"] .icone-label,
+
+.paleta[style*="background-color: rgb(231, 214, 185)"] .icone-label {
+
+    color: #000000 !important;
+
+}
+
+
