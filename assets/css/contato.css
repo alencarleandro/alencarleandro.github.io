@@ -6,113 +6,137 @@
 }
 
 .contato-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-/* Seção de Redes Sociais */
-.redes-sociais {
-    padding: 1rem;
-}
-
-/* Redes Sociais no perfil (versão compacta) */
-.redes-sociais .icones-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    grid-template-columns: 1fr 2px 2fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
-.redes-sociais .icone-item {
-    padding: 1rem 0.5rem;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+/* =========================
+   REDES SOCIAIS - SEÇÃO DE CONTATO (Layout Vertical)
+   ========================= */
+.contato-container .redes-sociais {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    min-height: 500px;
 }
 
-.redes-sociais .icone-wrapper {
-    width: 70px;
-    height: 70px;
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-}
-
-.redes-sociais .icone-label {
-    font-size: 0.9rem;
+.contato-container .redes-sociais h5 {
     text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.contato-container .redes-sociais .icones-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.contato-container .redes-sociais .icone-item {
+    padding: 1.5rem;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contato-container .redes-sociais .icone-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contato-container .redes-sociais .icone-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.contato-container .redes-sociais .icone-label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
     line-height: 1.2;
 }
 
-.icones-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+/* =========================
+   REDES SOCIAIS - SEÇÃO DE INFORMAÇÕES PESSOAIS (Layout Horizontal)
+   ========================= */
+.redes-sociais:not(.contato-container .redes-sociais) {
+    margin-top: 1rem;
 }
 
-.icone-item {
+.redes-sociais:not(.contato-container .redes-sociais) .icones-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.redes-sociais:not(.contato-container .redes-sociais) .icone-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    justify-content: center;
     padding: 1rem;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.icone-item:hover {
+.redes-sociais:not(.contato-container .redes-sociais) .icone-item:hover {
     transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.icone-wrapper {
+.redes-sociais:not(.contato-container .redes-sociais) .icone-wrapper {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     font-size: 1.8rem;
     color: white;
     transition: all 0.3s ease;
 }
 
-.icone-wrapper.email {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-}
-
-.icone-wrapper.whatsapp {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-}
-
-.icone-wrapper.linkedin {
-    background: linear-gradient(135deg, #0077b5, #005885);
-}
-
-.icone-wrapper.github {
-    background: linear-gradient(135deg, #333, #000);
-}
-
-.icone-wrapper.instagram {
-    background: linear-gradient(135deg, #e4405f, #c13584);
-}
-
-.icone-item:hover .icone-wrapper {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.icone-label {
+.redes-sociais:not(.contato-container .redes-sociais) .icone-label {
     font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
     color: inherit;
+    line-height: 1.2;
+}
+
+.redes-sociais:not(.contato-container .redes-sociais) .icone-item:hover .icone-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Divisor vertical */
@@ -121,11 +145,37 @@
     height: 100%;
     background: linear-gradient(to bottom, transparent, var(--paleta-color, #000), transparent);
     justify-self: center;
+    min-height: 500px;
 }
 
 /* Formulário de Contato */
 .formulario-contato {
-    padding: 1rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+.formulario-contato h5 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.formulario-contato form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato .mb-3 {
+    margin-bottom: 2rem !important;
 }
 
 .form-control {
@@ -135,6 +185,9 @@
     color: inherit;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    width: 100%;
 }
 
 .form-control:focus {
@@ -142,20 +195,30 @@
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     color: inherit;
+    transform: scale(1.02);
 }
 
 .form-control::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: block;
+    font-size: 1.1rem;
+}
+
 .btn-enviar {
     background: linear-gradient(135deg, #007bff, #0056b3);
     border: none;
     border-radius: 25px;
-    padding: 12px 30px;
+    padding: 18px 40px;
     font-weight: 600;
     transition: all 0.3s ease;
     width: 100%;
+    font-size: 1.1rem;
+    margin-top: auto;
 }
 
 .btn-enviar:hover {
@@ -174,6 +237,7 @@
     border-radius: 10px;
     text-align: center;
     font-weight: 600;
+    margin-top: 1rem;
 }
 
 #formStatus.success {
@@ -188,110 +252,122 @@
     color: #dc3545;
 }
 
-/* Informações de Contato */
-.info-contato {
-    text-align: center;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.info-item:hover {
-    transform: translateY(-3px);
-}
-
-.info-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.info-content {
-    text-align: left;
-}
-
-.info-content strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.info-content p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
 /* Responsividade */
+@media only screen and (max-width: 1200px) {
+    .contato-container {
+        max-width: 1200px;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .contato-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 1rem;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        max-width: 800px;
+        padding: 0 1rem;
     }
     
     .divisor-vertical {
         width: 100%;
         height: 2px;
         background: linear-gradient(to right, transparent, var(--paleta-color, #000), transparent);
+        min-height: auto;
     }
     
-    .icones-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    .contato-container .redes-sociais .icones-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .contato-container .redes-sociais .icone-item {
+        flex-direction: column;
+        text-align: center;
         gap: 1rem;
     }
     
-    .info-grid {
-        grid-template-columns: 1fr;
+    .contato-container .redes-sociais .icone-label {
+        text-align: center;
+    }
+    
+    .contato-container .redes-sociais,
+    .formulario-contato {
+        min-height: auto;
+    }
+    
+    /* Redes sociais da seção de informações pessoais em mobile */
+    .redes-sociais:not(.contato-container .redes-sociais) .icones-container {
         gap: 1rem;
+    }
+    
+    .redes-sociais:not(.contato-container .redes-sociais) .icone-item {
+        min-height: 100px;
+        padding: 0.8rem;
+    }
+    
+    .redes-sociais:not(.contato-container .redes-sociais) .icone-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .contato-container {
-        padding: 0 1rem;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
     }
     
-    .icones-container {
+    .contato-container .redes-sociais .icones-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
-    .icone-wrapper {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+    .contato-container .redes-sociais .icone-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
     
-    .info-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
+    .contato-container .redes-sociais,
+    .formulario-contato {
+        padding: 1.5rem;
     }
     
-    .info-content {
-        text-align: center;
+    .form-control {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+    
+    .form-label {
+        font-size: 1rem;
+    }
+    
+    .btn-enviar {
+        padding: 16px 30px;
+        font-size: 1rem;
+    }
+    
+    /* Redes sociais da seção de informações pessoais em mobile pequeno */
+    .redes-sociais:not(.contato-container .redes-sociais) .icones-container {
+        gap: 0.8rem;
+    }
+    
+    .redes-sociais:not(.contato-container .redes-sociais) .icone-item {
+        min-height: 90px;
+        padding: 0.6rem;
+    }
+    
+    .redes-sociais:not(.contato-container .redes-sociais) .icone-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .redes-sociais:not(.contato-container .redes-sociais) .icone-label {
+        font-size: 0.8rem;
     }
 }
 
@@ -311,7 +387,7 @@
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.redes-sociais {
+.contato-container .redes-sociais {
     animation-delay: 0.1s;
 }
 

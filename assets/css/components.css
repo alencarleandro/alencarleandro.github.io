@@ -70,17 +70,7 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
-    background-size: 200% 100%;
-    animation: gradientMove 3s ease infinite;
-}
+
 
 .quick-nav-card {
     background: rgba(255, 255, 255, 0.05);
@@ -100,17 +90,7 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.quick-nav-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
-    background-size: 200% 100%;
-    animation: gradientMove 3s ease infinite;
-}
+
 
 .highlight-card {
     background: rgba(255, 255, 255, 0.05);
@@ -423,11 +403,6 @@
 }
 
 /* Animações */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 @keyframes slideInUp {
     from {

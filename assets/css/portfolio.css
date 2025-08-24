@@ -30,11 +30,6 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    cursor: grab;
-}
-
-.portfolio-carousel:active {
-    cursor: grabbing;
 }
 
 .carousel-container {
@@ -77,45 +72,34 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* Esconder a scrollbar horizontal do carrossel mas manter funcionalidade */
+/* Estilização da scrollbar horizontal do carrossel */
 .portfolio-carousel::-webkit-scrollbar {
-    height: 0;
-    width: 0;
+    height: 8px;
+    width: auto;
 }
 
 .portfolio-carousel::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .portfolio-carousel::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.portfolio-carousel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* Para Firefox */
 .portfolio-carousel {
-    scrollbar-width: none;
-    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
 }
 
-/* Estados do drag */
-.portfolio-carousel.dragging {
-    cursor: grabbing;
-}
 
-.portfolio-carousel.dragging .carousel-track {
-    cursor: grabbing;
-}
-
-.portfolio-carousel.dragging .project-card {
-    cursor: grabbing;
-    user-select: none;
-}
-
-/* Feedback visual durante o drag */
-.portfolio-carousel.dragging .project-card {
-    transform: scale(0.98);
-    transition: transform 0.1s ease;
-}
 
 
 
@@ -138,23 +122,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #007bff, #00d4ff, #007bff);
-    background-size: 200% 100%;
-    animation: gradientMove 3s ease infinite;
-}
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 /* Header do projeto */
 .project-header {

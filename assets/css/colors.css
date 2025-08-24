@@ -19,18 +19,7 @@ body.paleta-beje .foto-perfil {
     border-color: #01355c !important;
 }
 
-/* Estilos para borda dos cards de projeto com cores específicas de cada paleta */
-body.paleta-preta .project-card::before {
-    background: linear-gradient(90deg, #ffffff, #e6e6e6, #ffffff) !important;
-}
 
-body.paleta-azul .project-card::before {
-    background: linear-gradient(90deg, #74b9ff, #4dabf7, #74b9ff) !important;
-}
-
-body.paleta-beje .project-card::before {
-    background: linear-gradient(90deg, #01355c, #000000, #01355c) !important;
-}
 
 /* Divisores entre seções */
 .divisor-secao {
