@@ -85,7 +85,7 @@
         <!-- =========================
              SEÇÃO PERFIL
              ========================= -->
-        <section id="perfil">
+        <section id="perfil" style="padding-top: 1%;">
             <div class="perfil-header">
                 <div class="em2 centro mb-4 text_paleta">
                     <strong data-i18n="profile.title">Meu Perfil</strong>
@@ -98,7 +98,7 @@
                 <div class="perfil-foto">
                     <div class="foto-wrapper">
                         <div class="foto-container">
-                            <img id="fotoPerfil" src="../assets/img/eu_preto.jpg" alt="Foto de perfil" class="eu foto-perfil">
+                            <img id="fotoPerfil" src="../assets/img/eu_preto.png" alt="Foto de perfil" class="eu foto-perfil">
                         </div>
                         <div class="paleta-container">
                             <div class="em1-5 centro text_paleta">
@@ -182,7 +182,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Divisor entre Informações Pessoais e Portfólio -->
             <div class="divisor-secao"></div>
 
@@ -579,16 +578,55 @@
         <section id="contato" class="mt-5">
             <div class="contato-header">
                 <div class="em2 centro mb-4 text_paleta">
-                    <strong data-i18n="contact.title">Envie uma Mensagem</strong>
+                    <strong data-i18n="contact.title">Entre em Contato</strong>
                 </div>
                 <div class="exp2 paleta"></div>
             </div>
 
             <div class="contato-container">
+                <!-- Redes Sociais -->
+                <div class="redes-sociais">
+                    <div class="icones-container">
+                        <div class="icone-item" onclick="window.open('https://www.linkedin.com/in/leandroalencarclemente/', '_blank')">
+                            <div class="icone-wrapper linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="icone-label">LinkedIn</div>
+                        </div>
+                        
+                        <div class="icone-item" onclick="window.open('https://github.com/alencarleandro', '_blank')">
+                            <div class="icone-wrapper github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="icone-label">GitHub</div>
+                        </div>
+                        
+                        <div class="icone-item" onclick="window.open('https://www.instagram.com/leandro_a_clemente/', '_blank')">
+                            <div class="icone-wrapper instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="icone-label">Instagram</div>
+                        </div>
+                        
+
+                        
+                        <div class="icone-item" onclick="abrirWhatsApp()">
+                            <div class="icone-wrapper whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="icone-label">WhatsApp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor Vertical -->
+                <div class="divisor-vertical"></div>
+
                 <!-- Formulário de Contato -->
                 <div class="formulario-contato">
+                    <h5 class="text_paleta mb-3">Envie uma Mensagem</h5>
                     
-                    <form id="contactForm" onsubmit="enviarEmail(event)">
+                    <form id="contactForm" onsubmit="enviarFormulario(event)">
                         <div class="mb-3">
                             <label for="nome" class="form-label text_paleta" data-i18n="contact.form.name">Nome</label>
                             <input type="text" class="form-control" id="nome" name="nome" required>
@@ -609,17 +647,22 @@
                             <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-enviar">
-                            <i class="fas fa-paper-plane me-2"></i>
-                            <span data-i18n="contact.form.send">Enviar Mensagem</span>
+                        <button type="submit" class="btn btn-primary btn-enviar" id="btnEnviar">
+                            <i class="fab fa-google me-2"></i>
+                            <span>Abrir Gmail</span>
                         </button>
                     </form>
+                    
+                    <div class="mt-3">
+                        <small class="text-info-email">
+                            <i class="fab fa-google me-1"></i>
+                            Sua mensagem será aberta no Gmail para: <strong>leandro130333.dev@gmail.com</strong>
+                        </small>
+                    </div>
                     
                     <div id="formStatus" class="mt-3"></div>
                 </div>
             </div>
-
-
         </section>
 
     </div>
@@ -628,14 +671,20 @@
 
 <footer class="h_minContent footer P">
     <div class="centro pb-4 pt-4 text_paleta">
-        <strong data-i18n="footer.copyright">© 2024 - All rights reserved - Leandro Alencar</strong>
+        <strong>© <span id="anoAtual"></span> - All rights reserved - Leandro Alencar</strong>
     </div>
 </footer>
 
-<script src="../assets/js/index.js"></script>
-<script src="../assets/js/perfil.js"></script>
-<script src="../assets/js/portfolio.js"></script>
-<script src="../assets/js/contato.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/contato.js"></script>
+    
+    <!-- EmailJS para envio de e-mails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública do EmailJS
+        })();
+    </script>
 </body>
 
 </html>

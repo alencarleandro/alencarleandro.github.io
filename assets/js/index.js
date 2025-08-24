@@ -86,7 +86,6 @@ const translations = {
         "education.title": "Formação Acadêmica",
         "education.software.title": "Engenharia de Software",
         "education.electronics.title": "Técnico em Eletrônica",
-        "footer.copyright": "© 2024 - All rights reserved - Leandro Alencar",
         // Traduções da página de contato
         "contact.title": "Entre em Contato",
         "contact.social.title": "Redes Sociais",
@@ -182,7 +181,6 @@ const translations = {
         "education.title": "Academic Background",
         "education.software.title": "Software Engineering",
         "education.electronics.title": "Electronics Technician",
-        "footer.copyright": "© 2024 - All rights reserved - Leandro Alencar",
         // Traduções da página de contato
         "contact.title": "Get in Touch",
         "contact.social.title": "Social Networks",
@@ -461,6 +459,9 @@ function beje() {
 function start() {
     console.log('Função start() chamada');
     
+    // Atualizar o ano imediatamente
+    atualizarAnoFooter();
+    
     // Aguarda o DOM estar completamente carregado
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', inicializarAplicacao);
@@ -486,9 +487,12 @@ function inicializarAplicacao() {
     // Restaura a paleta selecionada anteriormente
     restaurarPaletaSelecionada();
     
-    // Atualiza o idioma
-    updateLanguage();
-    updateHTML();
+            // Atualiza o idioma
+        updateLanguage();
+        updateHTML();
+        
+        // Atualizar o ano novamente
+        atualizarAnoFooter();
     
     // Aguarda um pouco mais para garantir que todos os elementos estejam renderizados
     setTimeout(() => {
@@ -504,6 +508,9 @@ function inicializarAplicacao() {
         } else if (paletaSalva === 'beje') {
             aplicarEstilosPaletaBeje();
         }
+        
+        // Atualiza o ano no footer
+        atualizarAnoFooter();
         
         console.log('Estilos aplicados após delay');
     }, 300);
@@ -1282,3 +1289,30 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
+// =========================
+// FUNÇÕES DE INICIALIZAÇÃO
+// =========================
+
+// Função para atualizar o ano no footer automaticamente
+function atualizarAnoFooter() {
+    const anoAtual = new Date().getFullYear();
+    const elementoAno = document.getElementById('anoAtual');
+    
+    if (elementoAno) {
+        elementoAno.textContent = anoAtual;
+        console.log('✅ Ano atualizado para:', anoAtual);
+    } else {
+        console.log('❌ Elemento anoAtual não encontrado');
+        // Tentar novamente após um delay
+        setTimeout(atualizarAnoFooter, 500);
+    }
+}
+
+// Executar imediatamente quando o script carregar
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', atualizarAnoFooter);
+} else {
+    // Se já carregou, executar imediatamente
+    atualizarAnoFooter();
+}
