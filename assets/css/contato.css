@@ -743,61 +743,21 @@ body.paleta-beje .btn-primary:hover {
 }
 
 /* Sobrescreve textos azuis para preto ou branco conforme a paleta */
-body.paleta-preta,
-body.paleta-azul {
-    /* Todos os textos devem ser brancos */
-}
-body.paleta-preta .text_paleta,
-body.paleta-preta strong,
-body.paleta-preta h1,
-body.paleta-preta h2,
-body.paleta-preta h3,
-body.paleta-preta h4,
-body.paleta-preta h5,
-body.paleta-preta h6,
-body.paleta-preta a,
-body.paleta-preta .btn,
-body.paleta-preta .icone-label,
-body.paleta-preta .info-content,
-body.paleta-preta .project-title,
-body.paleta-preta .stat-number,
-body.paleta-preta .stat-label {
+body.paleta-preta, body.paleta-preta * {
     color: #fff !important;
 }
-
-body.paleta-azul .text_paleta,
-body.paleta-azul strong,
-body.paleta-azul h1,
-body.paleta-azul h2,
-body.paleta-azul h3,
-body.paleta-azul h4,
-body.paleta-azul h5,
-body.paleta-azul h6,
-body.paleta-azul a,
-body.paleta-azul .btn,
-body.paleta-azul .icone-label,
-body.paleta-azul .info-content,
-body.paleta-azul .project-title,
-body.paleta-azul .stat-number,
-body.paleta-azul .stat-label {
+body.paleta-azul, body.paleta-azul * {
     color: #fff !important;
 }
+body.paleta-beje, body.paleta-beje * {
+    color: #000 !important;
+}
 
-body.paleta-beje .text_paleta,
-body.paleta-beje strong,
-body.paleta-beje h1,
-body.paleta-beje h2,
-body.paleta-beje h3,
-body.paleta-beje h4,
-body.paleta-beje h5,
-body.paleta-beje h6,
-body.paleta-beje a,
-body.paleta-beje .btn,
-body.paleta-beje .icone-label,
-body.paleta-beje .info-content,
-body.paleta-beje .project-title,
-body.paleta-beje .stat-number,
-body.paleta-beje .stat-label {
+body.paleta-preta a, body.paleta-preta .btn, body.paleta-preta .nav-link,
+body.paleta-azul a, body.paleta-azul .btn, body.paleta-azul .nav-link {
+    color: #fff !important;
+}
+body.paleta-beje a, body.paleta-beje .btn, body.paleta-beje .nav-link {
     color: #000 !important;
 }
 

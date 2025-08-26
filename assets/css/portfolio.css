@@ -849,3 +849,21 @@ a {
 .stat-item:hover {
     transform: translateY(-5px);
 }
+
+body.paleta-preta, body.paleta-preta * {
+    color: #fff !important;
+}
+body.paleta-azul, body.paleta-azul * {
+    color: #fff !important;
+}
+body.paleta-beje, body.paleta-beje * {
+    color: #000 !important;
+}
+
+body.paleta-preta a, body.paleta-preta .btn, body.paleta-preta .nav-link,
+body.paleta-azul a, body.paleta-azul .btn, body.paleta-azul .nav-link {
+    color: #fff !important;
+}
+body.paleta-beje a, body.paleta-beje .btn, body.paleta-beje .nav-link {
+    color: #000 !important;
+}

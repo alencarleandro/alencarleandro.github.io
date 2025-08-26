@@ -618,7 +618,7 @@ body.paleta-preta .contato-item a:hover {
 
 /* Paleta Azul - Outros elementos */
 body.paleta-azul .perfil-info strong {
-    color: #74b9ff !important;
+    color: #fff !important;
 }
 
 body.paleta-azul .perfil-info p {
@@ -639,7 +639,7 @@ body.paleta-azul .contato-item a:hover {
 
 /* Paleta Beje - Outros elementos */
 body.paleta-beje .perfil-info strong {
-    color: #01355c !important;
+    color: #000 !important;
 }
 
 body.paleta-beje .perfil-info p {
@@ -1012,5 +1012,55 @@ body.paleta-azul .contatos * {
 
 body.paleta-beje .contatos,
 body.paleta-beje .contatos * {
+    color: #000 !important;
+}
+
+body.paleta-preta, body.paleta-preta * {
+    color: #fff !important;
+}
+body.paleta-azul, body.paleta-azul * {
+    color: #fff !important;
+}
+body.paleta-beje, body.paleta-beje * {
+    color: #000 !important;
+}
+
+body.paleta-preta a, body.paleta-preta .btn, body.paleta-preta .nav-link,
+body.paleta-azul a, body.paleta-azul .btn, body.paleta-azul .nav-link {
+    color: #fff !important;
+}
+body.paleta-beje a, body.paleta-beje .btn, body.paleta-beje .nav-link {
+    color: #000 !important;
+}
+
+body.paleta-azul *, body.paleta-azul a, body.paleta-azul .btn, body.paleta-azul .nav-link {
+  color: #fff !important;
+}
+body.paleta-beje *, body.paleta-beje a, body.paleta-beje .btn, body.paleta-beje .nav-link {
+  color: #000 !important;
+}
+
+body.paleta-azul .skill-category strong,
+body.paleta-azul .exp-header strong,
+body.paleta-azul .formacao-header strong,
+body.paleta-azul .formacao-instituicao,
+body.paleta-azul .formacao-periodo,
+body.paleta-azul .exp-period,
+body.paleta-azul .exp-description,
+body.paleta-azul .exp-tech,
+body.paleta-azul .stat-label,
+body.paleta-azul .stat-number {
+    color: #fff !important;
+}
+body.paleta-beje .skill-category strong,
+body.paleta-beje .exp-header strong,
+body.paleta-beje .formacao-header strong,
+body.paleta-beje .formacao-instituicao,
+body.paleta-beje .formacao-periodo,
+body.paleta-beje .exp-period,
+body.paleta-beje .exp-description,
+body.paleta-beje .exp-tech,
+body.paleta-beje .stat-label,
+body.paleta-beje .stat-number {
     color: #000 !important;
 }
