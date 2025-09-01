@@ -15,7 +15,6 @@ Acesse o site no GitHub Pages:
 - **CSS3** (modularizado por tema: layout, cores, componentes, tipografia, etc)
 - **JavaScript**
 - **Bootstrap 5** (CDN)
-- **Font Awesome** (CDN para ícones)
 - 📦 **GitHub Pages** (deploy)
 
 ---
