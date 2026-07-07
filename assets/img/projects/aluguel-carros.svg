@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema de Aluguel de Carros</title>
+  <desc id="desc">Logo com carro e rota para representar aluguel de veiculos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="28" y1="26" x2="230" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="car" x1="58" y1="96" x2="200" y2="166" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="46" fill="url(#bg)"/>
+  <path d="M54 178c32 28 116 28 148 0" fill="none" stroke="#99f6e4" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 18"/>
+  <path d="M64 135h15l18-32c5-9 13-14 24-14h38c11 0 19 5 24 14l18 32h11c7 0 13 6 13 13v30c0 7-6 13-13 13H64c-7 0-13-6-13-13v-30c0-7 6-13 13-13Z" fill="url(#car)"/>
+  <path d="M104 107h49c6 0 10 3 13 8l11 20H81l11-20c3-5 7-8 12-8Z" fill="#0f172a" opacity=".16"/>
+  <circle cx="88" cy="190" r="18" fill="#0f172a"/>
+  <circle cx="88" cy="190" r="8" fill="#f8fafc"/>
+  <circle cx="188" cy="190" r="18" fill="#0f172a"/>
+  <circle cx="188" cy="190" r="8" fill="#f8fafc"/>
+  <path d="M80 154h25M172 154h25" stroke="#1e40af" stroke-width="9" stroke-linecap="round"/>
+  <text x="128" y="68" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#ffffff">ALUGUEL</text>
+</svg>

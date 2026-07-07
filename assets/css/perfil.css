@@ -1064,3 +1064,417 @@ body.paleta-beje .stat-label,
 body.paleta-beje .stat-number {
     color: #000 !important;
 }
+
+/* Layout basico do portfolio */
+body.portfolio-basic {
+    --basic-bg: #f5f7fa;
+    --basic-panel: #ffffff;
+    --basic-text: #1f2937;
+    --basic-muted: #64748b;
+    --basic-border: #d9e2ec;
+    --basic-accent: #116466;
+    --basic-accent-soft: #e6f3f1;
+    background: var(--basic-bg) !important;
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic *,
+body.portfolio-basic .text_paleta,
+body.portfolio-basic strong,
+body.portfolio-basic a,
+body.portfolio-basic .nav-link {
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .main {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+body.portfolio-basic .header,
+body.portfolio-basic .footer {
+    background: var(--basic-panel) !important;
+    border-bottom: 1px solid var(--basic-border);
+    box-shadow: none !important;
+}
+
+body.portfolio-basic .footer {
+    border-top: 1px solid var(--basic-border);
+    border-bottom: 0;
+}
+
+body.portfolio-basic .folha {
+    background: transparent !important;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+body.portfolio-basic .botaoAnima,
+body.portfolio-basic .nav-link,
+body.portfolio-basic #langBtn {
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+body.portfolio-basic #langBtn,
+body.portfolio-basic .btn-enviar {
+    border: 1px solid var(--basic-accent) !important;
+    background: var(--basic-accent) !important;
+    color: #ffffff !important;
+}
+
+body.portfolio-basic #langBtn *,
+body.portfolio-basic .btn-enviar * {
+    color: #ffffff !important;
+}
+
+body.portfolio-basic .perfil-header,
+body.portfolio-basic .portfolio-header,
+body.portfolio-basic .contato-header {
+    margin-bottom: 24px;
+}
+
+body.portfolio-basic .perfil-header .em2,
+body.portfolio-basic .portfolio-header .em2,
+body.portfolio-basic .contato-header .em2 {
+    justify-content: flex-start;
+    font-size: 1.45rem;
+}
+
+body.portfolio-basic .exp2,
+body.portfolio-basic .divisor-secao,
+body.portfolio-basic .divisor-vertical,
+body.portfolio-basic .divisor-horizontal {
+    background: var(--basic-border) !important;
+}
+
+body.portfolio-basic .divisor-secao {
+    height: 1px;
+    margin: 36px 0;
+}
+
+body.portfolio-basic .perfil-container {
+    grid-template-columns: minmax(240px, 330px) 1px minmax(0, 1fr);
+    gap: 32px;
+    min-height: auto;
+    align-items: stretch;
+    background: var(--basic-panel);
+    border: 1px solid var(--basic-border);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+body.portfolio-basic .perfil-foto {
+    min-height: auto;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+body.portfolio-basic .foto-wrapper {
+    max-width: none;
+    width: 100%;
+    gap: 0;
+}
+
+body.portfolio-basic .foto-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    border: 1px solid var(--basic-border);
+    background: #eef2f7;
+    box-shadow: none;
+}
+
+body.portfolio-basic .foto-container img {
+    object-position: center top;
+}
+
+body.portfolio-basic .foto-perfil {
+    border: 0 !important;
+}
+
+body.portfolio-basic .perfil-info {
+    min-height: auto;
+    padding: 0;
+}
+
+body.portfolio-basic .profile-section-title {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: .85rem;
+    color: var(--basic-muted) !important;
+}
+
+body.portfolio-basic .profile-name {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 18px !important;
+}
+
+body.portfolio-basic .profile-form-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+body.portfolio-basic .profile-field {
+    min-height: 70px;
+    padding: 12px 14px;
+    border: 1px solid var(--basic-border);
+    border-radius: 6px;
+    background: #fbfcfe;
+}
+
+body.portfolio-basic .profile-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: var(--basic-muted) !important;
+}
+
+body.portfolio-basic .sobre-mim,
+body.portfolio-basic .skill-category,
+body.portfolio-basic .exp-item,
+body.portfolio-basic .formacao-item,
+body.portfolio-basic .project-card,
+body.portfolio-basic .formulario-contato,
+body.portfolio-basic .contato-container .redes-sociais {
+    background: var(--basic-panel) !important;
+    border: 1px solid var(--basic-border) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+body.portfolio-basic .sobre-mim {
+    padding: 18px;
+}
+
+body.portfolio-basic .sobre-mim .em1-5 strong,
+body.portfolio-basic .project-title,
+body.portfolio-basic .formacao-header,
+body.portfolio-basic .exp-period,
+body.portfolio-basic .exp-tech {
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .icones-container {
+    justify-content: flex-start;
+}
+
+body.portfolio-basic .icone-item {
+    border: 1px solid var(--basic-border);
+    border-radius: 6px;
+    background: #fbfcfe;
+}
+
+body.portfolio-basic .icone-wrapper {
+    box-shadow: none !important;
+}
+
+body.portfolio-basic .icone-wrapper i {
+    color: #ffffff !important;
+}
+
+body.portfolio-basic .project-card:hover,
+body.portfolio-basic .skill-category:hover,
+body.portfolio-basic .exp-item:hover,
+body.portfolio-basic .formacao-item:hover,
+body.portfolio-basic .icone-item:hover {
+    transform: none !important;
+    border-color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .form-control {
+    border: 1px solid var(--basic-border) !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    color: var(--basic-text) !important;
+    box-shadow: none !important;
+}
+
+body.portfolio-basic .form-control:focus {
+    border-color: var(--basic-accent) !important;
+    box-shadow: 0 0 0 3px rgba(17, 100, 102, .12) !important;
+}
+
+body.portfolio-basic .text-info-email,
+body.portfolio-basic .project-description,
+body.portfolio-basic .project-features li,
+body.portfolio-basic .stat-label,
+body.portfolio-basic .formacao-instituicao,
+body.portfolio-basic .formacao-periodo {
+    color: var(--basic-muted) !important;
+}
+
+body.portfolio-basic .project-logo {
+    background: var(--basic-accent-soft) !important;
+    border-radius: 6px;
+}
+
+body.portfolio-basic .legacy-projects {
+    display: none !important;
+}
+
+body.portfolio-basic .projects-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+body.portfolio-basic .project-card-detailed {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 20px;
+}
+
+body.portfolio-basic .project-card-detailed .project-header {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+body.portfolio-basic .project-card-detailed .project-logo {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--basic-border);
+    overflow: hidden;
+}
+
+body.portfolio-basic .project-card-detailed .project-icon {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+body.portfolio-basic .project-card-detailed .project-title {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1.1rem;
+}
+
+body.portfolio-basic .project-type {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--basic-muted) !important;
+    font-size: .85rem;
+}
+
+body.portfolio-basic .project-card-detailed .project-description {
+    margin-bottom: 14px;
+}
+
+body.portfolio-basic .project-card-detailed .project-features {
+    margin-bottom: 14px;
+}
+
+body.portfolio-basic .project-card-detailed .project-features h6 {
+    margin-bottom: 8px;
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .project-card-detailed .project-features ul {
+    margin-bottom: 0;
+    padding-left: 18px;
+}
+
+body.portfolio-basic .project-card-detailed .project-features li {
+    margin-bottom: 5px;
+}
+
+body.portfolio-basic .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+body.portfolio-basic .project-stack span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 9px;
+    border: 1px solid var(--basic-border);
+    border-radius: 999px;
+    background: #fbfcfe;
+    color: var(--basic-text) !important;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+body.portfolio-basic .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+body.portfolio-basic .project-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 6px 12px;
+    border: 1px solid var(--basic-accent);
+    border-radius: 6px;
+    color: var(--basic-accent) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body.portfolio-basic .project-links a:hover {
+    background: var(--basic-accent);
+    color: #ffffff !important;
+}
+
+body.portfolio-basic .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+body.portfolio-basic .skills-summary {
+    max-width: 780px;
+    margin: 0 auto 22px;
+    text-align: center;
+    color: var(--basic-muted) !important;
+    line-height: 1.6;
+}
+
+body.portfolio-basic .skills-badges img {
+    height: 28px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    body.portfolio-basic .perfil-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    body.portfolio-basic .foto-container {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body.portfolio-basic .main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body.portfolio-basic .profile-form-card {
+        grid-template-columns: 1fr;
+    }
+
+    body.portfolio-basic .projects-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="paleta body rolagemY cartaoV " onload="start()">
+<body class="portfolio-basic body rolagemY cartaoV">
 
 <header class="h_minContent header P">
     <div class="paleta header P ">
@@ -98,22 +98,7 @@
                 <div class="perfil-foto">
                     <div class="foto-wrapper">
                         <div class="foto-container">
-                            <img id="fotoPerfil" src="../assets/img/eu_preto.png" alt="Foto de perfil" class="eu foto-perfil">
-                        </div>
-                        <div class="paleta-container">
-                            <div class="em1-5 centro text_paleta">
-                                <strong data-i18n="palette">Paleta</strong>
-                            </div>
-                            <div class="flex" id="Campo_Paleta" style="flex-direction: column; align-items: center;">
-                                <div class="flex gap-3 p-2 radius_All_-40- seletorPaleta">
-                                    <div class="icon32 rounded-circle color_preto cursorHand" id="paletaPreta"
-                                         onclick="preto()"></div>
-                                    <div class="icon32 rounded-circle color_azulMarinho cursorHand" id="paletaAzul"
-                                         onclick="azulMarinho()"></div>
-                                    <div class="icon32 rounded-circle color_beje cursorHand" id="paletaBeje"
-                                         onclick="beje()"></div>
-                                </div>
-                            </div>
+                            <img id="fotoPerfil" src="../assets/img/eu.png" alt="Foto de Leandro Alencar" class="eu foto-perfil">
                         </div>
                     </div>
                 </div>
@@ -123,13 +108,32 @@
 
                 <!-- Seção de Informações Pessoais -->
                 <div class="perfil-info">
-                    <div class="em1-5 text_paleta mb-3">
+                    <div class="em1-5 text_paleta mb-3 profile-section-title">
                         <strong data-i18n="profile.personal">Informações Pessoais</strong>
                     </div>
                     
                     <div class="info-pessoal">
-                        <div class="fontEsp em1-5 mb-3">
+                        <div class="fontEsp em1-5 mb-3 profile-name">
                             <strong>Leandro Alencar Pereira Clemente</strong>
+                        </div>
+
+                        <div class="profile-form-card" aria-label="Resumo profissional">
+                            <div class="profile-field">
+                                <span class="profile-label">Área</span>
+                                <strong>Desenvolvedor Fullstack</strong>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-label">Formação</span>
+                                <strong>Engenharia de Software - PUC Minas</strong>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-label">Período</span>
+                                <strong>2024 - 2027</strong>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-label">Local</span>
+                                <strong>Belo Horizonte, MG</strong>
+                            </div>
                         </div>
                         
                         <div class="sobre-mim">
@@ -193,7 +197,222 @@
                 <div class="exp2 paleta"></div>
             </div>
 
-            <div class="portfolio-carousel">
+            <div class="projects-detail-grid">
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo Cache Aside" src="../assets/img/projects/cacheaside.svg" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">Cache Aside</h5>
+                            <span class="project-type">API REST + dashboard</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Laboratório acadêmico para demonstrar o padrão Cache Aside com CRUD de alunos, benchmark e métricas de cache hit, miss, leituras no banco e invalidações.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Cache Aside para listas e consultas individuais.</li>
+                            <li>Redis opcional com fallback em memória.</li>
+                            <li>PostgreSQL/Supabase com fallback JSON local em desenvolvimento.</li>
+                            <li>Deploy publicado no Render.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>React 19</span><span>Vite 8</span><span>Node.js</span><span>Express</span><span>Redis</span><span>PostgreSQL</span><span>n8n</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/CacheAside" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://cacheaside-8t48.onrender.com" target="_blank" rel="noopener noreferrer">Deploy</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo Legnu ERP" src="../assets/img/projects/legnu.png" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">Legnu ERP</h5>
+                            <span class="project-type">ERP modular</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Sistema de gestão empresarial com módulos web, API, desktop JavaFX e ferramenta local para administração de tenants.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Gestão de clientes, funcionários, produtos e serviços.</li>
+                            <li>Fluxos comerciais com ponto de venda, comandas e financeiro.</li>
+                            <li>API REST com autenticação JWT e persistência JPA.</li>
+                            <li>Tenant Maker em Python/Tkinter para operações administrativas locais.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>React 18</span><span>Vite 5</span><span>Java</span><span>Spring Boot</span><span>JavaFX</span><span>PostgreSQL</span><span>Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/Legnu_ERP" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo CineScore" src="../assets/img/projects/cinescore.png" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">CineScore</h5>
+                            <span class="project-type">Catálogo de filmes</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Aplicação web para explorar filmes, tendências, populares, busca por título e catálogo com filtros usando dados reais da API TMDb.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Home com tendências da semana e filmes populares.</li>
+                            <li>Busca, filtros por gênero/classificação e paginação.</li>
+                            <li>Modal de detalhes com conteúdo em português quando disponível.</li>
+                            <li>Documentação acadêmica com processos, indicadores e modelagem.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>React 18</span><span>Vite 5</span><span>React Router</span><span>TMDb API</span><span>CSS</span><span>Markdown</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/Cinescore" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo Sistema de Aluguel de Carros" src="../assets/img/projects/aluguel-carros.svg" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">Sistema de Aluguel de Carros</h5>
+                            <span class="project-type">Aplicação MVC</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Aplicação web para cadastro, autenticação, catálogo de veículos, pedidos de aluguel e painel administrativo.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Gestão de clientes, automóveis e agentes financeiros.</li>
+                            <li>Fluxo de pedidos com status pendente, aprovado, rejeitado e cancelado.</li>
+                            <li>Views Thymeleaf com Spring MVC e segurança de sessão.</li>
+                            <li>H2 em memória por padrão e suporte a PostgreSQL.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>Java 21</span><span>Spring Boot 3.5</span><span>Thymeleaf</span><span>Spring Security</span><span>JPA</span><span>Gradle</span><span>H2/PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo SGO" src="../assets/img/projects/sgo.svg" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">SGO - Sistema de Gerenciamento das Olimpíadas</h5>
+                            <span class="project-type">Modelagem e arquitetura</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Documentação e modelagem de um sistema para coordenar competições, atletas, locais, resultados e quadro de medalhas.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Histórias de usuário para competições, atletas, locais e resultados.</li>
+                            <li>Diagramas UML de classes, componentes, implantação e pacotes.</li>
+                            <li>Arquitetura proposta com microserviços, API Gateway e mensageria.</li>
+                            <li>Stack proposta com Spring Boot, JPA, REST API, Docker e SQS.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>UML</span><span>Microserviços</span><span>REST API</span><span>Java</span><span>Spring Boot</span><span>Amazon SQS</span><span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo VaiComigo" src="../assets/img/projects/vaicomigo.png" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">VaiComigo</h5>
+                            <span class="project-type">Mobile + web + backend</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Sistema de segurança preventiva para trajetos: app mobile envia localização, backend monitora a rota e aciona contatos de confiança.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Monitoramento em tempo real por SSE.</li>
+                            <li>Rotas, contatos de confiança, eventos de risco e botão de pânico.</li>
+                            <li>Fila RabbitMQ/CloudAMQP e e-mail via Brevo.</li>
+                            <li>Deploy com Render, PostgreSQL/Supabase e testes de carga com k6.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>Java 21</span><span>Spring Boot</span><span>React 19</span><span>TypeScript</span><span>Flutter</span><span>PostgreSQL</span><span>RabbitMQ</span><span>k6</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://front-vaicomigo.onrender.com" target="_blank" rel="noopener noreferrer">Deploy web</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-detailed">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img alt="Logo Leandro Alencar" src="../assets/img/LogoVazia.png" class="project-icon">
+                        </div>
+                        <div>
+                            <h5 class="project-title">Portfolio Pessoal</h5>
+                            <span class="project-type">Site estático</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Site pessoal para apresentar perfil profissional, projetos, experiências, habilidades e canais de contato.
+                    </p>
+                    <div class="project-features">
+                        <h6>Detalhes:</h6>
+                        <ul>
+                            <li>Layout responsivo com seções de perfil, portfolio e contato.</li>
+                            <li>Cards detalhados baseados nos READMEs dos projetos.</li>
+                            <li>Formulário de contato com abertura no Gmail.</li>
+                            <li>Deploy via GitHub Pages.</li>
+                        </ul>
+                    </div>
+                    <div class="project-stack">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span><span>GitHub Pages</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alencarleandro/alencarleandro.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://alencarleandro.github.io/" target="_blank" rel="noopener noreferrer">Deploy</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="portfolio-carousel legacy-projects">
                 <div class="carousel-container">
                     <div class="carousel-track">
                 <!-- ERP V2 -->
@@ -399,6 +618,9 @@
                 <div class="em1-5 text_paleta mb-3 centro">
                     <strong data-i18n="skills.title">Habilidades Técnicas</strong>
                 </div>
+                <p class="skills-summary">
+                    Tecnologias aplicadas nos projetos do portfolio, cobrindo front-end, back-end, mobile, dados, integrações, deploy e documentação técnica.
+                </p>
                 
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -409,6 +631,9 @@
                             <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
                             <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
                             <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                            <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white">
+                            <img alt="Dart" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white">
+                            <img alt="Python" src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
                             <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
                         </div>
                     </div>
@@ -420,9 +645,14 @@
                         <div class="skills-badges">
                             <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
                             <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                            <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                            <img alt="Spring Boot" src="https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white">
+                            <img alt="Spring Security" src="https://img.shields.io/badge/spring%20security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white">
                             <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
+                            <img alt="JPA" src="https://img.shields.io/badge/jpa-hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white">
+                            <img alt="Express" src="https://img.shields.io/badge/express.js-%23000000.svg?style=for-the-badge&logo=express&logoColor=white">
+                            <img alt="Flutter" src="https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white">
                             <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                            <img alt="Thymeleaf" src="https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white">
                             <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
                         </div>
                     </div>
@@ -434,6 +664,11 @@
                         <div class="skills-badges">
                             <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
                             <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                            <img alt="React" src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=111111">
+                            <img alt="Vite" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white">
+                            <img alt="React Router" src="https://img.shields.io/badge/react%20router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
+                            <img alt="Leaflet" src="https://img.shields.io/badge/leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white">
+                            <img alt="Recharts" src="https://img.shields.io/badge/recharts-ff6384?style=for-the-badge&logo=chartdotjs&logoColor=white">
                         </div>
                     </div>
 
@@ -445,6 +680,9 @@
                             <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
                             <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
                             <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+                            <img alt="H2" src="https://img.shields.io/badge/h2-database-1021ff?style=for-the-badge">
+                            <img alt="Redis" src="https://img.shields.io/badge/redis-%23DC382D.svg?style=for-the-badge&logo=redis&logoColor=white">
+                            <img alt="Supabase" src="https://img.shields.io/badge/supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white">
                         </div>
                     </div>
 
@@ -455,6 +693,10 @@
                         <div class="skills-badges">
                             <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
                             <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+                            <img alt="Render" src="https://img.shields.io/badge/render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=111111">
+                            <img alt="Docker" src="https://img.shields.io/badge/docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white">
+                            <img alt="RabbitMQ" src="https://img.shields.io/badge/rabbitmq-%23FF6600.svg?style=for-the-badge&logo=rabbitmq&logoColor=white">
+                            <img alt="GitHub Pages" src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white">
                         </div>
                     </div>
 
@@ -466,6 +708,11 @@
                             <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
                             <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
                             <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                            <img alt="Maven" src="https://img.shields.io/badge/maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
+                            <img alt="Gradle" src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
+                            <img alt="npm" src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
+                            <img alt="Swagger" src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=111111">
+                            <img alt="k6" src="https://img.shields.io/badge/k6-7D64FF?style=for-the-badge&logo=k6&logoColor=white">
                             <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
                         </div>
                     </div>
@@ -681,14 +928,6 @@
             emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública do EmailJS
         })();
     </script>
-    <style>
-body.paleta-azul *, body.paleta-azul a, body.paleta-azul .btn, body.paleta-azul .nav-link {
-  color: #fff !important;
-}
-body.paleta-beje *, body.paleta-beje a, body.paleta-beje .btn, body.paleta-beje .nav-link {
-  color: #000 !important;
-}
-</style>
 </body>
 
 </html>

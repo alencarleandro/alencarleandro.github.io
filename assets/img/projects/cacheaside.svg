@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Cache Aside Redis</title>
+  <desc id="desc">Minimal red cache layers inspired by Redis.</desc>
+  <defs>
+    <linearGradient id="top" x1="32" x2="96" y1="17" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9B91"/>
+      <stop offset="1" stop-color="#FF5148"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="28" x2="100" y1="47" y2="79" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EF3B32"/>
+      <stop offset="1" stop-color="#C81E1E"/>
+    </linearGradient>
+    <linearGradient id="front" x1="28" x2="100" y1="72" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4A3D"/>
+      <stop offset="1" stop-color="#E12720"/>
+    </linearGradient>
+    <filter id="softShadow" x="12" y="14" width="104" height="104" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#7F1513" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="#FFF3F1"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M64 18L104 38L64 58L24 38L64 18Z" fill="url(#top)"/>
+    <path d="M24 38L64 58V72L24 52V38Z" fill="#E0312A"/>
+    <path d="M104 38L64 58V72L104 52V38Z" fill="#B91C1C"/>
+
+    <path d="M64 46L104 66L64 86L24 66L64 46Z" fill="url(#mid)"/>
+    <path d="M24 66L64 86V100L24 80V66Z" fill="#C91F1B"/>
+    <path d="M104 66L64 86V100L104 80V66Z" fill="#991B1B"/>
+
+    <path d="M64 72L104 92L64 112L24 92L64 72Z" fill="url(#front)"/>
+    <path d="M24 92L64 112V114L24 94V92Z" fill="#B91C1C"/>
+    <path d="M104 92L64 112V114L104 94V92Z" fill="#8F1715"/>
+  </g>
+
+  <path d="M48 38L64 30L80 38L64 46L48 38Z" fill="#FFF4F1" opacity="0.78"/>
+  <path d="M48 66L64 58L80 66L64 74L48 66Z" fill="#FFF4F1" opacity="0.22"/>
+</svg>

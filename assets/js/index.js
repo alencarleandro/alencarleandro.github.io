@@ -1123,19 +1123,10 @@ function aplicarEstilosPaletaBeje() {
 }
 
 function atualizarFotoPorPaleta() {
-    const body = document.body;
     const foto = document.getElementById('fotoPerfil');
     if (!foto) return;
 
-    if (body.classList.contains('paleta-preta')) {
-        foto.src = '../assets/img/eu_preto.png';
-    } else if (body.classList.contains('paleta-azul')) {
-        foto.src = '../assets/img/eu_azul.png';
-    } else if (body.classList.contains('paleta-beje')) {
-        foto.src = '../assets/img/eu_beje.png';
-    } else {
-        foto.src = '../assets/img/eu_preto.png';
-    }
+    foto.src = '../assets/img/eu.png';
 }
 
 document.addEventListener('DOMContentLoaded', atualizarFotoPorPaleta);
