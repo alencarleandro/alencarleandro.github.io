@@ -11,6 +11,10 @@ const folha = document.querySelector(".folha");
 const seletorPaleta = document.querySelector(".seletorPaleta");
 const foto = document.getElementById('fotoPerfil');
 
+function isPortfolioBasicMode() {
+    return document.body.classList.contains('portfolio-basic');
+}
+
 // Sistema de internacionalização
 const translations = {
     pt: {
@@ -273,6 +277,11 @@ function salvarPaletaSelecionada(paletaNome) {
 }
 
 function restaurarPaletaSelecionada() {
+    if (isPortfolioBasicMode()) {
+        console.log('Modo portfolio-basic ativo: paletas legadas desativadas.');
+        return;
+    }
+
     const paletaSalva = localStorage.getItem('paletaSelecionada');
     console.log('Paleta salva encontrada:', paletaSalva);
     
@@ -483,11 +492,22 @@ function start() {
     }
     
     // Adiciona listener para mudanças na paleta
-    document.addEventListener('paletaChanged', aplicarEstilosPaleta);
+    if (!isPortfolioBasicMode()) {
+        document.addEventListener('paletaChanged', aplicarEstilosPaleta);
+    }
 }
 
 function inicializarAplicacao() {
     console.log('Inicializando aplicação...');
+
+    if (isPortfolioBasicMode()) {
+        updateLanguage();
+        updateHTML();
+        atualizarFotoPorPaleta();
+        atualizarAnoFooter();
+        console.log('Inicialização concluída no modo portfolio-basic');
+        return;
+    }
     
     // Verifica se os elementos necessários existem
     if (!paleta || paleta.length === 0) {
@@ -535,6 +555,10 @@ function inicializarAplicacao() {
  */
 function aplicarEstilosPaleta() {
     try {
+        if (isPortfolioBasicMode()) {
+            return;
+        }
+
         const paletaSalva = localStorage.getItem('paletaSelecionada') || 'preto';
         console.log('Aplicando estilos para paleta:', paletaSalva);
         

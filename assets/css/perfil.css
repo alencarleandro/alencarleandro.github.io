@@ -1067,13 +1067,19 @@ body.paleta-beje .stat-number {
 
 /* Layout basico do portfolio */
 body.portfolio-basic {
-    --basic-bg: #f5f7fa;
-    --basic-panel: #ffffff;
-    --basic-text: #1f2937;
-    --basic-muted: #64748b;
-    --basic-border: #d9e2ec;
-    --basic-accent: #116466;
-    --basic-accent-soft: #e6f3f1;
+    --basic-bg: #0d1117;
+    --basic-panel: #161b22;
+    --basic-panel-soft: #21262d;
+    --basic-field: #0d1117;
+    --basic-text: #e6edf3;
+    --basic-muted: #8b949e;
+    --basic-border: #30363d;
+    --basic-accent: #58a6ff;
+    --basic-accent-hover: #79c0ff;
+    --basic-accent-soft: #0d1117;
+    --basic-action: #238636;
+    --basic-action-hover: #2ea043;
+    --basic-focus: rgba(56, 139, 253, .35);
     background: var(--basic-bg) !important;
     color: var(--basic-text) !important;
 }
@@ -1098,6 +1104,13 @@ body.portfolio-basic .footer {
     box-shadow: none !important;
 }
 
+body.portfolio-basic .header .paleta,
+body.portfolio-basic .footer .paleta,
+body.portfolio-basic .navbar,
+body.portfolio-basic .container-fluid {
+    background: var(--basic-panel) !important;
+}
+
 body.portfolio-basic .footer {
     border-top: 1px solid var(--basic-border);
     border-bottom: 0;
@@ -1119,9 +1132,15 @@ body.portfolio-basic #langBtn {
 
 body.portfolio-basic #langBtn,
 body.portfolio-basic .btn-enviar {
-    border: 1px solid var(--basic-accent) !important;
-    background: var(--basic-accent) !important;
+    border: 1px solid rgba(240, 246, 252, .1) !important;
+    background: var(--basic-action) !important;
     color: #ffffff !important;
+}
+
+body.portfolio-basic #langBtn:hover,
+body.portfolio-basic .btn-enviar:hover {
+    background: var(--basic-action-hover) !important;
+    border-color: rgba(240, 246, 252, .2) !important;
 }
 
 body.portfolio-basic #langBtn *,
@@ -1183,7 +1202,7 @@ body.portfolio-basic .foto-container {
     aspect-ratio: 3 / 4;
     border-radius: 8px;
     border: 1px solid var(--basic-border);
-    background: #eef2f7;
+    background: var(--basic-field);
     box-shadow: none;
 }
 
@@ -1225,7 +1244,7 @@ body.portfolio-basic .profile-field {
     padding: 12px 14px;
     border: 1px solid var(--basic-border);
     border-radius: 6px;
-    background: #fbfcfe;
+    background: var(--basic-field);
 }
 
 body.portfolio-basic .profile-label {
@@ -1268,7 +1287,7 @@ body.portfolio-basic .icones-container {
 body.portfolio-basic .icone-item {
     border: 1px solid var(--basic-border);
     border-radius: 6px;
-    background: #fbfcfe;
+    background: var(--basic-field);
 }
 
 body.portfolio-basic .icone-wrapper {
@@ -1286,19 +1305,20 @@ body.portfolio-basic .formacao-item:hover,
 body.portfolio-basic .icone-item:hover {
     transform: none !important;
     border-color: var(--basic-accent) !important;
+    background: var(--basic-panel-soft) !important;
 }
 
 body.portfolio-basic .form-control {
     border: 1px solid var(--basic-border) !important;
     border-radius: 6px !important;
-    background: #ffffff !important;
+    background: var(--basic-field) !important;
     color: var(--basic-text) !important;
     box-shadow: none !important;
 }
 
 body.portfolio-basic .form-control:focus {
     border-color: var(--basic-accent) !important;
-    box-shadow: 0 0 0 3px rgba(17, 100, 102, .12) !important;
+    box-shadow: 0 0 0 3px var(--basic-focus) !important;
 }
 
 body.portfolio-basic .text-info-email,
@@ -1405,7 +1425,7 @@ body.portfolio-basic .project-stack span {
     padding: 4px 9px;
     border: 1px solid var(--basic-border);
     border-radius: 999px;
-    background: #fbfcfe;
+    background: var(--basic-field);
     color: var(--basic-text) !important;
     font-size: .8rem;
     font-weight: 600;
@@ -1431,7 +1451,8 @@ body.portfolio-basic .project-links a {
 }
 
 body.portfolio-basic .project-links a:hover {
-    background: var(--basic-accent);
+    background: #1f6feb;
+    border-color: #1f6feb;
     color: #ffffff !important;
 }
 
@@ -1450,6 +1471,90 @@ body.portfolio-basic .skills-summary {
 body.portfolio-basic .skills-badges img {
     height: 28px;
     max-width: 100%;
+}
+
+body.portfolio-basic a:not(.nav-link):not(.project-links a) {
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic a:not(.nav-link):hover,
+body.portfolio-basic .nav-link:hover,
+body.portfolio-basic .project-card:hover .project-title,
+body.portfolio-basic .project-features li:hover {
+    color: var(--basic-accent-hover) !important;
+}
+
+body.portfolio-basic .navbar-toggler {
+    border: 1px solid var(--basic-border) !important;
+}
+
+body.portfolio-basic .navbar-toggler-icon {
+    filter: invert(1) grayscale(1);
+}
+
+body.portfolio-basic .project-header {
+    border-bottom: 1px solid var(--basic-border) !important;
+}
+
+body.portfolio-basic .project-features li::before {
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .stat-number {
+    color: var(--basic-accent) !important;
+    text-shadow: none !important;
+}
+
+body.portfolio-basic .formulario-contato::before {
+    background: linear-gradient(90deg, var(--basic-accent), #1f6feb, var(--basic-accent)) !important;
+}
+
+body.portfolio-basic .redes-sociais:not(.contato-container .redes-sociais) .icone-item,
+body.portfolio-basic .contato-container .redes-sociais .icone-item,
+body.portfolio-basic .info-item {
+    background: var(--basic-field) !important;
+    border: 1px solid var(--basic-border) !important;
+    box-shadow: none !important;
+}
+
+body.portfolio-basic .redes-sociais:not(.contato-container .redes-sociais) .icone-item:hover,
+body.portfolio-basic .contato-container .redes-sociais .icone-item:hover,
+body.portfolio-basic .info-item:hover {
+    background: var(--basic-panel-soft) !important;
+    border-color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .form-control::placeholder {
+    color: var(--basic-muted) !important;
+}
+
+body.portfolio-basic #formStatus,
+body.portfolio-basic .opcoes-email,
+body.portfolio-basic .modal-opcoes-email .modal-content {
+    background: var(--basic-panel) !important;
+    border-color: var(--basic-border) !important;
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .modal-opcoes-email .modal-header {
+    background: var(--basic-panel-soft) !important;
+    border-bottom: 1px solid var(--basic-border) !important;
+}
+
+body.portfolio-basic .opcoes-email h6,
+body.portfolio-basic .opcoes-email p,
+body.portfolio-basic .opcoes-email .text-primary {
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .opcoes-email .text-primary,
+body.portfolio-basic .info-icon {
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .info-icon {
+    background: var(--basic-accent-soft) !important;
+    border: 1px solid var(--basic-border);
 }
 
 @media only screen and (max-width: 900px) {
