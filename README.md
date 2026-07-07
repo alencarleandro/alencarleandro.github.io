@@ -1,48 +1,69 @@
-# Portfólio Pessoal - Leandro Alencar
+<div align="center">
+  <img src="assets/img/LogoVazia.png" width="120" alt="Logo Leandro Alencar" />
 
-Bem-vindo ao repositório do portfólio pessoal de **Leandro Alencar**! Este projeto tem como objetivo apresentar meu perfil profissional, portfólio de projetos e canais de contato, tudo em um único site, moderno, acessível e responsivo.
+  <h1>Portfolio Pessoal - Leandro Alencar</h1>
 
-## 🌐 Link do site publicado
+  <p>Site estatico para apresentar perfil profissional, projetos, experiencias e canais de contato.</p>
 
-Acesse o site no GitHub Pages:  
-[https://alencarleandro.github.io/](https://alencarleandro.github.io/)
+  <p>
+    <img src="https://img.shields.io/badge/HTML5-interface-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+    <img src="https://img.shields.io/badge/CSS3-estilos-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+    <img src="https://img.shields.io/badge/JavaScript-interacoes-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111111" alt="JavaScript" />
+    <img src="https://img.shields.io/badge/GitHub%20Pages-deploy-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages" />
+  </p>
 
----
+  <a href="https://alencarleandro.github.io/">Acessar site publicado</a>
+</div>
 
-## 🚀 Tecnologias Utilizadas
+## Sobre o projeto
 
-- **HTML5**
-- **CSS3** (modularizado por tema: layout, cores, componentes, tipografia, etc)
-- **JavaScript**
-- **Bootstrap 5** (CDN)
-- 📦 **GitHub Pages** (deploy)
+Este repositorio contem o portfolio pessoal de Leandro Alencar. O site foi construido como uma aplicacao web estatica, com foco em responsividade, apresentacao de projetos e navegacao simples para recrutadores, professores, colegas e visitantes.
 
----
+## Stack utilizada
 
-## 📝 Estrutura do Projeto
+| Camada | Tecnologias |
+| --- | --- |
+| Estrutura | HTML5 |
+| Estilos | CSS3 modular, Bootstrap 5 via CDN |
+| Interacao | JavaScript |
+| Hospedagem | GitHub Pages |
+| Versionamento | Git e GitHub |
 
-O projeto é composto principalmente por arquivos HTML, CSS e JavaScript, organizados por função e páginas, além da integração com bibliotecas externas via CDN.
+## Funcionalidades
 
-Principais pastas e arquivos:
+- Pagina inicial com apresentacao pessoal.
+- Secao de portfolio com projetos em destaque.
+- Links para redes profissionais.
+- Formulario e area de contato.
+- Layout responsivo para desktop e mobile.
 
-- `index.html`: Página principal.
-- `assets/css/`: Diretório de todos os arquivos CSS, segmentados por site, tema ou componente, facilitando manutenção.
-- `contato.js`, `index.js`: Scripts para funcionalidades dinâmicas.
+## Estrutura
 
----
+```text
+.
+|-- index.html
+|-- assets/
+|   |-- css/
+|   |-- img/
+|   `-- js/
+|-- headerFast.png
+|-- headerLegnu.png
+|-- headerPuc.png
+`-- README.md
+```
 
-## 💻 Como Usar
+## Como executar localmente
 
-#### 👀 Navegação
+Por ser um site estatico, basta abrir o arquivo `index.html` no navegador.
 
-O site é totalmente estático e pode ser acessado diretamente pelo link publicado. Nele você encontra:
+Tambem e possivel servir a pasta com um servidor HTTP local:
 
-- **Perfil:** Sobre mim e minhas redes sociais.
-- **Portfólio:** Projetos desenvolvidos com descrição.
-- **Contato:** Formulário para envio de mensagens.
+```bash
+python -m http.server 8000
+```
 
-#### 🚀 Deploy
+Depois acesse `http://localhost:8000`.
 
-O site está publicado no GitHub Pages, portanto qualquer alteração enviada para o branch principal do repositório será refletida automaticamente na publicação.
+## Deploy
 
----
+O deploy e feito pelo GitHub Pages a partir do branch principal do repositorio.
