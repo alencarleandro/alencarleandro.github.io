@@ -1369,6 +1369,62 @@ body.portfolio-basic .project-card-detailed {
     flex-direction: column;
     min-height: 100%;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-left: 3px solid var(--project-accent, var(--basic-accent)) !important;
+    transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+body.portfolio-basic .project-card-detailed::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: linear-gradient(90deg, var(--project-accent, var(--basic-accent)), transparent);
+    opacity: .85;
+}
+
+body.portfolio-basic .project-card-detailed:hover,
+body.portfolio-basic .project-card-detailed:focus-within,
+body.portfolio-basic .project-card-detailed:focus-visible {
+    background: var(--basic-panel-soft) !important;
+    border-color: var(--project-accent, var(--basic-accent)) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 16px 38px rgba(1, 4, 9, .34) !important;
+}
+
+body.portfolio-basic .project-card-detailed:focus-visible {
+    outline: 2px solid var(--project-accent, var(--basic-accent));
+    outline-offset: 3px;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="cacheaside"] {
+    --project-accent: #a371f7;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="legnu"] {
+    --project-accent: #f0883e;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="cinescore"] {
+    --project-accent: #58a6ff;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="aluguel-carros"] {
+    --project-accent: #3fb950;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="sgo"] {
+    --project-accent: #d29922;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="vaicomigo"] {
+    --project-accent: #2ea043;
+}
+
+body.portfolio-basic .project-card-detailed[data-project="portfolio"] {
+    --project-accent: #79c0ff;
 }
 
 body.portfolio-basic .project-card-detailed .project-header {
@@ -1454,7 +1510,7 @@ body.portfolio-basic .project-links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 body.portfolio-basic .project-links a {
@@ -1473,6 +1529,239 @@ body.portfolio-basic .project-links a:hover {
     background: #1f6feb;
     border-color: #1f6feb;
     color: #ffffff !important;
+}
+
+body.portfolio-basic .project-readme-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 40px;
+    margin-top: 14px;
+    border: 1px solid var(--project-accent, var(--basic-accent));
+    border-radius: 6px;
+    background: rgba(88, 166, 255, .08);
+    color: var(--project-accent, var(--basic-accent)) !important;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+body.portfolio-basic .project-readme-trigger:hover,
+body.portfolio-basic .project-readme-trigger:focus-visible,
+body.portfolio-basic .project-card-detailed:hover .project-readme-trigger {
+    background: var(--project-accent, var(--basic-accent));
+    color: #0d1117 !important;
+}
+
+body.portfolio-basic .project-readme-trigger i {
+    color: inherit !important;
+}
+
+body.readme-modal-open {
+    overflow: hidden;
+}
+
+body.portfolio-basic .readme-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+}
+
+body.portfolio-basic .readme-modal.is-open {
+    display: block;
+}
+
+body.portfolio-basic .readme-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(1, 4, 9, .78);
+    backdrop-filter: blur(4px);
+}
+
+body.portfolio-basic .readme-modal-dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(980px, calc(100vw - 32px));
+    max-height: calc(100vh - 48px);
+    margin: 24px auto;
+    background: var(--basic-panel);
+    border: 1px solid var(--basic-border);
+    border-radius: 10px;
+    box-shadow: 0 24px 80px rgba(1, 4, 9, .62);
+    overflow: hidden;
+}
+
+body.portfolio-basic .readme-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 22px;
+    background: var(--basic-panel-soft);
+    border-bottom: 1px solid var(--basic-border);
+}
+
+body.portfolio-basic .readme-modal-eyebrow {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: var(--basic-muted) !important;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+body.portfolio-basic .readme-modal-header h3 {
+    margin: 0;
+    color: var(--basic-text) !important;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+body.portfolio-basic .readme-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--basic-border);
+    border-radius: 6px;
+    background: var(--basic-field);
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .readme-modal-close:hover,
+body.portfolio-basic .readme-modal-close:focus-visible {
+    border-color: var(--basic-accent);
+    color: var(--basic-accent-hover) !important;
+}
+
+body.portfolio-basic .readme-modal-close i {
+    color: inherit !important;
+}
+
+body.portfolio-basic .readme-modal-body {
+    overflow: auto;
+    padding: 24px;
+}
+
+body.portfolio-basic .readme-loading {
+    padding: 28px;
+    border: 1px dashed var(--basic-border);
+    border-radius: 8px;
+    color: var(--basic-muted) !important;
+    text-align: center;
+}
+
+body.portfolio-basic .readme-content {
+    color: var(--basic-text) !important;
+    line-height: 1.65;
+}
+
+body.portfolio-basic .readme-content:empty {
+    display: none;
+}
+
+body.portfolio-basic .readme-content h1,
+body.portfolio-basic .readme-content h2,
+body.portfolio-basic .readme-content h3,
+body.portfolio-basic .readme-content h4 {
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--basic-border);
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .readme-content h1:first-child,
+body.portfolio-basic .readme-content h2:first-child,
+body.portfolio-basic .readme-content h3:first-child {
+    margin-top: 0;
+}
+
+body.portfolio-basic .readme-content p,
+body.portfolio-basic .readme-content li {
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .readme-content a {
+    color: var(--basic-accent) !important;
+}
+
+body.portfolio-basic .readme-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+body.portfolio-basic .readme-content code {
+    padding: .15rem .35rem;
+    border-radius: 4px;
+    background: rgba(110, 118, 129, .28);
+    color: var(--basic-text) !important;
+}
+
+body.portfolio-basic .readme-content pre {
+    overflow: auto;
+    padding: 16px;
+    border: 1px solid var(--basic-border);
+    border-radius: 8px;
+    background: var(--basic-field);
+}
+
+body.portfolio-basic .readme-content pre code {
+    padding: 0;
+    background: transparent;
+}
+
+body.portfolio-basic .readme-content blockquote {
+    margin: 16px 0;
+    padding: 0 16px;
+    border-left: 4px solid var(--basic-border);
+    color: var(--basic-muted) !important;
+}
+
+body.portfolio-basic .readme-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+body.portfolio-basic .readme-content th,
+body.portfolio-basic .readme-content td {
+    padding: 9px 12px;
+    border: 1px solid var(--basic-border);
+}
+
+@media only screen and (max-width: 600px) {
+    body.portfolio-basic .project-readme-trigger {
+        min-height: 38px;
+        font-size: .82rem;
+    }
+
+    body.portfolio-basic .readme-modal-dialog {
+        width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    body.portfolio-basic .readme-modal-header {
+        padding: 14px;
+    }
+
+    body.portfolio-basic .readme-modal-header h3 {
+        font-size: 1.08rem;
+    }
+
+    body.portfolio-basic .readme-modal-body {
+        padding: 16px;
+    }
 }
 
 body.portfolio-basic .skills-grid {
