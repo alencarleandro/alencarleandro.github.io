@@ -1,1005 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title data-i18n="main.title">Leandro Alencar - Desenvolvedor Fullstack</title>
-    <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/colors.css" rel="stylesheet">
-    <link href="../assets/css/layout.css" rel="stylesheet">
-    <link href="../assets/css/components.css" rel="stylesheet">
-    <link href="../assets/css/typography.css" rel="stylesheet">
-    <link href="../assets/css/index.css" rel="stylesheet">
-    <link href="../assets/css/fotos.css" rel="stylesheet">
-    <link href="../assets/css/perfil.css" rel="stylesheet">
-    <link href="../assets/css/portfolio.css" rel="stylesheet">
-    <link href="../assets/css/contato.css" rel="stylesheet">
-
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
-    <script crossorigin="anonymous"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Leandro Alencar, desenvolvedor fullstack com atuação em sistemas web, desktop, automações e inteligência artificial.">
+    <meta name="theme-color" content="#f4f5f6">
+    <title>Leandro Alencar | Fullstack Developer</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portfolio-v2.css">
 </head>
+<body id="top">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-<body class="portfolio-basic body rolagemY cartaoV">
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a class="brand" href="#top" aria-label="Página inicial de Leandro Alencar">
+                <span class="brand-mark">LA</span>
+                <span class="brand-name">Leandro Alencar</span>
+            </a>
 
-<header class="h_minContent header P">
-    <div class="paleta header P ">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
 
-        <nav class="navbar navbar-expand-lg P">
-            <div class="container-fluid paleta">
+            <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#stack">Stack</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#contato">Contato</a>
+            </nav>
 
-                <div class="Nome">
-                    <div class="botaoAnima p-3 text_paleta em1 rounded w200 text-center">
-                        <a href="../index.html" class="text-decoration-none text_paleta">
-                            <strong>Leandro Alencar</strong>
+            <a class="header-contact" href="mailto:leandro130333.dev@gmail.com">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                <span>Fale comigo</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero" id="sobre" aria-labelledby="heroTitle">
+            <div class="hero-media" aria-hidden="true">
+                <img src="assets/img/eu.png" alt="">
+            </div>
+
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="availability"><span></span> Disponível para novos desafios</p>
+                    <p class="hero-kicker">Belo Horizonte, MG</p>
+                    <h1 id="heroTitle">Leandro<br><span>Alencar</span></h1>
+                    <p class="hero-role">Software Engineering | System Architect | Fullstack Developer</p>
+                    <p class="hero-summary">
+                        Desenvolvo produtos que conectam backend, frontend e operação. Minha experiência passa por ERPs, APIs REST, aplicações web e desktop, automações, visão computacional, agentes de IA e sistemas distribuídos.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projetos">
+                            <span>Ver projetos</span>
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </a>
+                        <a class="button button-secondary" href="mailto:leandro130333.dev@gmail.com">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                            <span>Enviar e-mail</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-social" aria-label="Redes e contato">
+                        <a href="https://www.linkedin.com/in/leandroalencarclemente/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/alencarleandro" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/5531983479067" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/leandro_a_clemente/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="radius_All_-5- color_brancoTransparent semBorda">
-                    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                            class="navbar-toggler semBorda" data-bs-target="#navbarNav" data-bs-toggle="collapse"
-                            type="button">
-                        <span class="navbar-toggler-icon semBorda"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link text_paleta text-center botaoAnima"
-                               href="#perfil"><strong data-i18n="nav.profile">Perfil</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text_paleta text-center botaoAnima"
-                               href="#portfolio"><strong data-i18n="nav.portfolio">Portfólio</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text_paleta text-center botaoAnima"
-                               href="#contato"><strong data-i18n="nav.contact">Contato</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()" id="langBtn">
-                                <span data-i18n="lang.pt">PT</span>/<span data-i18n="lang.en">EN</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-
-    </div>
-</header>
-
-<main class="main P">
-
-    <div class="pt-2 folha">
-
-        <!-- =========================
-             SEÇÃO PERFIL
-             ========================= -->
-        <section id="perfil" style="padding-top: 1%;">
-            <div class="perfil-header">
-                <div class="em2 centro mb-4 text_paleta">
-                    <strong data-i18n="profile.title">Meu Perfil</strong>
-            </div>
-                    <div class="exp2 paleta"></div>
-                </div>
-
-            <div class="perfil-container">
-                <!-- Seção da Foto e Paleta -->
-                <div class="perfil-foto">
-                    <div class="foto-wrapper">
-                        <div class="foto-container">
-                            <img id="fotoPerfil" src="../assets/img/eu.png" alt="Foto de Leandro Alencar" class="eu foto-perfil">
-                        </div>
+                <dl class="hero-facts" aria-label="Resumo profissional">
+                    <div>
+                        <dt>Atuação atual</dt>
+                        <dd>Fullstack Developer Jr.</dd>
                     </div>
-                </div>
-
-                <!-- Divisor -->
-                <div class="divisor-vertical"></div>
-
-                <!-- Seção de Informações Pessoais -->
-                <div class="perfil-info">
-                    <div class="em1-5 text_paleta mb-3 profile-section-title">
-                        <strong data-i18n="profile.personal">Informações Pessoais</strong>
+                    <div>
+                        <dt>Formação</dt>
+                        <dd>Engenharia de Software</dd>
                     </div>
-                    
-                    <div class="info-pessoal">
-                        <div class="fontEsp em1-5 mb-3 profile-name">
-                            <strong>Leandro Alencar Pereira Clemente</strong>
-                        </div>
+                    <div>
+                        <dt>Foco</dt>
+                        <dd>Produtos, APIs, IA e automação</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-                        <div class="sobre-mim">
-                            <div class="em1-5 text_paleta mb-2">
-                                <strong data-i18n="about.title">Sobre mim</strong>
-                            </div>
-                            <div class="text_paleta" style="text-align: justify; line-height: 1.6;" data-i18n="about.description">
-                                Sou desenvolvedor full stack júnior e estudante de Engenharia de Software, com experiência em sistemas web, APIs REST, automações, integrações entre plataformas e soluções com apoio de Inteligência Artificial. Busco desenvolver aplicações escaláveis, testáveis, confiáveis e fáceis de manter, unindo backend, frontend, produto e operação. Tenho atuado com Java, Spring Boot, Node.js, React, bancos relacionais, RPA, visão computacional e agentes de IA.
-                            </div>
-                        </div>
+        <section class="section projects-section" id="projetos" aria-labelledby="projectsTitle">
+            <div class="section-inner">
+                <header class="section-heading">
+                    <div>
+                        <p class="section-index">01 / Projetos</p>
+                        <h2 id="projectsTitle">Soluções que saíram do papel.</h2>
+                    </div>
+                    <p>Projetos pessoais, profissionais e acadêmicos que mostram amplitude técnica, decisões de arquitetura e atenção ao produto.</p>
+                </header>
 
-                        <div class="redes-sociais mt-4">
-                            <div class="icones-container">
-                                <div class="icone-item" onclick="abrirWhatsApp()">
-                                    <div class="icone-wrapper whatsapp">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </div>
-                                    <span class="icone-label">WhatsApp</span>
-                                </div>
-                                
-                                <div class="icone-item" onclick="abrirLinkedIn()">
-                                    <div class="icone-wrapper linkedin">
-                                        <i class="fab fa-linkedin"></i>
-                                    </div>
-                                    <span class="icone-label">LinkedIn</span>
-                                </div>
-                                
-                                <div class="icone-item" onclick="abrirGitHub()">
-                                    <div class="icone-wrapper github">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <span class="icone-label">GitHub</span>
-                                </div>
-                                
-                                <div class="icone-item" onclick="abrirInstagram()">
-                                    <div class="icone-wrapper instagram">
-                                        <i class="fab fa-instagram"></i>
-                                    </div>
-                                    <span class="icone-label">Instagram</span>
+                <div class="projects-grid">
+                    <article class="project-card project-card-detailed" data-project="amphitruo" data-project-title="A.M.P.H.I.T.R.U.O" data-readme="https://raw.githubusercontent.com/alencarleandro/A.M.P.H.I.T.R.U.O/main/README.md" data-readme-fallback="assets/readmes/amphitruo.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/A.M.P.H.I.T.R.U.O/main/" tabindex="0" aria-label="Abrir README do projeto A.M.P.H.I.T.R.U.O">
+                        <div class="project-visual project-visual-dark">
+                            <span class="project-number">01</span>
+                            <img src="assets/img/projects/amphitruo.svg" alt="Logo A.M.P.H.I.T.R.U.O">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Desktop quant research</p>
+                            <h3 class="project-title">A.M.P.H.I.T.R.U.O</h3>
+                            <p class="project-description">Laboratório quantitativo local para Binance Spot, com backtests reproduzíveis, dados em tempo real e paper trading persistente.</p>
+                            <ul class="project-highlights">
+                                <li>Backtest sem lookahead e com custos estressados.</li>
+                                <li>WebSocket, métricas de risco e histórico em SQLite.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>TypeScript</span><span>React 19</span><span>Electron</span><span>Express</span><span>SQLite</span><span>Vitest</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/A.M.P.H.I.T.R.U.O" target="_blank" rel="noopener noreferrer" aria-label="A.M.P.H.I.T.R.U.O no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="leda" data-project-title="L.E.D.A" data-readme="https://raw.githubusercontent.com/alencarleandro/L.E.D.A/main/README.md" data-readme-fallback="assets/readmes/leda.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/L.E.D.A/main/" tabindex="0" aria-label="Abrir README do projeto L.E.D.A">
+                        <div class="project-visual">
+                            <span class="project-number">02</span>
+                            <img class="project-logo-square" src="assets/img/projects/leda.svg" alt="Logo L.E.D.A">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Application monitoring</p>
+                            <h3 class="project-title">L.E.D.A</h3>
+                            <p class="project-description">Sentinela desktop para acompanhar endpoints HTTP, identificar indisponibilidade e visualizar a saúde das aplicações.</p>
+                            <ul class="project-highlights">
+                                <li>Uptime, latência e histórico de 180 verificações.</li>
+                                <li>Alertas nativos e execução em segundo plano.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>Electron</span><span>React 18</span><span>Node.js</span><span>Vite</span><span>Windows</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/L.E.D.A" target="_blank" rel="noopener noreferrer" aria-label="L.E.D.A no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="cacheaside" data-project-title="Cache Aside" data-readme="https://raw.githubusercontent.com/alencarleandro/CacheAside/main/README.md" data-readme-fallback="assets/readmes/cacheaside.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/CacheAside/main/" tabindex="0" aria-label="Abrir README do projeto Cache Aside">
+                        <div class="project-visual">
+                            <span class="project-number">03</span>
+                            <img class="project-logo-square" src="assets/img/projects/cacheaside.svg" alt="Logo Cache Aside">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Architecture lab</p>
+                            <h3 class="project-title">Cache Aside</h3>
+                            <p class="project-description">API REST e dashboard para visualizar cache hit, miss, invalidação de chaves e impacto do padrão Cache Aside.</p>
+                            <ul class="project-highlights">
+                                <li>CRUD, benchmark e métricas em tempo real.</li>
+                                <li>Redis/PostgreSQL com fallbacks locais.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>React 19</span><span>Node.js</span><span>Express 5</span><span>Redis</span><span>PostgreSQL</span><span>n8n</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/CacheAside" target="_blank" rel="noopener noreferrer" aria-label="Cache Aside no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                    <a href="https://cacheaside-8t48.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir deploy do Cache Aside" title="Abrir deploy"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="legnu" data-project-title="Legnu ERP" data-readme="https://raw.githubusercontent.com/alencarleandro/Legnu_ERP/main/README.md" data-readme-fallback="assets/readmes/legnu-erp.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/Legnu_ERP/main/" tabindex="0" aria-label="Abrir README do projeto Legnu ERP">
+                        <div class="project-visual project-visual-dark">
+                            <span class="project-number">04</span>
+                            <img src="assets/img/projects/legnu.png" alt="Logo Legnu ERP">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Enterprise resource planning</p>
+                            <h3 class="project-title">Legnu ERP</h3>
+                            <p class="project-description">Plataforma de gestão empresarial com frontend web, API REST, aplicação desktop JavaFX e administração multi-tenant.</p>
+                            <ul class="project-highlights">
+                                <li>Vendas, financeiro, estoque, CRM e fiscal.</li>
+                                <li>Arquitetura modular web, API e desktop.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>Java 21/25</span><span>Spring Boot</span><span>React 18</span><span>JavaFX</span><span>PostgreSQL</span><span>Python</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/Legnu_ERP" target="_blank" rel="noopener noreferrer" aria-label="Legnu ERP no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="vaicomigo" data-project-title="VaiComigo" data-readme="https://raw.githubusercontent.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo/main/README.md" data-readme-fallback="assets/readmes/vaicomigo.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo/main/" tabindex="0" aria-label="Abrir README do projeto VaiComigo">
+                        <div class="project-visual">
+                            <span class="project-number">05</span>
+                            <img src="assets/img/projects/vaicomigo.png" alt="Logo VaiComigo">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Mobile safety platform</p>
+                            <h3 class="project-title">VaiComigo</h3>
+                            <p class="project-description">Ecossistema de segurança preventiva para trajetos com aplicativo móvel, painel web e alertas para contatos de confiança.</p>
+                            <ul class="project-highlights">
+                                <li>Localização e acompanhamento por REST/SSE.</li>
+                                <li>Mensageria, e-mail e testes de carga.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>Java 21</span><span>Spring Boot</span><span>React 19</span><span>Flutter</span><span>RabbitMQ</span><span>PostgreSQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo" target="_blank" rel="noopener noreferrer" aria-label="VaiComigo no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                    <a href="https://front-vaicomigo.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir deploy do VaiComigo" title="Abrir deploy"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="aluguel-carros" data-project-title="Sistema de Aluguel de Carros" data-readme="https://raw.githubusercontent.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros/main/README.md" data-readme-fallback="assets/readmes/aluguel-carros.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros/main/" tabindex="0" aria-label="Abrir README do projeto Sistema de Aluguel de Carros">
+                        <div class="project-visual">
+                            <span class="project-number">06</span>
+                            <img class="project-logo-square" src="assets/img/projects/aluguel-carros.svg" alt="Logo Sistema de Aluguel de Carros">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Spring MVC application</p>
+                            <h3 class="project-title">Aluguel de Carros</h3>
+                            <p class="project-description">Sistema web para gerenciar clientes, catálogo, frota, agentes financeiros e pedidos de aluguel de veículos.</p>
+                            <ul class="project-highlights">
+                                <li>Autenticação, catálogo e painel administrativo.</li>
+                                <li>Arquitetura MVC com persistência JPA.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>Java 21</span><span>Spring Boot 3.5</span><span>Thymeleaf</span><span>JPA</span><span>Security</span><span>Gradle</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros" target="_blank" rel="noopener noreferrer" aria-label="Sistema de Aluguel de Carros no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="cinescore" data-project-title="CineScore" data-readme="https://raw.githubusercontent.com/alencarleandro/Cinescore/main/README.md" data-readme-fallback="assets/readmes/cinescore.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/Cinescore/main/" tabindex="0" aria-label="Abrir README do projeto CineScore">
+                        <div class="project-visual">
+                            <span class="project-number">07</span>
+                            <img class="project-logo-square" src="assets/img/projects/cinescore.png" alt="Logo CineScore">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Movie discovery experience</p>
+                            <h3 class="project-title">CineScore</h3>
+                            <p class="project-description">Experiência web para explorar tendências, filmes populares, busca, filtros de catálogo e detalhes com dados da TMDb.</p>
+                            <ul class="project-highlights">
+                                <li>Busca, gêneros, classificação e paginação.</li>
+                                <li>Interface responsiva orientada a conteúdo.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>React 18</span><span>Vite 5</span><span>React Router</span><span>TMDb API</span><span>CSS</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/Cinescore" target="_blank" rel="noopener noreferrer" aria-label="CineScore no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="sgo" data-project-title="SGO - Sistema de Gerenciamento das Olimpíadas" data-readme="https://raw.githubusercontent.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-/main/README.md" data-readme-fallback="assets/readmes/sgo.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-/main/" tabindex="0" aria-label="Abrir README do projeto SGO">
+                        <div class="project-visual">
+                            <span class="project-number">08</span>
+                            <img class="project-logo-square" src="assets/img/projects/sgo.svg" alt="Logo SGO">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Software architecture</p>
+                            <h3 class="project-title">SGO Olimpíadas</h3>
+                            <p class="project-description">Modelagem de uma plataforma para competições, atletas, locais, resultados e quadro de medalhas.</p>
+                            <ul class="project-highlights">
+                                <li>Diagramas de classes, componentes e implantação.</li>
+                                <li>Proposta baseada em microserviços e mensageria.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias propostas">
+                                <span>UML</span><span>Microservices</span><span>REST API</span><span>Java</span><span>Spring Boot</span><span>Amazon SQS</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-" target="_blank" rel="noopener noreferrer" aria-label="SGO no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-detailed" data-project="portfolio" data-project-title="Portfólio Pessoal" data-readme="https://raw.githubusercontent.com/alencarleandro/alencarleandro.github.io/main/README.md" data-readme-fallback="assets/readmes/portfolio.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/alencarleandro.github.io/main/" tabindex="0" aria-label="Abrir README do Portfólio Pessoal">
+                        <div class="project-visual">
+                            <span class="project-number">09</span>
+                            <img class="project-logo-square" src="assets/img/LogoVazia.png" alt="Logo Leandro Alencar">
+                        </div>
+                        <div class="project-content">
+                            <p class="project-kind">Personal portfolio</p>
+                            <h3 class="project-title">Portfólio Pessoal</h3>
+                            <p class="project-description">Site responsivo para apresentar trajetória profissional, projetos, habilidades e canais de contato.</p>
+                            <ul class="project-highlights">
+                                <li>Cards com leitura dinâmica de READMEs.</li>
+                                <li>Interface acessível e publicada no GitHub Pages.</li>
+                            </ul>
+                            <div class="project-stack" aria-label="Tecnologias">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GitHub Pages</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="readme-button project-readme-trigger" type="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ler README</button>
+                                <div class="project-links">
+                                    <a href="https://github.com/alencarleandro/alencarleandro.github.io" target="_blank" rel="noopener noreferrer" aria-label="Portfólio no GitHub" title="Abrir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                    <a href="https://alencarleandro.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Abrir portfólio publicado" title="Abrir site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <!-- Divisor entre Informações Pessoais e Portfólio -->
-            <div class="divisor-secao"></div>
+        </section>
 
-        <!-- =========================
-             SEÇÃO PORTFÓLIO
-             ========================= -->
-        <section id="portfolio" class="mt-5">
-            <div class="portfolio-header">
-                <div class="em2 centro mb-4 text_paleta">
-                    <strong data-i18n="portfolio.title">Meu Portfólio</strong>
-                </div>
-                <div class="exp2 paleta"></div>
-            </div>
+        <section class="section skills-section" id="stack" aria-labelledby="skillsTitle">
+            <div class="section-inner">
+                <header class="section-heading section-heading-light">
+                    <div>
+                        <p class="section-index">02 / Stack</p>
+                        <h2 id="skillsTitle">Da interface à infraestrutura.</h2>
+                    </div>
+                    <p>Uma stack construída em projetos reais: produtos web e desktop, APIs, dados, mensageria, automação, IA e qualidade.</p>
+                </header>
 
-            <div class="projects-detail-grid">
-                <article class="project-card project-card-detailed" data-project="leda" data-project-title="L.E.D.A" data-readme="https://raw.githubusercontent.com/alencarleandro/L.E.D.A/main/README.md" data-readme-fallback="./assets/readmes/leda.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/L.E.D.A/main/" tabindex="0" aria-label="Abrir README do projeto L.E.D.A">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo L.E.D.A" src="../assets/img/projects/leda.svg" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">L.E.D.A</h5>
-                            <span class="project-type">Desktop monitoring assistant</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Aplicacao desktop para Windows que monitora a saude de endpoints HTTP/HTTPS em tempo real, com metricas, historico e alertas nativos.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Health checks configuraveis por status HTTP e conteudo da resposta.</li>
-                            <li>Uptime, latencia, linha do tempo e historico das verificacoes.</li>
-                            <li>Alertas nativos e monitoramento continuo em segundo plano.</li>
-                            <li>Dados armazenados localmente e inicializacao automatica no Windows.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>Electron</span><span>React</span><span>Vite</span><span>Node.js</span><span>JavaScript</span><span>Windows</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/L.E.D.A" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="cacheaside" data-project-title="Cache Aside" data-readme="https://raw.githubusercontent.com/alencarleandro/CacheAside/main/README.md" data-readme-fallback="./assets/readmes/cacheaside.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/CacheAside/main/" tabindex="0" aria-label="Abrir README do projeto Cache Aside">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo Cache Aside" src="../assets/img/projects/cacheaside.svg" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">Cache Aside</h5>
-                            <span class="project-type">API REST + dashboard</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Laboratório acadêmico para demonstrar o padrão Cache Aside com CRUD de alunos, benchmark e métricas de cache hit, miss, leituras no banco e invalidações.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Cache Aside para listas e consultas individuais.</li>
-                            <li>Redis opcional com fallback em memória.</li>
-                            <li>PostgreSQL/Supabase com fallback JSON local em desenvolvimento.</li>
-                            <li>Deploy publicado no Render.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>React 19</span><span>Vite 8</span><span>Node.js</span><span>Express</span><span>Redis</span><span>PostgreSQL</span><span>n8n</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/CacheAside" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://cacheaside-8t48.onrender.com" target="_blank" rel="noopener noreferrer">Deploy</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="legnu" data-project-title="Legnu ERP" data-readme="https://raw.githubusercontent.com/alencarleandro/Legnu_ERP/main/README.md" data-readme-fallback="./assets/readmes/legnu-erp.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/Legnu_ERP/main/" tabindex="0" aria-label="Abrir README do projeto Legnu ERP">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo Legnu ERP" src="../assets/img/projects/legnu.png" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">Legnu ERP</h5>
-                            <span class="project-type">ERP modular</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Sistema de gestão empresarial com módulos web, API, desktop JavaFX e ferramenta local para administração de tenants.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Gestão de clientes, funcionários, produtos e serviços.</li>
-                            <li>Fluxos comerciais com ponto de venda, comandas e financeiro.</li>
-                            <li>API REST com autenticação JWT e persistência JPA.</li>
-                            <li>Tenant Maker em Python/Tkinter para operações administrativas locais.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>React 18</span><span>Vite 5</span><span>Java</span><span>Spring Boot</span><span>JavaFX</span><span>PostgreSQL</span><span>Python</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/Legnu_ERP" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="cinescore" data-project-title="CineScore" data-readme="https://raw.githubusercontent.com/alencarleandro/Cinescore/main/README.md" data-readme-fallback="./assets/readmes/cinescore.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/Cinescore/main/" tabindex="0" aria-label="Abrir README do projeto CineScore">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo CineScore" src="../assets/img/projects/cinescore.png" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">CineScore</h5>
-                            <span class="project-type">Catálogo de filmes</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Aplicação web para explorar filmes, tendências, populares, busca por título e catálogo com filtros usando dados reais da API TMDb.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Home com tendências da semana e filmes populares.</li>
-                            <li>Busca, filtros por gênero/classificação e paginação.</li>
-                            <li>Modal de detalhes com conteúdo em português quando disponível.</li>
-                            <li>Documentação acadêmica com processos, indicadores e modelagem.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>React 18</span><span>Vite 5</span><span>React Router</span><span>TMDb API</span><span>CSS</span><span>Markdown</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/Cinescore" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="aluguel-carros" data-project-title="Sistema de Aluguel de Carros" data-readme="https://raw.githubusercontent.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros/main/README.md" data-readme-fallback="./assets/readmes/aluguel-carros.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros/main/" tabindex="0" aria-label="Abrir README do projeto Sistema de Aluguel de Carros">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo Sistema de Aluguel de Carros" src="../assets/img/projects/aluguel-carros.svg" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">Sistema de Aluguel de Carros</h5>
-                            <span class="project-type">Aplicação MVC</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Aplicação web para cadastro, autenticação, catálogo de veículos, pedidos de aluguel e painel administrativo.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Gestão de clientes, automóveis e agentes financeiros.</li>
-                            <li>Fluxo de pedidos com status pendente, aprovado, rejeitado e cancelado.</li>
-                            <li>Views Thymeleaf com Spring MVC e segurança de sessão.</li>
-                            <li>H2 em memória por padrão e suporte a PostgreSQL.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>Java 21</span><span>Spring Boot 3.5</span><span>Thymeleaf</span><span>Spring Security</span><span>JPA</span><span>Gradle</span><span>H2/PostgreSQL</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/laboratorioProjetoDeSoftware_Sistema-de-Aluguel-de-Carros" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="sgo" data-project-title="SGO - Sistema de Gerenciamento das Olimpíadas" data-readme="https://raw.githubusercontent.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-/main/README.md" data-readme-fallback="./assets/readmes/sgo.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-/main/" tabindex="0" aria-label="Abrir README do projeto SGO">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo SGO" src="../assets/img/projects/sgo.svg" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">SGO - Sistema de Gerenciamento das Olimpíadas</h5>
-                            <span class="project-type">Modelagem e arquitetura</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Documentação e modelagem de um sistema para coordenar competições, atletas, locais, resultados e quadro de medalhas.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Histórias de usuário para competições, atletas, locais e resultados.</li>
-                            <li>Diagramas UML de classes, componentes, implantação e pacotes.</li>
-                            <li>Arquitetura proposta com microserviços, API Gateway e mensageria.</li>
-                            <li>Stack proposta com Spring Boot, JPA, REST API, Docker e SQS.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>UML</span><span>Microserviços</span><span>REST API</span><span>Java</span><span>Spring Boot</span><span>Amazon SQS</span><span>Docker</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/SGO---Sistema-de-Gerenciamento-das-Olimpiadas-" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="vaicomigo" data-project-title="VaiComigo" data-readme="https://raw.githubusercontent.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo/main/README.md" data-readme-fallback="./assets/readmes/vaicomigo.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo/main/" tabindex="0" aria-label="Abrir README do projeto VaiComigo">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo VaiComigo" src="../assets/img/projects/vaicomigo.png" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">VaiComigo</h5>
-                            <span class="project-type">Mobile + web + backend</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Sistema de segurança preventiva para trajetos: app mobile envia localização, backend monitora a rota e aciona contatos de confiança.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Monitoramento em tempo real por SSE.</li>
-                            <li>Rotas, contatos de confiança, eventos de risco e botão de pânico.</li>
-                            <li>Fila RabbitMQ/CloudAMQP e e-mail via Brevo.</li>
-                            <li>Deploy com Render, PostgreSQL/Supabase e testes de carga com k6.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>Java 21</span><span>Spring Boot</span><span>React 19</span><span>TypeScript</span><span>Flutter</span><span>PostgreSQL</span><span>RabbitMQ</span><span>k6</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/pmg-es-2026-1-ti5-6904100-vaicomigo" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://front-vaicomigo.onrender.com" target="_blank" rel="noopener noreferrer">Deploy web</a>
-                    </div>
-                </article>
-
-                <article class="project-card project-card-detailed" data-project="portfolio" data-project-title="Portfolio Pessoal" data-readme="https://raw.githubusercontent.com/alencarleandro/alencarleandro.github.io/main/README.md" data-readme-fallback="./assets/readmes/portfolio.md" data-raw-base="https://raw.githubusercontent.com/alencarleandro/alencarleandro.github.io/main/" tabindex="0" aria-label="Abrir README do projeto Portfolio Pessoal">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo Leandro Alencar" src="../assets/img/LogoVazia.png" class="project-icon">
-                        </div>
-                        <div>
-                            <h5 class="project-title">Portfolio Pessoal</h5>
-                            <span class="project-type">Site estático</span>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Site pessoal para apresentar perfil profissional, projetos, experiências, habilidades e canais de contato.
-                    </p>
-                    <div class="project-features">
-                        <h6>Detalhes:</h6>
-                        <ul>
-                            <li>Layout responsivo com seções de perfil, portfolio e contato.</li>
-                            <li>Cards detalhados baseados nos READMEs dos projetos.</li>
-                            <li>Formulário de contato com abertura no Gmail.</li>
-                            <li>Deploy via GitHub Pages.</li>
-                        </ul>
-                    </div>
-                    <div class="project-stack">
-                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span><span>GitHub Pages</span>
-                    </div>
-                    <button type="button" class="project-readme-trigger">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>
-                        Abrir README
-                    </button>
-                    <div class="project-links">
-                        <a href="https://github.com/alencarleandro/alencarleandro.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://alencarleandro.github.io/" target="_blank" rel="noopener noreferrer">Deploy</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="portfolio-carousel legacy-projects">
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                <!-- ERP V2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
-                        </div>
-                        <h5 class="project-title" data-i18n="projects.erp2.title">ERP V2</h5>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-description" data-i18n="projects.erp2.description">
-                            Sistema ERP modular para médias empresas, com foco em escalabilidade e aplicação dos princípios SOLID.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h6 data-i18n="portfolio.features">Características:</h6>
-                            <ul>
-                                <li data-i18n="portfolio.features.modular">Arquitetura modular</li>
-                                <li data-i18n="portfolio.features.scalable">Altamente escalável</li>
-                                <li data-i18n="portfolio.features.solid">Princípios SOLID</li>
-                                <li data-i18n="portfolio.features.enterprise">Focado em médias empresas</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
-                            <div class="tech-badges">
-                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Disparador de Mensagens -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
-                        </div>
-                        <h5 class="project-title" data-i18n="projects.messenger.title">Disparador de Mensagens</h5>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-description" data-i18n="projects.messenger.description">
-                            Aplicação desktop para envio automatizado de mensagens para WhatsApp, Facebook, Instagram e e-mail com suporte a mídias.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h6 data-i18n="portfolio.features">Características:</h6>
-                            <ul>
-                                <li data-i18n="portfolio.features.automation">Automação completa</li>
-                                <li data-i18n="portfolio.features.multiplatform">Múltiplas plataformas</li>
-                                <li data-i18n="portfolio.features.media">Suporte a mídias</li>
-                                <li data-i18n="portfolio.features.batch">Envio em lote</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
-                            <div class="tech-badges">
-                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ERP V1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
-                        </div>
-                        <h5 class="project-title" data-i18n="projects.erp1.title">ERP V1</h5>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-description" data-i18n="projects.erp1.description">
-                            Sistema de gestão para pequenas empresas com funcionalidades de relatórios, ordens de serviço, estoque e controle financeiro.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h6 data-i18n="portfolio.features">Características:</h6>
-                            <ul>
-                                <li data-i18n="portfolio.features.reports">Relatórios gerenciais</li>
-                                <li data-i18n="portfolio.features.inventory">Controle de estoque</li>
-                                <li data-i18n="portfolio.features.financial">Gestão financeira</li>
-                                <li data-i18n="portfolio.features.service">Ordens de serviço</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
-                            <div class="tech-badges">
-                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                                <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-
-                <!-- Giostri Construções -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
-                        </div>
-                        <h5 class="project-title" data-i18n="projects.giostri.title">Giostri Construções</h5>
-                            </div>
-
-                    <div class="project-content">
-                        <p class="project-description" data-i18n="projects.giostri.description">
-                            O projeto Giostri Construções implementa uma plataforma digital para transformar a gestão do Depósito Giostri.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h6 data-i18n="portfolio.features">Características:</h6>
-                            <ul>
-                                <li data-i18n="portfolio.features.web">Aplicação web</li>
-                                <li data-i18n="portfolio.features.management">Gestão de depósito</li>
-                                <li data-i18n="portfolio.features.modern">Interface moderna</li>
-                                <li data-i18n="portfolio.features.responsive">Totalmente responsiva</li>
-                            </ul>
-                            </div>
-
-                        <div class="project-tech">
-                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
-                            <div class="tech-badges">
-                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <!-- CineScore -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-logo">
-                            <img alt="Logo do projeto" src="../assets/img/LegnuIconPreto.png" class="project-icon">
-                        </div>
-                        <h5 class="project-title" data-i18n="projects.cinescore.title">CineScore</h5>
-                    </div>
-
-                    <div class="project-content">
-                        <p class="project-description" data-i18n="projects.cinescore.description">
-                            Este projeto apresenta o desenvolvimento de uma aplicação web projetada para oferecer recomendações personalizadas de filmes e séries, baseada nas interações dos usuários, como os likes atribuídos aos conteúdos.
-                        </p>
-                        
-                        <div class="project-features">
-                            <h6 data-i18n="portfolio.features">Características:</h6>
-                            <ul>
-                                <li data-i18n="portfolio.features.recommendations">Sistema de recomendações</li>
-                                <li data-i18n="portfolio.features.personalization">Personalização</li>
-                                <li data-i18n="portfolio.features.interaction">Interação do usuário</li>
-                                <li data-i18n="portfolio.features.analytics">Análise de preferências</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <h6 data-i18n="portfolio.technologies">Tecnologias Utilizadas:</h6>
-                            <div class="tech-badges">
-                                <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                                <img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                                <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                                <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                                <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                                <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                                <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                
-
-            </div>
-            </section>
-
-            <!-- Divisor entre Portfólio e Habilidades -->
-            <div class="divisor-secao"></div>
-
-            <!-- Seção de Habilidades -->
-            <div class="habilidades-section mt-5">
-                <div class="em1-5 text_paleta mb-3 centro">
-                    <strong data-i18n="skills.title">Habilidades Técnicas</strong>
-                </div>
-                <p class="skills-summary">
-                    Tecnologias aplicadas nos projetos do portfolio, cobrindo front-end, back-end, mobile, dados, integrações, deploy e documentação técnica.
-                </p>
-                
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.programming">Linguagens de Programação</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
-                            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                            <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white">
-                            <img alt="Dart" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white">
-                            <img alt="Python" src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-                            <img alt="Swift" src="https://img.shields.io/badge/swift-F05138?style=for-the-badge&logo=swift&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.frameworks">Frameworks & Bibliotecas</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="JavaFX" src="https://img.shields.io/badge/javafx-3873C6?style=for-the-badge&logo=java&logoColor=white">
-                            <img alt="Java Swing" src="https://img.shields.io/badge/swing-6DB33F?style=for-the-badge&logo=java&logoColor=white">
-                            <img alt="Spring Boot" src="https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white">
-                            <img alt="Spring Security" src="https://img.shields.io/badge/spring%20security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white">
-                            <img alt="Hibernate" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white">
-                            <img alt="JPA" src="https://img.shields.io/badge/jpa-hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white">
-                            <img alt="Express" src="https://img.shields.io/badge/express.js-%23000000.svg?style=for-the-badge&logo=express&logoColor=white">
-                            <img alt="Flutter" src="https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white">
-                            <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-                            <img alt="Thymeleaf" src="https://img.shields.io/badge/thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white">
-                            <img alt="Selenium" src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.frontend">Frontend</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                            <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                            <img alt="React" src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=111111">
-                            <img alt="Vite" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white">
-                            <img alt="React Router" src="https://img.shields.io/badge/react%20router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
-                            <img alt="Leaflet" src="https://img.shields.io/badge/leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white">
-                            <img alt="Recharts" src="https://img.shields.io/badge/recharts-ff6384?style=for-the-badge&logo=chartdotjs&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.database">Banco de Dados</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="MySQL" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
-                            <img alt="H2" src="https://img.shields.io/badge/h2-database-1021ff?style=for-the-badge">
-                            <img alt="Redis" src="https://img.shields.io/badge/redis-%23DC382D.svg?style=for-the-badge&logo=redis&logoColor=white">
-                            <img alt="Supabase" src="https://img.shields.io/badge/supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.cloud">Cloud & DevOps</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Red Hat" src="https://img.shields.io/badge/redhat-EE0000?style=for-the-badge&logo=redhat&logoColor=white">
-                            <img alt="Vercel" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
-                            <img alt="Render" src="https://img.shields.io/badge/render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=111111">
-                            <img alt="Docker" src="https://img.shields.io/badge/docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white">
-                            <img alt="RabbitMQ" src="https://img.shields.io/badge/rabbitmq-%23FF6600.svg?style=for-the-badge&logo=rabbitmq&logoColor=white">
-                            <img alt="GitHub Pages" src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.tools">Ferramentas de Desenvolvimento</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
-                            <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
-                            <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
-                            <img alt="Maven" src="https://img.shields.io/badge/maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
-                            <img alt="Gradle" src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
-                            <img alt="npm" src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
-                            <img alt="Swagger" src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=111111">
-                            <img alt="k6" src="https://img.shields.io/badge/k6-7D64FF?style=for-the-badge&logo=k6&logoColor=white">
-                            <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="em1-2 text_paleta mb-2">
-                            <strong data-i18n="skills.design">Design & Multimídia</strong>
-                        </div>
-                        <div class="skills-badges">
-                            <img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
-                            <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
-                            <img alt="Inkscape" src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13">
-                            <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Divisor entre Habilidades e Experiência/Formação -->
-            <div class="divisor-secao"></div>
-
-            <!-- Seção de Experiência e Formação -->
-            <div class="experiencia-formacao mt-5">
-                <div class="exp-form-container">
-                    <!-- Experiência Profissional -->
-                    <div class="experiencia-section">
-                        <div class="em1-5 text_paleta mb-3">
-                            <strong data-i18n="experience.title">Experiência Profissional</strong>
-                        </div>
-                        
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.strata.title">Desenvolvedor Fullstack Júnior - Strata Engenharia</strong>
-                                <span class="exp-period" data-i18n="experience.strata.period">mai 2026 - atual</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.strata.description">
-                                Desenvolvimento de website de gestão com React e Node.js, implementação de funcionalidades com apoio de Inteligência Artificial, visão computacional, manutenção, suporte técnico e treinamento de usuários.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> React, Node.js, JavaScript/TypeScript, IA, Visão Computacional, APIs</small>
-                            </div>
-                        </div>
-
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.fast.title">Engenheiro de Agentes de IA / Dev RPA - Fast Tennis</strong>
-                                <span class="exp-period" data-i18n="experience.fast.period">out 2025 - abr 2026</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.fast.description">
-                                Desenvolvimento de agente de IA no n8n para agendamento automatizado via WhatsApp, integração com Zoho, exportação de funis do RD Station, automações RPA e refatoração gradual de agentes para Python.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> n8n, Python, PHP, RAG, RPA, APIs, WhatsApp, Zoho, RD Station</small>
-                            </div>
-                        </div>
-
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.legnu.title">Desenvolvedor Fullstack / Java - Legnu INFORTEC</strong>
-                                <span class="exp-period" data-i18n="experience.legnu.period">jan 2020 - out 2025</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.legnu.description">
-                                Desenvolvimento de ERP com Java 21, JavaFX e Spring Boot, modelagem de dados, regras de negócio para financeiro, estoque, vendas e CRM, integrações NF-e/NFC-e, APIs REST e refatoração de legado.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java 21, JavaFX, Spring Boot, Hibernate, Maven, MySQL, PostgreSQL, Selenium</small>
-                            </div>
-                        </div>
-
-                        <div class="exp-item">
-                            <div class="exp-header">
-                                <strong data-i18n="experience.puc.title">Monitor de Programação Modular - PUC Minas</strong>
-                                <span class="exp-period" data-i18n="experience.puc.period">jul 2025 - out 2025</span>
-                            </div>
-                            <div class="exp-description" data-i18n="experience.puc.description">
-                                Orientação técnica para alunos em lógica de programação, POO, boas práticas, modularização, exercícios, dúvidas técnicas e projetos acadêmicos.
-                            </div>
-                            <div class="exp-tech">
-                                <small><strong data-i18n="experience.technologies">Tecnologias:</strong> Java, POO, Estruturas de Dados, Modularização, Boas Práticas</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Divisor entre Experiência Profissional e Formação Acadêmica -->
-                    <div class="divisor-vertical"></div>
-
-                    <!-- Formação Acadêmica -->
-                    <div class="formacao-section">
-                <div class="em1-5 text_paleta mb-3">
-                            <strong data-i18n="education.title">Formação Acadêmica</strong>
-                        </div>
-                        
-                        <div class="formacao-item">
-                            <div class="formacao-header">
-                                <strong data-i18n="education.software.title">Engenharia de Software</strong>
-                            </div>
-                            <div class="formacao-instituicao">PUC Minas, Belo Horizonte</div>
-                            <div class="formacao-periodo">2024-2027</div>
-                        </div>
-
-                        <div class="formacao-item">
-                            <div class="formacao-header">
-                                <strong data-i18n="education.electronics.title">Técnico em Eletrônica</strong>
-                            </div>
-                            <div class="formacao-instituicao">SENAI Horto, Belo Horizonte</div>
-                            <div class="formacao-periodo">2022-2023</div>
-                        </div>
-                    </div>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Linguagens</h3></div>
+                        <div class="skill-list"><span>Java</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Dart</span><span>Go</span><span>C#</span><span>PHP</span><span>C</span><span>Swift</span><span>SQL</span><span>HTML5</span><span>CSS3</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-server" aria-hidden="true"></i><h3>Backend & APIs</h3></div>
+                        <div class="skill-list"><span>Spring Boot</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>ASP.NET Core</span><span>Spring Security</span><span>JPA / Hibernate</span><span>JWT</span><span>GraphQL</span><span>Swagger</span><span>WebSocket</span><span>SSE</span><span>Zod</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-display" aria-hidden="true"></i><h3>Frontend & Desktop</h3></div>
+                        <div class="skill-list"><span>React</span><span>Next.js</span><span>Angular</span><span>Vite</span><span>Electron</span><span>JavaFX</span><span>Java Swing</span><span>Flutter</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Thymeleaf</span><span>Leaflet</span><span>Recharts</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-database" aria-hidden="true"></i><h3>Dados & Mensageria</h3></div>
+                        <div class="skill-list"><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>Redis</span><span>Supabase</span><span>H2</span><span>RabbitMQ</span><span>Kafka</span><span>Flyway</span><span>CloudAMQP</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><h3>IA & Automação</h3></div>
+                        <div class="skill-list"><span>AI Agents</span><span>RAG</span><span>n8n</span><span>ChromaDB</span><span>RPA</span><span>OpenCV</span><span>Selenium</span><span>WhatsApp API</span><span>Binance API</span><span>Computer Vision</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-cloud" aria-hidden="true"></i><h3>Cloud & Entrega</h3></div>
+                        <div class="skill-list"><span>AWS</span><span>Docker</span><span>Terraform</span><span>CI/CD</span><span>GitHub Actions</span><span>Vercel</span><span>Render</span><span>GitHub Pages</span><span>Git</span><span>Maven</span><span>Gradle</span><span>npm</span><span>Red Hat</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-vial-circle-check" aria-hidden="true"></i><h3>Qualidade & Observabilidade</h3></div>
+                        <div class="skill-list"><span>JUnit</span><span>Vitest</span><span>k6</span><span>Postman</span><span>Grafana</span><span>Prometheus</span><span>Testes de integração</span><span>Backtesting</span></div>
+                    </article>
+                    <article class="skill-group">
+                        <div class="skill-heading"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><h3>Produto & Ferramentas</h3></div>
+                        <div class="skill-list"><span>Jira</span><span>Figma</span><span>Canva</span><span>Inkscape</span><span>Blender</span><span>JasperReports</span><span>iText</span><span>Arduino</span></div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Divisor entre Perfil e Contato -->
-        <div class="divisor-secao"></div>
-
-        <!-- =========================
-             SEÇÃO CONTATO
-             ========================= -->
-        <section id="contato" class="mt-5">
-            <div class="contato-header">
-                <div class="em2 centro mb-4 text_paleta">
-                    <strong data-i18n="contact.title">Entre em Contato</strong>
-                </div>
-                <div class="exp2 paleta"></div>
-            </div>
-
-            <div class="contato-container">
-                <!-- Redes Sociais -->
-                <div class="redes-sociais">
-                    <div class="icones-container">
-                        <div class="icone-item" onclick="window.open('https://www.linkedin.com/in/leandroalencarclemente/', '_blank')">
-                            <div class="icone-wrapper linkedin">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="icone-label">LinkedIn</div>
-                        </div>
-                        
-                        <div class="icone-item" onclick="window.open('https://github.com/alencarleandro', '_blank')">
-                            <div class="icone-wrapper github">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="icone-label">GitHub</div>
-                        </div>
-                        
-                        <div class="icone-item" onclick="window.open('https://www.instagram.com/leandro_a_clemente/', '_blank')">
-                            <div class="icone-wrapper instagram">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <div class="icone-label">Instagram</div>
-                        </div>
-                        
-
-                        
-                        <div class="icone-item" onclick="abrirWhatsApp()">
-                            <div class="icone-wrapper whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="icone-label">WhatsApp</div>
-                        </div>
+        <section class="section career-section" id="experiencia" aria-labelledby="careerTitle">
+            <div class="section-inner">
+                <header class="section-heading">
+                    <div>
+                        <p class="section-index">03 / Trajetória</p>
+                        <h2 id="careerTitle">Experiência que conecta contexto e código.</h2>
                     </div>
-                </div>
+                    <p>Atuação em produto, sistemas empresariais, automação, IA e formação técnica.</p>
+                </header>
 
-                <!-- Divisor Vertical -->
-                <div class="divisor-vertical"></div>
+                <div class="career-layout">
+                    <div class="timeline" aria-label="Experiência profissional">
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-meta"><span>Mai 2026 - atual</span><span>Júnior</span></div>
+                            <div class="timeline-title">
+                                <div><p>Strata Engenharia</p><h3>Desenvolvedor Fullstack Júnior</h3></div>
+                                <img src="assets/img/strataLogoEsticada.png" alt="Strata Engenharia">
+                            </div>
+                            <p>Desenvolvimento de plataforma de gestão com React e Node.js, funcionalidades apoiadas por IA, visão computacional, manutenção, suporte técnico e treinamento de usuários.</p>
+                            <div class="timeline-stack"><span>React</span><span>Node.js</span><span>TypeScript</span><span>IA</span><span>Computer Vision</span></div>
+                        </article>
 
-                <!-- Formulário de Contato -->
-                <div class="formulario-contato">
-                    <h5 class="text_paleta mb-3">Envie uma Mensagem</h5>
-                    
-                    <form id="contactForm" onsubmit="enviarFormulario(event)">
-                        <div class="mb-3">
-                            <label for="nome" class="form-label text_paleta" data-i18n="contact.form.name">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="email" class="form-label text_paleta" data-i18n="contact.form.email">E-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="assunto" class="form-label text_paleta" data-i18n="contact.form.subject">Assunto</label>
-                            <input type="text" class="form-control" id="assunto" name="assunto" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label text_paleta" data-i18n="contact.form.message">Mensagem</label>
-                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-enviar" id="btnEnviar">
-                            <i class="fab fa-google me-2"></i>
-                            <span>Abrir Gmail</span>
-                        </button>
-                    </form>
-                    
-                    <div class="mt-3">
-                        <small class="text-info-email">
-                            <i class="fab fa-google me-1"></i>
-                            Sua mensagem será aberta no Gmail para: <strong>leandro130333.dev@gmail.com</strong>
-                        </small>
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-meta"><span>Out 2025 - abr 2026</span><span>Estágio</span></div>
+                            <div class="timeline-title">
+                                <div><p>Fast Tennis</p><h3>Estagiário em Agentes de IA e RPA</h3></div>
+                                <img src="headerFast.png" alt="Fast Tennis">
+                            </div>
+                            <p>Criação de agente de atendimento e agendamento no n8n, integrações com WhatsApp, Zoho e RD Station, automações RPA e evolução de fluxos para Python.</p>
+                            <div class="timeline-stack"><span>n8n</span><span>Python</span><span>RAG</span><span>RPA</span><span>APIs</span></div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-meta"><span>Jan 2020 - out 2025</span><span>Júnior</span></div>
+                            <div class="timeline-title">
+                                <div><p>Legnu INFORTEC</p><h3>Desenvolvedor Fullstack Júnior / Java</h3></div>
+                                <img src="headerLegnu.png" alt="Legnu INFORTEC">
+                            </div>
+                            <p>Evolução de ERP para financeiro, vendas, estoque e CRM, integrações NF-e/NFC-e, APIs REST, relatórios, automações internas e modernização de legado.</p>
+                            <div class="timeline-stack"><span>Java</span><span>Spring Boot</span><span>JavaFX</span><span>PostgreSQL</span><span>JasperReports</span></div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-meta"><span>Jul 2025 - out 2025</span><span>Monitoria</span></div>
+                            <div class="timeline-title">
+                                <div><p>PUC Minas</p><h3>Monitor de Programação Modular</h3></div>
+                                <img src="headerPuc.png" alt="PUC Minas">
+                            </div>
+                            <p>Orientação a estudantes em lógica, orientação a objetos, estruturas de dados, modularização, boas práticas e desenvolvimento de projetos acadêmicos.</p>
+                            <div class="timeline-stack"><span>Java</span><span>POO</span><span>Estruturas de Dados</span><span>Clean Code</span></div>
+                        </article>
                     </div>
-                    
-                    <div id="formStatus" class="mt-3"></div>
+
+                    <aside class="education" aria-labelledby="educationTitle">
+                        <p class="aside-label">Formação</p>
+                        <h3 id="educationTitle">Base técnica e engenharia.</h3>
+                        <article class="education-item">
+                            <span class="education-level">Graduação</span>
+                            <h4>Engenharia de Software</h4>
+                            <p>PUC Minas - Belo Horizonte</p>
+                            <time>2024 - 2027</time>
+                        </article>
+                        <article class="education-item">
+                            <span class="education-level">Curso técnico</span>
+                            <h4>Técnico em Eletrônica</h4>
+                            <p>SENAI Horto - Belo Horizonte</p>
+                            <time>2022 - 2023</time>
+                        </article>
+                        <div class="education-note">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>Belo Horizonte, Minas Gerais, Brasil</span>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
 
-    </div>
+        <section class="contact-section" id="contato" aria-labelledby="contactTitle">
+            <div class="section-inner contact-layout">
+                <div class="contact-copy">
+                    <p class="section-index">04 / Contato</p>
+                    <h2 id="contactTitle">Vamos construir algo útil.</h2>
+                    <p>Estou aberto a conversar sobre desenvolvimento fullstack, arquitetura, automações, IA e produtos que precisem sair do rascunho para uso real.</p>
+                    <div class="contact-direct">
+                        <a href="mailto:leandro130333.dev@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>leandro130333.dev@gmail.com</span></a>
+                        <a href="https://wa.me/5531983479067" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>+55 (31) 98347-9067</span></a>
+                        <a href="https://www.linkedin.com/in/leandroalencarclemente/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+                    </div>
+                </div>
 
-</main>
-
-<footer class="h_minContent footer P">
-    <div class="centro pb-4 pt-4 text_paleta">
-        <strong>© <span id="anoAtual"></span> - All rights reserved - Leandro Alencar</strong>
-    </div>
-</footer>
-
-<div class="readme-modal" id="readmeModal" aria-hidden="true">
-    <div class="readme-modal-backdrop" data-readme-close></div>
-    <section class="readme-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="readmeModalTitle">
-        <header class="readme-modal-header">
-            <div>
-                <span class="readme-modal-eyebrow">README.md</span>
-                <h3 id="readmeModalTitle">Projeto</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="nome">Nome</label>
+                            <input id="nome" name="nome" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="assunto">Assunto</label>
+                        <input id="assunto" name="assunto" type="text" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button class="button button-primary form-submit" id="btnEnviar" type="submit">
+                        <span>Abrir no Gmail</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </button>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
+                </form>
             </div>
-            <button type="button" class="readme-modal-close" data-readme-close aria-label="Fechar README">
-                <i class="fas fa-times" aria-hidden="true"></i>
-            </button>
-        </header>
-        <div class="readme-modal-body">
-            <div class="readme-loading" id="readmeModalLoading">Carregando README...</div>
-            <article class="readme-content" id="readmeModalContent"></article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="#top"><span class="brand-mark">LA</span><span class="brand-name">Leandro Alencar</span></a>
+            <p>Fullstack Developer em Belo Horizonte, MG.</p>
+            <p>© <span id="currentYear"></span> Leandro Alencar.</p>
         </div>
-    </section>
-</div>
+    </footer>
 
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/contato.js"></script>
-    <script src="../assets/js/readme-modal.js"></script>
-    
-    <!-- EmailJS para envio de e-mails -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública do EmailJS
-        })();
-    </script>
+    <div class="readme-modal" id="readmeModal" aria-hidden="true">
+        <div class="readme-modal-backdrop" data-readme-close></div>
+        <section class="readme-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="readmeModalTitle">
+            <header class="readme-modal-header">
+                <div>
+                    <span class="readme-modal-eyebrow">README.md</span>
+                    <h3 id="readmeModalTitle">Projeto</h3>
+                </div>
+                <button class="readme-modal-close" type="button" data-readme-close aria-label="Fechar README" title="Fechar">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </header>
+            <div class="readme-modal-body">
+                <div class="readme-loading" id="readmeModalLoading">Carregando README...</div>
+                <article class="readme-content" id="readmeModalContent"></article>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/portfolio-v2.js"></script>
+    <script src="assets/js/readme-modal.js"></script>
 </body>
-
 </html>
