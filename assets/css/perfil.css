@@ -1403,6 +1403,10 @@ body.portfolio-basic .project-card-detailed[data-project="cacheaside"] {
     --project-accent: #a371f7;
 }
 
+body.portfolio-basic .project-card-detailed[data-project="leda"] {
+    --project-accent: #f3c735;
+}
+
 body.portfolio-basic .project-card-detailed[data-project="legnu"] {
     --project-accent: #f0883e;
 }
